@@ -69,8 +69,17 @@
   <ItemGroup>
     <Compile Include="CommonModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
+    <Compile Include="Workflow\StateDefinitionActions.cs" />
+    <Compile Include="Workflow\ActionActions.cs" />
+    <Compile Include="Workflow\StateChangeActions.cs" />
+    <Compile Include="Workflow\WFInstanceActions.cs" />
+    <Compile Include="Workflow\StateActions.cs" />
+    <Compile Include="Workflow\WFDefinitionActions.cs" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.  -->
