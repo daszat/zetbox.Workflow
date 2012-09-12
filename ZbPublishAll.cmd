@@ -28,8 +28,8 @@ rem Zetbox.Server.Service.exe %config% -export ..\..\Data\Workflow.Config.xml -s
 rem IF ERRORLEVEL 1 GOTO FAIL
 
 rem export Workflow.Data data
-rem Zetbox.Server.Service.exe %config% -export ..\..\Data\Workflow.Data.xml -schemamodules Workflow -ownermodules Workflow
-rem IF ERRORLEVEL 1 GOTO FAIL
+Zetbox.Server.Service.exe %config% -export ..\..\Data\Workflow.Data.xml -schemamodules Workflow -ownermodules Workflow
+IF ERRORLEVEL 1 GOTO FAIL
 
 echo ********************************************************************************
 echo ************************************ Success ***********************************
