@@ -18,7 +18,7 @@ namespace Zetbox.Basic.Workflow
         [Invocation]
         public static void GetName(Action obj, MethodReturnEventArgs<string> e)
         {
-            e.Result = string.Format("Workflow.Actions.{0}.{1}", obj.Module.Namespace, obj.Name);
+            e.Result = obj.Module != null ? string.Format("Workflow.Actions.{0}.{1}", obj.Module.Namespace, obj.Name) : null;
         }
     }
 }
