@@ -58,11 +58,11 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Zetbox.API">
-      <HintPath>..\packages\zetboxBasic-Common.1.0.4338.1\lib\net35\Zetbox.API.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Common.1.0.4346.1\lib\net35\Zetbox.API.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Zetbox.API.Common">
-      <HintPath>..\packages\zetboxBasic-Common.1.0.4338.1\lib\net35\Zetbox.API.Common.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Common.1.0.4346.1\lib\net35\Zetbox.API.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -79,7 +79,9 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="README.zetbox.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.  -->
