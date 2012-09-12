@@ -14,5 +14,11 @@ namespace Zetbox.Basic.Workflow
         {
             e.Result = obj.Summary;
         }
+
+        [Invocation]
+        public static void postSet_Workflow(WFInstance obj, PropertyPostSetterEventArgs<Zetbox.Basic.Workflow.WFDefinition> e)
+        {
+            // Setup initial states
+        }
     }
 }

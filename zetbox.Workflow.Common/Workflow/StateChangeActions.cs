@@ -14,5 +14,19 @@ namespace Zetbox.Basic.Workflow
         {
             e.Result = obj.Name;
         }
+
+        [Invocation]
+        public static void preSet_Workflow(WFInstance obj, PropertyPreSetterEventArgs<Zetbox.Basic.Workflow.WFDefinition> e)
+        {
+            // disallow changes
+        }
+
+        [Invocation]
+        public static void Execute(StateChange obj, Zetbox.Basic.Workflow.State current)
+        {
+            // set on left
+            // call invocation
+            // change current state
+        }
     }
 }
