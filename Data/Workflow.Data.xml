@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ZetboxPackaging xmlns:Workflow="Zetbox.Basic.Workflow" date="2012-09-12T18:19:26.6245743Z" xmlns="http://dasz.at/Zetbox">
+  <Workflow:Action ExportGuid="6a55cf90-c334-42a6-83ed-15d65c71664d">
+    <Workflow:ChangedOn>2012-09-12T12:44:51.9511851Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T12:44:51.9511851Z</Workflow:CreatedOn>
+    <Workflow:Description>Decline the current step</Workflow:Description>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Decline</Workflow:Name>
+  </Workflow:Action>
+  <Workflow:Action ExportGuid="6b9ace99-b484-4561-8eda-0c91e52493fb">
+    <Workflow:ChangedOn>2012-09-12T12:45:37.8408099Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T12:45:37.8408099Z</Workflow:CreatedOn>
+    <Workflow:Description>Forward to antother person or group</Workflow:Description>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Forward</Workflow:Name>
+  </Workflow:Action>
+  <Workflow:Action ExportGuid="e5ab1ebc-3e5d-467f-acba-2026f3f58a92">
+    <Workflow:ChangedOn>2012-09-12T12:44:39.4154681Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T12:44:39.4154681Z</Workflow:CreatedOn>
+    <Workflow:Description>Accept the current step</Workflow:Description>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Accept</Workflow:Name>
+  </Workflow:Action>
+  <Workflow:Action ExportGuid="f92dca07-8f58-4af7-9487-7993aaa534a9">
+    <Workflow:ChangedOn>2012-09-12T12:45:15.0185045Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T12:45:15.0185045Z</Workflow:CreatedOn>
+    <Workflow:Description>Send back for improvements</Workflow:Description>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Improve</Workflow:Name>
+  </Workflow:Action>
+  <Workflow:StateChange ExportGuid="bf528c34-9624-4ea9-a8a9-bba06882a6bb">
+    <Workflow:ChangedOn>2012-09-12T15:40:54.267315Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T15:40:54.267315Z</Workflow:CreatedOn>
+    <Workflow:Description>Declines and finish the Workflow</Workflow:Description>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>DeclineFinish</Workflow:Name>
+    <Workflow:StateDefinition>f142cca9-239b-4e35-ab81-312160e8c8c9</Workflow:StateDefinition>
+  </Workflow:StateChange>
+  <Workflow:StateChange ExportGuid="bf955ff8-fa87-43e5-bbca-b612bd8f11c5">
+    <Workflow:ChangedOn>2012-09-12T15:40:54.267315Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T15:40:54.267315Z</Workflow:CreatedOn>
+    <Workflow:Description>Accept and next state</Workflow:Description>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>AcceptNext</Workflow:Name>
+    <Workflow:StateDefinition>f142cca9-239b-4e35-ab81-312160e8c8c9</Workflow:StateDefinition>
+  </Workflow:StateChange>
+  <Workflow:StateChange ExportGuid="d69f5102-de41-44d3-af2a-7095570603ab">
+    <Workflow:ChangedOn>2012-09-12T15:40:54.267315Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T15:40:54.267315Z</Workflow:CreatedOn>
+    <Workflow:Description>Finish the Workflow</Workflow:Description>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Finish</Workflow:Name>
+    <Workflow:StateDefinition>6b698ca5-498e-4e6e-b2e9-34b59827f272</Workflow:StateDefinition>
+  </Workflow:StateChange>
+  <Workflow:StateDefinition ExportGuid="6b698ca5-498e-4e6e-b2e9-34b59827f272">
+    <Workflow:ChangedOn>2012-09-12T15:36:11.7931584Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T15:36:11.7931584Z</Workflow:CreatedOn>
+    <Workflow:Description>Second state</Workflow:Description>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>State 2</Workflow:Name>
+    <Workflow:WFDefinition>cc7f9453-a7c9-42c7-9e87-f91042733ef6</Workflow:WFDefinition>
+  </Workflow:StateDefinition>
+  <Workflow:StateDefinition ExportGuid="f142cca9-239b-4e35-ab81-312160e8c8c9">
+    <Workflow:ChangedOn>2012-09-12T15:34:03.3138098Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T15:34:03.3138098Z</Workflow:CreatedOn>
+    <Workflow:Description>First State</Workflow:Description>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>State 1</Workflow:Name>
+    <Workflow:WFDefinition>cc7f9453-a7c9-42c7-9e87-f91042733ef6</Workflow:WFDefinition>
+  </Workflow:StateDefinition>
+  <Workflow:WFDefinition ExportGuid="cc7f9453-a7c9-42c7-9e87-f91042733ef6">
+    <Workflow:ChangedOn>2012-09-12T12:42:54.3254573Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T12:42:54.3254573Z</Workflow:CreatedOn>
+    <Workflow:Description>A Testworkflow</Workflow:Description>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>TestWorkflow</Workflow:Name>
+  </Workflow:WFDefinition>
+  <Workflow:StateChange_invoked_by_Action_RelationEntry ExportGuid="1c4a2eaa-36dc-4c5c-9260-a323969598f0">
+    <Workflow:A>d69f5102-de41-44d3-af2a-7095570603ab</Workflow:A>
+    <Workflow:B>6a55cf90-c334-42a6-83ed-15d65c71664d</Workflow:B>
+  </Workflow:StateChange_invoked_by_Action_RelationEntry>
+  <Workflow:StateChange_invoked_by_Action_RelationEntry ExportGuid="5541a258-4ccd-4a93-b469-c1d5e4db9f52">
+    <Workflow:A>d69f5102-de41-44d3-af2a-7095570603ab</Workflow:A>
+    <Workflow:B>e5ab1ebc-3e5d-467f-acba-2026f3f58a92</Workflow:B>
+  </Workflow:StateChange_invoked_by_Action_RelationEntry>
+  <Workflow:StateChange_invoked_by_Action_RelationEntry ExportGuid="a6cde61f-3fc1-4691-8e8b-a68ca126f41d">
+    <Workflow:A>bf528c34-9624-4ea9-a8a9-bba06882a6bb</Workflow:A>
+    <Workflow:B>6a55cf90-c334-42a6-83ed-15d65c71664d</Workflow:B>
+  </Workflow:StateChange_invoked_by_Action_RelationEntry>
+  <Workflow:StateChange_invoked_by_Action_RelationEntry ExportGuid="ee19ee54-a2a7-4840-8bd7-88e03618747c">
+    <Workflow:A>bf955ff8-fa87-43e5-bbca-b612bd8f11c5</Workflow:A>
+    <Workflow:B>e5ab1ebc-3e5d-467f-acba-2026f3f58a92</Workflow:B>
+  </Workflow:StateChange_invoked_by_Action_RelationEntry>
+  <Workflow:StateChange_goes_to_StateDefinition_RelationEntry ExportGuid="8d6148b9-6005-4c76-9097-7502ff1e7113">
+    <Workflow:A>bf955ff8-fa87-43e5-bbca-b612bd8f11c5</Workflow:A>
+    <Workflow:B>6b698ca5-498e-4e6e-b2e9-34b59827f272</Workflow:B>
+  </Workflow:StateChange_goes_to_StateDefinition_RelationEntry>
+  <Workflow:StateDefinition_has_Action_RelationEntry ExportGuid="0ab602c0-83ec-4dee-af03-421aca57385a">
+    <Workflow:A>6b698ca5-498e-4e6e-b2e9-34b59827f272</Workflow:A>
+    <Workflow:A_pos>2147483647</Workflow:A_pos>
+    <Workflow:B>e5ab1ebc-3e5d-467f-acba-2026f3f58a92</Workflow:B>
+    <Workflow:B_pos>0</Workflow:B_pos>
+  </Workflow:StateDefinition_has_Action_RelationEntry>
+  <Workflow:StateDefinition_has_Action_RelationEntry ExportGuid="7baf3db3-5274-4911-8ce1-1d95759e7337">
+    <Workflow:A>f142cca9-239b-4e35-ab81-312160e8c8c9</Workflow:A>
+    <Workflow:A_pos>2147483647</Workflow:A_pos>
+    <Workflow:B>6a55cf90-c334-42a6-83ed-15d65c71664d</Workflow:B>
+    <Workflow:B_pos>1</Workflow:B_pos>
+  </Workflow:StateDefinition_has_Action_RelationEntry>
+  <Workflow:StateDefinition_has_Action_RelationEntry ExportGuid="b78b23ca-1b45-432f-a66c-32805fcfcdaa">
+    <Workflow:A>6b698ca5-498e-4e6e-b2e9-34b59827f272</Workflow:A>
+    <Workflow:A_pos>2147483647</Workflow:A_pos>
+    <Workflow:B>6a55cf90-c334-42a6-83ed-15d65c71664d</Workflow:B>
+    <Workflow:B_pos>1</Workflow:B_pos>
+  </Workflow:StateDefinition_has_Action_RelationEntry>
+  <Workflow:StateDefinition_has_Action_RelationEntry ExportGuid="fdc97333-9c04-4480-8f5b-0595d768c602">
+    <Workflow:A>f142cca9-239b-4e35-ab81-312160e8c8c9</Workflow:A>
+    <Workflow:A_pos>2147483647</Workflow:A_pos>
+    <Workflow:B>e5ab1ebc-3e5d-467f-acba-2026f3f58a92</Workflow:B>
+    <Workflow:B_pos>0</Workflow:B_pos>
+  </Workflow:StateDefinition_has_Action_RelationEntry>
+</ZetboxPackaging>
