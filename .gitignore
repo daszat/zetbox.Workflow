@@ -1,0 +1,12 @@
+/bin
+/Configs/Local
+/DocumentStore
+/zetbox.Workflow.Client.Tests/bin
+*.suo
+*.csproj.user
+bin
+obj
+
+# Only commit repositories.config. The rest of /packages is only a local cache
+!/packages/repositories.config
+/packages/*
