@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:Workflow="Zetbox.Basic.Workflow" date="2012-09-13T11:23:20.7612022Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:Workflow="Zetbox.Basic.Workflow" date="2012-09-13T15:00:17.1611672Z" xmlns="http://dasz.at/Zetbox">
   <Workflow:Action ExportGuid="6a55cf90-c334-42a6-83ed-15d65c71664d">
     <Workflow:ChangedOn>2012-09-12T12:44:51.9511851Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-12T12:44:51.9511851Z</Workflow:CreatedOn>
@@ -56,6 +56,7 @@
     <Workflow:ChangedOn>2012-09-12T15:36:11.7931584Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-12T15:36:11.7931584Z</Workflow:CreatedOn>
     <Workflow:Description>Second state</Workflow:Description>
+    <Workflow:IsStartState>false</Workflow:IsStartState>
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>State 2</Workflow:Name>
     <Workflow:WFDefinition>cc7f9453-a7c9-42c7-9e87-f91042733ef6</Workflow:WFDefinition>
@@ -64,6 +65,7 @@
     <Workflow:ChangedOn>2012-09-12T15:34:03.3138098Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-12T15:34:03.3138098Z</Workflow:CreatedOn>
     <Workflow:Description>First State</Workflow:Description>
+    <Workflow:IsStartState>true</Workflow:IsStartState>
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>State 1</Workflow:Name>
     <Workflow:WFDefinition>cc7f9453-a7c9-42c7-9e87-f91042733ef6</Workflow:WFDefinition>

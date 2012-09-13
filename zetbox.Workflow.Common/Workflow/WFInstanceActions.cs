@@ -16,9 +16,43 @@ namespace Zetbox.Basic.Workflow
         }
 
         [Invocation]
-        public static void postSet_Workflow(WFInstance obj, PropertyPostSetterEventArgs<Zetbox.Basic.Workflow.WFDefinition> e)
+        public static void preSet_Workflow(WFInstance obj, PropertyPreSetterEventArgs<Zetbox.Basic.Workflow.WFDefinition> e)
         {
-            // Setup initial states
+            if (e.OldValue == null) return; // OK
+            if (e.OldValue != e.NewValue) throw new NotSupportedException("Changing the workflow is not supported");
+        }
+
+        [Invocation]
+        public static void Start(WFInstance obj, Zetbox.Basic.Workflow.WFDefinition workflow)
+        {
+            if (workflow != null)
+            {
+                var ctx = obj.Context;
+                obj.Workflow = workflow;
+                foreach (var stateDef in workflow.StateDefinitions.Where(s => s.IsStartState))
+                {
+                    var state = ctx.Create<State>();
+                    state.Instance = obj;
+                    state.StateDefinition = stateDef;
+                }
+            }
+        }
+
+        [Invocation]
+        public static void StartCanExec(WFInstance obj, MethodReturnEventArgs<bool> e)
+        {
+            e.Result = obj.Workflow == null;
+        }
+
+        [Invocation]
+        public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs<string> e)
+        {
+            e.Result = "A workflow was started already";
+        }
+
+        [Invocation]
+        public static void Abort(WFInstance obj)
+        {
         }
     }
 }
