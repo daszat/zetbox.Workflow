@@ -12,6 +12,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zetbox.Workflow.Client.WPF", "zetbox.Workflow.Client.WPF\zetbox.Workflow.Client.WPF.csproj", "{E5D37600-76DC-4C7E-BFCE-5D42F3FA868A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zetbox.Workflow.WPF", "zetbox.Workflow.WPF\zetbox.Workflow.WPF.csproj", "{E56A7C44-9842-452F-945B-FDE22B4F77DC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E5D37600-76DC-4C7E-BFCE-5D42F3FA868A} = {E5D37600-76DC-4C7E-BFCE-5D42F3FA868A}
+		{A59F6DE3-22DF-4B01-85CB-B9CA6AA36868} = {A59F6DE3-22DF-4B01-85CB-B9CA6AA36868}
+		{290B11F7-D2CD-407C-8FE8-D4B957E9B235} = {290B11F7-D2CD-407C-8FE8-D4B957E9B235}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zetbox.Workflow.Server", "zetbox.Workflow.Server\zetbox.Workflow.Server.csproj", "{9FFA0ED3-5A01-41C8-BF14-A7FF81B48BFF}"
 EndProject

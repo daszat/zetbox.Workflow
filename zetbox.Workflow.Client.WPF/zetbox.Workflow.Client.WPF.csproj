@@ -75,6 +75,9 @@
   <ItemGroup>
     <Compile Include="ClientWPFModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Workflow\StateEditor.xaml.cs">
+      <DependentUpon>StateEditor.xaml</DependentUpon>
+    </Compile>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +94,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.zetbox.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\Workflow\StateEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

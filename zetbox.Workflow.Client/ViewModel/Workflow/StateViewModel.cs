@@ -1,0 +1,51 @@
+namespace zetbox.Workflow.Client.ViewModel.Workflow
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using Zetbox.Client.Presentables;
+    using Zetbox.API;
+    using wf = Zetbox.Basic.Workflow;
+
+    [ViewModelDescriptor]
+    public class StateViewModel : DataObjectViewModel
+    {
+        public new delegate StateViewModel Factory(IZetboxContext dataCtx, ViewModel parent, IDataObject obj);
+
+        public StateViewModel(IViewModelDependencies appCtx, IZetboxContext dataCtx, ViewModel parent, wf.State obj)
+            : base(appCtx, dataCtx, parent, obj)
+        {
+            State = obj;
+        }
+
+        public wf.State State { get; private set; }
+        public DataObjectViewModel InstanceViewModel
+        {
+            get
+            {
+                return DataObjectViewModel.Fetch(ViewModelFactory, DataContext, this, State.Instance);
+            }
+        }
+
+        public override string Name
+        {
+            get { return State.ToString(); }
+        }
+
+        protected override System.Collections.ObjectModel.ObservableCollection<ICommandViewModel> CreateCommands()
+        {
+            var commands = base.CreateCommands();
+            foreach (var action in State.StateDefinition.Actions)
+            {
+                commands.Add(ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this, action.Name, action.Description, () => InvokeAction(action), null, null));
+            }
+            return commands;
+        }
+
+        public void InvokeAction(wf.Action action)
+        {
+            // TODO:
+        }
+    }
+}
