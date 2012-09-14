@@ -30,6 +30,12 @@ namespace Zetbox.Basic.Workflow
         }
 
         [Invocation]
+        public static void GetLabel(Action obj, MethodReturnEventArgs<string> e)
+        {
+            e.Result = string.IsNullOrEmpty(obj.Label) ? obj.Name : obj.Label;
+        }
+
+        [Invocation]
         public static void Execute(Action obj, Zetbox.Basic.Workflow.State current)
         {
             if(current == null) throw new ArgumentException("current");

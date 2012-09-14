@@ -56,7 +56,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow
                     // avoid capturing the loop variable
                     var localAction = action;
                     commands.Add(ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this,
-                        action.Name,
+                        action.GetLabel(),
                         action.Description,
                         () => ExecuteAction(localAction),
                         null,

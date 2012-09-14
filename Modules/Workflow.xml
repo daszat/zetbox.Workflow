@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-14T09:48:34.3399099Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-14T10:57:34.9311851Z" xmlns="http://dasz.at/Zetbox">
   <ZetboxBase:Module ExportGuid="e27c7e66-f806-4b0b-bf03-4e14efff5336">
     <ZetboxBase:ChangedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:CreatedOn>
@@ -3681,6 +3681,30 @@ public static void ExecuteCanExecReason(Action obj, MethodReturnEventArgs&lt;str
     <ZetboxBase:Name>Execute</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>f33e0ab3-84ee-4543-90c1-a615191118d2</ZetboxBase:ObjectClass>
   </ZetboxBase:Method>
+  <ZetboxBase:Method ExportGuid="9a5a7faa-7029-4e0e-b596-ae794ea8da9a">
+    <ZetboxBase:ChangedOn>2012-09-14T08:57:34.9311851Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void GetLabel(Action obj, MethodReturnEventArgs&lt;string&gt; e)
+{
+}
+
+[Invocation]
+public static void GetLabelCanExec(Action obj, MethodReturnEventArgs&lt;bool&gt; e)
+{
+}
+
+[Invocation]
+public static void GetLabelCanExecReason(Action obj, MethodReturnEventArgs&lt;string&gt; e)
+{
+}
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-14T08:57:34.9311851Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:InvokeOnServer>false</ZetboxBase:InvokeOnServer>
+    <GUI:IsDisplayable>false</GUI:IsDisplayable>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>GetLabel</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>f33e0ab3-84ee-4543-90c1-a615191118d2</ZetboxBase:ObjectClass>
+  </ZetboxBase:Method>
   <ZetboxBase:Method ExportGuid="724c45f3-c8dd-4cb5-894b-bc2c051f090d">
     <ZetboxBase:ChangedOn>2012-09-12T09:34:20.9827022Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
@@ -3836,6 +3860,16 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:Name>current</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>1d502a56-825c-462a-87d7-d705a4e0ba8d</ZetboxBase:ObjectClass>
   </ZetboxBase:ObjectReferenceParameter>
+  <ZetboxBase:StringParameter ExportGuid="4c9d0612-3145-40fa-a8fe-7d9bf50642e7">
+    <ZetboxBase:ChangedOn>2012-09-14T08:57:34.9311851Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-14T08:57:34.9311851Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+    <ZetboxBase:IsNullable>false</ZetboxBase:IsNullable>
+    <ZetboxBase:IsReturnParameter>true</ZetboxBase:IsReturnParameter>
+    <ZetboxBase:Method>9a5a7faa-7029-4e0e-b596-ae794ea8da9a</ZetboxBase:Method>
+    <ZetboxBase:Parameter_pos>0</ZetboxBase:Parameter_pos>
+    <ZetboxBase:Name>retVal</ZetboxBase:Name>
+  </ZetboxBase:StringParameter>
   <ZetboxBase:StringParameter ExportGuid="65277f19-e879-4b61-a8b4-924f80c31169">
     <ZetboxBase:ChangedOn>2012-09-12T09:34:20.9827022Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-12T09:34:20.9827022Z</ZetboxBase:CreatedOn>
