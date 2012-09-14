@@ -28,6 +28,19 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow
             }
         }
 
+        protected override void OnObjectPropertyChanged(string propName)
+        {
+            base.OnObjectPropertyChanged(propName);
+
+            switch (propName)
+            {
+                case "IsActive":
+                    base.commandsStore = null;
+                    OnPropertyChanged("Commands");
+                    break;
+            }
+        }
+
         public override string Name
         {
             get { return State.ToString(); }
@@ -36,16 +49,19 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow
         protected override System.Collections.ObjectModel.ObservableCollection<ICommandViewModel> CreateCommands()
         {
             var commands = base.CreateCommands();
-            foreach (var action in State.StateDefinition.Actions)
+            if (State.IsActive)
             {
-                // avoid capturing the loop variable
-                var localAction = action;
-                commands.Add(ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this, 
-                    action.Name, 
-                    action.Description,
-                    () => ExecuteAction(localAction), 
-                    null, 
-                    null));
+                foreach (var action in State.StateDefinition.Actions)
+                {
+                    // avoid capturing the loop variable
+                    var localAction = action;
+                    commands.Add(ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this,
+                        action.Name,
+                        action.Description,
+                        () => ExecuteAction(localAction),
+                        null,
+                        null));
+                }
             }
             return commands;
         }
