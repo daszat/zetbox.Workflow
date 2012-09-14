@@ -38,14 +38,21 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow
             var commands = base.CreateCommands();
             foreach (var action in State.StateDefinition.Actions)
             {
-                commands.Add(ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this, action.Name, action.Description, () => InvokeAction(action), null, null));
+                // avoid capturing the loop variable
+                var localAction = action;
+                commands.Add(ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this, 
+                    action.Name, 
+                    action.Description,
+                    () => ExecuteAction(localAction), 
+                    null, 
+                    null));
             }
             return commands;
         }
 
-        public void InvokeAction(wf.Action action)
+        public void ExecuteAction(wf.Action action)
         {
-            // TODO:
+            action.Execute(State);
         }
     }
 }

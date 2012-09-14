@@ -18,9 +18,39 @@ namespace Zetbox.Basic.Workflow
         [Invocation]
         public static void Execute(StateChange obj, Zetbox.Basic.Workflow.State current)
         {
-            // set on left
+            var ctx = obj.Context;
+            var nextStates = obj.NextStates;
             // call invocation
-            // change current state
+            // nextStates = obj.ExecuteInvocation(...., nextStates);
+
+            var stateEnds = true;
+            if (nextStates == null || nextStates.Count == 0)
+            {
+                // workflow branch ends here
+            }
+            else
+            {
+                // change current state
+                foreach (var stateDef in nextStates)
+                {
+                    if (stateDef == current.StateDefinition)
+                    {
+                        stateEnds = false;
+                    }
+                    else
+                    {
+                        var state = ctx.Create<State>();
+                        state.Instance = current.Instance;
+                        state.StateDefinition = stateDef;
+                    }
+                }
+            }
+
+            // set on left
+            if (stateEnds)
+            {
+                current.LeftOn = DateTime.Now;
+            }
         }
     }
 }

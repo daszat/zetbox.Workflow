@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-13T16:03:04.8076643Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-14T09:48:34.3399099Z" xmlns="http://dasz.at/Zetbox">
   <ZetboxBase:Module ExportGuid="e27c7e66-f806-4b0b-bf03-4e14efff5336">
     <ZetboxBase:ChangedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:CreatedOn>
@@ -789,6 +789,7 @@ public static void isValid_Date(LogEntry obj, PropertyIsValidEventArgs e)
 
 </ZetboxBase:CodeTemplate>
     <ZetboxBase:CreatedOn>2012-09-12T16:09:57.2960106Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:DefaultValue>3b4770e1-1a09-41af-bb31-496f6e213de1</ZetboxBase:DefaultValue>
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
     <ZetboxBase:Name>Date</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>6f70bf8b-8837-4e2b-b5a8-2719dbd6ac53</ZetboxBase:ObjectClass>
@@ -3971,6 +3972,11 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:MaxLength>100</ZetboxBase:MaxLength>
     <ZetboxBase:MinLength>0</ZetboxBase:MinLength>
   </ZetboxBase:StringRangeConstraint>
+  <ZetboxBase:NotNullableConstraint ExportGuid="9bf4b9e5-0766-4617-9f96-7c102487c94b">
+    <ZetboxBase:ChangedOn>2012-09-14T07:46:56.399308Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>9792ded4-5c5a-418f-b205-837c6f5f52f5</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2012-09-14T07:46:56.399308Z</ZetboxBase:CreatedOn>
+  </ZetboxBase:NotNullableConstraint>
   <ZetboxBase:ViewReadOnlyConstraint ExportGuid="bded0a30-18e7-4e19-a8b3-e59ebad3e349">
     <ZetboxBase:ChangedOn>2012-09-12T16:09:57.2960106Z</ZetboxBase:ChangedOn>
     <ZetboxBase:ConstrainedProperty>9792ded4-5c5a-418f-b205-837c6f5f52f5</ZetboxBase:ConstrainedProperty>
@@ -3986,6 +3992,11 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:ConstrainedProperty>fcb35927-018f-4c0e-aa28-9bb888db982c</ZetboxBase:ConstrainedProperty>
     <ZetboxBase:CreatedOn>2012-09-12T15:57:21.6467899Z</ZetboxBase:CreatedOn>
   </ZetboxBase:NotNullableConstraint>
+  <ZetboxBase:ViewReadOnlyConstraint ExportGuid="88c52b5f-5a49-4d91-8fd5-edbeebe8cb00">
+    <ZetboxBase:ChangedOn>2012-09-14T07:47:34.758502Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>fcb35927-018f-4c0e-aa28-9bb888db982c</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2012-09-14T07:47:34.758502Z</ZetboxBase:CreatedOn>
+  </ZetboxBase:ViewReadOnlyConstraint>
   <ZetboxBase:StringRangeConstraint ExportGuid="35e0d5ed-2d77-4726-96cf-38127c359678">
     <ZetboxBase:ChangedOn>2012-09-12T16:09:57.2960106Z</ZetboxBase:ChangedOn>
     <ZetboxBase:ConstrainedProperty>8b0da95e-ea2f-4fe8-969c-ad539167da32</ZetboxBase:ConstrainedProperty>
@@ -4286,6 +4297,11 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:ConstrainedProperty>be05f0b2-2433-4a43-ba10-26f2899afdc0</ZetboxBase:ConstrainedProperty>
     <ZetboxBase:CreatedOn>2012-09-12T16:11:25.6660651Z</ZetboxBase:CreatedOn>
   </ZetboxBase:ViewReadOnlyConstraint>
+  <ZetboxBase:ViewReadOnlyConstraint ExportGuid="0984c7e8-96e8-42a6-912a-3b8ff30ecf55">
+    <ZetboxBase:ChangedOn>2012-09-14T07:48:34.3399099Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>b022f12c-6756-46e0-9f84-b2ce6756c1a2</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2012-09-14T07:48:34.3399099Z</ZetboxBase:CreatedOn>
+  </ZetboxBase:ViewReadOnlyConstraint>
   <ZetboxBase:StringRangeConstraint ExportGuid="447e4625-9c2c-4b2f-8209-be235a1dccac">
     <ZetboxBase:ChangedOn>2012-09-12T09:42:33.3736238Z</ZetboxBase:ChangedOn>
     <ZetboxBase:ConstrainedProperty>2d6809c8-47f0-4edc-ba8a-3d4580a74248</ZetboxBase:ConstrainedProperty>
@@ -4354,6 +4370,11 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:CreatedOn>2012-09-12T09:34:20.9827022Z</ZetboxBase:CreatedOn>
     <ZetboxBase:Property>ba4d4ddb-bfc2-419f-93e4-4f85c42f23ec</ZetboxBase:Property>
   </ZetboxBase:NewGuidDefaultValue>
+  <ZetboxBase:CurrentDateTimeDefaultValue ExportGuid="3b4770e1-1a09-41af-bb31-496f6e213de1">
+    <ZetboxBase:ChangedOn>2012-09-14T07:46:56.399308Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-14T07:46:56.399308Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Property>9792ded4-5c5a-418f-b205-837c6f5f52f5</ZetboxBase:Property>
+  </ZetboxBase:CurrentDateTimeDefaultValue>
   <ZetboxBase:CurrentDateTimeDefaultValue ExportGuid="107a24b0-d45b-4b26-bf00-56ee360ef58e">
     <ZetboxBase:ChangedOn>2012-09-12T09:44:37.247709Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-12T09:44:37.247709Z</ZetboxBase:CreatedOn>
