@@ -16,30 +16,29 @@ namespace Zetbox.Basic.Workflow
         }
 
         [Invocation]
-        public static void ObjectIsValid(StateChange obj, ObjectIsValidEventArgs e)
-        {
-
-        }
-
-        [Invocation]
         public static void isValid_InvokedByActions(StateChange obj, PropertyIsValidEventArgs e)
         {
             // Check if actions invoke only one state change
-            var allOtherActions = obj.StateDefinition.StateChanges.Except(new[] { obj }).SelectMany(sc => sc.InvokedByActions);
-            var actions = allOtherActions.Intersect(obj.InvokedByActions).ToList();
-            e.IsValid = actions.Count == 0;
-            e.Error = e.IsValid ? string.Empty : "A Action is invoking more than one state change. This state change is one of it. Actions found: " + string.Join(", ", actions.Select(a => a.Name).ToArray());
+            if (obj.StateDefinition != null)
+            {
+                var allOtherActions = obj.StateDefinition.StateChanges.Except(new[] { obj }).SelectMany(sc => sc.InvokedByActions);
+                var actions = allOtherActions.Intersect(obj.InvokedByActions).ToList();
+                e.IsValid = actions.Count == 0;
+                e.Error = e.IsValid ? string.Empty : "A Action is invoking more than one state change. This state change is one of it. Actions found: " + string.Join(", ", actions.Select(a => a.Name).ToArray());
+            }
         }
 
         [Invocation]
         public static void isValid_NextStates(StateChange obj, PropertyIsValidEventArgs e)
         {
             // Check if next states are member of the same workflow definition
-            var invalidNextStates = obj.NextStates.Where(ns => ns.WFDefinition != obj.StateDefinition.WFDefinition).ToList();
-            e.IsValid = invalidNextStates.Count == 0;
-            e.Error = e.IsValid ? string.Empty : "At least one next state does not belong to the same workflow. These states are: " + string.Join(", ", invalidNextStates.Select(ns => ns.Name).ToArray());
+            if (obj.StateDefinition != null)
+            {
+                var invalidNextStates = obj.NextStates.Where(ns => ns.WFDefinition != obj.StateDefinition.WFDefinition).ToList();
+                e.IsValid = invalidNextStates.Count == 0;
+                e.Error = e.IsValid ? string.Empty : "At least one next state does not belong to the same workflow. These states are: " + string.Join(", ", invalidNextStates.Select(ns => ns.Name).ToArray());
+            }
         }
-
 
         [Invocation]
         public static void Execute(StateChange obj, Zetbox.Basic.Workflow.State current)
