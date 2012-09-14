@@ -25,6 +25,7 @@ namespace Zetbox.Basic.Workflow
         public static void postSet_LeftOn(State obj, PropertyPostSetterEventArgs<DateTime?> e)
         {
             obj.Recalculate("IsActive");
+            obj.Instance.Recalculate("IsActive");
         }
     }
 }

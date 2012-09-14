@@ -16,6 +16,12 @@ namespace Zetbox.Basic.Workflow
         }
 
         [Invocation]
+        public static void get_IsActive(WFInstance obj, PropertyGetterEventArgs<bool> e)
+        {
+            e.Result = obj.Workflow != null && obj.States.Any(s => s.IsActive);
+        }
+
+        [Invocation]
         public static void preSet_Workflow(WFInstance obj, PropertyPreSetterEventArgs<Zetbox.Basic.Workflow.WFDefinition> e)
         {
             if (e.OldValue == null) return; // OK
@@ -35,6 +41,7 @@ namespace Zetbox.Basic.Workflow
                     state.Instance = obj;
                     state.StateDefinition = stateDef;
                 }
+                obj.Recalculate("IsActive");
             }
         }
 
