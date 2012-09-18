@@ -72,6 +72,15 @@
     <Reference Include="PdfSharp.Charting, Version=1.32.2608.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
       <HintPath>..\packages\PDFsharp-MigraDoc-GDI-dasz.1.32.3883.0\lib\net35\PdfSharp.Charting.dll</HintPath>
     </Reference>
+    <Reference Include="QuickGraph">
+      <HintPath>..\packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Data">
+      <HintPath>..\packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Graphviz">
+      <HintPath>..\packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.Graphviz.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -101,6 +110,7 @@
     <Compile Include="ClientModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\Workflow\Designer\WFDefinitionDesigner.cs" />
+    <Compile Include="ViewModel\Workflow\Designer\WFDefinitionGraph.cs" />
     <Compile Include="ViewModel\Workflow\StateViewModel.cs" />
     <Compile Include="ViewModel\Workflow\WFDefinitionViewModel.cs" />
     <None Include="packages.config" />

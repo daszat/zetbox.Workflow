@@ -1,11 +1,35 @@
 ﻿<UserControl x:Class="zetbox.Workflow.Client.WPF.View.Workflow.Designer.WFDefinitionEditor"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:self="clr-namespace:zetbox.Workflow.Client.WPF.View.Workflow.Designer"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300">
     <Grid>
-        <TextBlock Text="WF definition designer" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Column="0"
+                  Grid.Row="0"
+                  Header="Workflow">
+            <ScrollViewer HorizontalScrollBarVisibility="Visible"
+                          VerticalScrollBarVisibility="Visible">
+                <self:WFDefinitionGraphLayout x:Name="definitionGraphLayout"
+                                              Graph="{Binding DefinitionGraph}"
+                                              LayoutAlgorithmType="FR"
+                                              OverlapRemovalConstraint="Automatic"
+                                              OverlapRemovalAlgorithmType="FSA"
+                                              EdgeRoutingConstraint="Automatic"
+                                              HighlightAlgorithmType="Simple" />
+            </ScrollViewer>
+        </GroupBox>
+        <GroupBox Grid.Column="0"
+                  Grid.Row="1"
+                  Header="State">
+            <TextBlock Text="One state" />
+        </GroupBox>
     </Grid>
 </UserControl>
