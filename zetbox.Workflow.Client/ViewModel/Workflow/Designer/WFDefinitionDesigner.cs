@@ -328,7 +328,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                         "Link action & change",
                         "Links an Action and a State Change Logic",
                         LinkActionChange,
-                        () => SelectedAction != null && SelectedStateChange != null,
+                        () => SelectedAction != null && SelectedStateChange != null && !SelectedStateChange.StateChange.InvokedByActions.Contains(SelectedAction.Action),
                         null);
                 }
                 return _LinkActionChangeCommand;
@@ -357,8 +357,8 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                     _LinkChangeStateCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this, 
                         "Link change & state",
                         "Links a state change logic and a destination state", 
-                        LinkStateChange, 
-                        () => SelectedStateChange != null && SelectedDestinationStateDefinition != null, 
+                        LinkStateChange,
+                        () => SelectedStateChange != null && SelectedDestinationStateDefinition != null && !SelectedStateChange.StateChange.NextStates.Contains(SelectedDestinationStateDefinition.StateDefinition), 
                         null);
                 }
                 return _LinkChangeStateCommand;
@@ -444,6 +444,67 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                 SelectedStateDefinition.StateDefinition.StateChanges.Add(change);
                 SelectedStateChange = ToStateChangeViewModel(change);
                 ResetStateDefinitionGraph();
+            }
+        }
+
+        private ICommandViewModel _UnlinkActionChangeCommand = null;
+        public ICommandViewModel UnlinkActionChangeCommand
+        {
+            get
+            {
+                if (_UnlinkActionChangeCommand == null)
+                {
+                    _UnlinkActionChangeCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this,
+                        "Unlink action & change",
+                        "Unlinks an Action and a State Change Logic",
+                        UnlinkActionChange,
+                        () => SelectedAction != null && SelectedStateChange != null && SelectedStateChange.StateChange.InvokedByActions.Contains(SelectedAction.Action),
+                        null);
+                }
+                return _UnlinkActionChangeCommand;
+            }
+        }
+
+        public void UnlinkActionChange()
+        {
+            if (SelectedAction != null && SelectedStateChange != null)
+            {
+                if (SelectedStateChange.StateChange.InvokedByActions.Contains(SelectedAction.Action))
+                {
+                    SelectedStateChange.StateChange.InvokedByActions.Remove(SelectedAction.Action);
+                    ResetStateDefinitionGraph();
+                }
+            }
+        }
+
+        private ICommandViewModel _UnlinkChangeStateCommand = null;
+        public ICommandViewModel UnlinkChangeStateCommand
+        {
+            get
+            {
+                if (_UnlinkChangeStateCommand == null)
+                {
+                    _UnlinkChangeStateCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this,
+                        "Unlink change & state",
+                        "Unlinks a state change logic and a destination state", 
+                        UnlinkChangeState,
+                        () => SelectedStateChange != null && SelectedDestinationStateDefinition != null && SelectedStateChange.StateChange.NextStates.Contains(SelectedDestinationStateDefinition.StateDefinition),
+                        null);
+                }
+                return _UnlinkChangeStateCommand;
+            }
+        }
+
+        public void UnlinkChangeState()
+        {
+            if (SelectedStateChange != null && SelectedDestinationStateDefinition != null)
+            {
+                if (SelectedStateChange.StateChange.NextStates.Contains(SelectedDestinationStateDefinition.StateDefinition))
+                {
+                    SelectedStateChange.StateChange.NextStates.Remove(SelectedDestinationStateDefinition.StateDefinition);
+                    ResetStateDefinitionGraph();
+                    ResetDefinitionGraph();
+                }
             }
         }
         #endregion

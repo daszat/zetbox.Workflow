@@ -10,61 +10,6 @@
              mc:Ignorable="d"
              d:DesignHeight="300"
              d:DesignWidth="300">
-    <UserControl.Resources>
-        <DataTemplate DataType="{x:Type vm:StateDefinitionGraphViewModel}">
-            <Border Background="#fffff3d3"
-                    BorderBrush="{TemplateBinding Control.BorderBrush}"
-                    BorderThickness="1"
-                    CornerRadius="2"
-                    Padding="{TemplateBinding Control.Padding}"
-                    MinWidth="120"
-                    MinHeight="70">
-                <Grid>
-                    <StackPanel>
-                        <CheckBox IsChecked="{Binding IsSelected}" 
-                                  Content="Selected" />
-                        <CheckBox IsChecked="{Binding IsSelectedDestination}"
-                                  Content="Selected as destination" />
-                    </StackPanel>
-                    <TextBlock Text="{Binding Name}"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center" />
-                </Grid>
-            </Border>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:StateChangeGraphViewModel}">
-            <Border Background="Green"
-                    BorderBrush="{TemplateBinding Control.BorderBrush}"
-                    BorderThickness="1"
-                    CornerRadius="2"
-                    Padding="{TemplateBinding Control.Padding}"
-                    MinWidth="120"
-                    MinHeight="70">
-                <Grid>
-                    <CheckBox IsChecked="{Binding IsSelected}" />
-                    <TextBlock Text="{Binding Name}"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center" />
-                </Grid>
-            </Border>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:ActionGraphViewModel}">
-            <Border Background="Blue"
-                    BorderBrush="{TemplateBinding Control.BorderBrush}"
-                    BorderThickness="1"
-                    CornerRadius="40"
-                    Padding="{TemplateBinding Control.Padding}"
-                    MinWidth="120"
-                    MinHeight="70">
-                <Grid>
-                    <CheckBox IsChecked="{Binding IsSelected}" />
-                    <TextBlock Text="{Binding Name}"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center" />
-                </Grid>
-            </Border>
-        </DataTemplate>
-    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -83,6 +28,23 @@
                                               Graph="{Binding DefinitionGraph}"
                                               HighlightAlgorithmType="Simple">
                     <self:WFDefinitionGraphLayout.Resources>
+                        <DataTemplate DataType="{x:Type vm:StateDefinitionGraphViewModel}">
+                            <Border Background="#fffff3d3"
+                                    BorderBrush="{TemplateBinding Control.BorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="2"
+                                    Padding="{TemplateBinding Control.Padding}"
+                                    MinWidth="120"
+                                    MinHeight="70">
+                                <Grid>
+                                    <CheckBox IsChecked="{Binding IsSelected}"
+                                              Content="Selected" />
+                                    <TextBlock Text="{Binding Name}"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
                         <Style TargetType="{x:Type gsCtrls:VertexControl}">
                             <Setter Property="Template">
                                 <Setter.Value>
@@ -105,6 +67,55 @@
                                                  Graph="{Binding StateDefinitionGraph}"
                                                  HighlightAlgorithmType="Simple">
                     <self:StateDefinitionGraphLayout.Resources>
+                        <DataTemplate DataType="{x:Type vm:StateDefinitionGraphViewModel}">
+                            <Border Background="#fffff3d3"
+                                    BorderBrush="{TemplateBinding Control.BorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="2"
+                                    Padding="{TemplateBinding Control.Padding}"
+                                    MinWidth="120"
+                                    MinHeight="70">
+                                <Grid>
+                                    <CheckBox IsChecked="{Binding IsSelectedDestination}"
+                                              Content="Selected as destination" />
+                                    <TextBlock Text="{Binding Name}"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type vm:StateChangeGraphViewModel}">
+                            <Border Background="Green"
+                                    BorderBrush="{TemplateBinding Control.BorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="2"
+                                    Padding="{TemplateBinding Control.Padding}"
+                                    MinWidth="120"
+                                    MinHeight="70">
+                                <Grid>
+                                    <CheckBox IsChecked="{Binding IsSelected}" />
+                                    <TextBlock Text="{Binding Name}"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type vm:ActionGraphViewModel}">
+                            <Border Background="Blue"
+                                    BorderBrush="{TemplateBinding Control.BorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="40"
+                                    Padding="{TemplateBinding Control.Padding}"
+                                    MinWidth="120"
+                                    MinHeight="70">
+                                <Grid>
+                                    <CheckBox IsChecked="{Binding IsSelected}" />
+                                    <TextBlock Text="{Binding Name}"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
                         <Style TargetType="{x:Type gsCtrls:VertexControl}">
                             <Setter Property="Template">
                                 <Setter.Value>
@@ -118,7 +129,7 @@
                 </self:StateDefinitionGraphLayout>
             </ScrollViewer>
         </GroupBox>
-        
+
         <GroupBox Grid.Row="0"
                   Grid.Column="1"
                   Header="Commands">
@@ -132,8 +143,14 @@
             <StackPanel>
                 <ctrls:CommandButton CommandViewModel="{Binding AddActionCommand}" />
                 <ctrls:CommandButton CommandViewModel="{Binding NewStateChangeCommand}" />
-                <ctrls:CommandButton CommandViewModel="{Binding LinkActionChangeCommand}" />
-                <ctrls:CommandButton CommandViewModel="{Binding LinkChangeStateCommand}" />
+                <StackPanel Orientation="Horizontal">
+                    <ctrls:CommandButton CommandViewModel="{Binding LinkActionChangeCommand}" />
+                    <ctrls:CommandButton CommandViewModel="{Binding UnlinkActionChangeCommand}" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <ctrls:CommandButton CommandViewModel="{Binding LinkChangeStateCommand}" />
+                    <ctrls:CommandButton CommandViewModel="{Binding UnlinkChangeStateCommand}" />
+                </StackPanel>
             </StackPanel>
         </GroupBox>
     </Grid>
