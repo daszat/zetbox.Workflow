@@ -10,6 +10,24 @@
              mc:Ignorable="d"
              d:DesignHeight="300"
              d:DesignWidth="300">
+    <UserControl.Resources>
+        <self:EdgeRouteToPathConverter x:Key="routeToPathConverter" />
+        <Style x:Key="VertexBorderStyle"
+               TargetType="Border">
+            <Setter Property="BorderBrush"
+                    Value="Black" />
+            <Setter Property="BorderThickness"
+                    Value="1" />
+            <Setter Property="CornerRadius"
+                    Value="2" />
+            <Setter Property="Padding"
+                    Value="5" />
+            <Setter Property="MinWidth"
+                    Value="120" />
+            <Setter Property="MinHeight"
+                    Value="70" />
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -28,14 +46,52 @@
                                               Graph="{Binding DefinitionGraph}"
                                               HighlightAlgorithmType="Simple">
                     <self:WFDefinitionGraphLayout.Resources>
+                        <Style TargetType="{x:Type gsCtrls:EdgeControl}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type gsCtrls:EdgeControl}">
+                                        <Canvas>
+                                            <Path Stroke="{TemplateBinding Foreground}"
+                                                  StrokeThickness="{TemplateBinding StrokeThickness}"
+                                                  MinWidth="1"
+                                                  MinHeight="1"
+                                                  ToolTip="{TemplateBinding ToolTip}"
+                                                  x:Name="edgePath">
+                                                <Path.Data>
+                                                    <PathGeometry>
+                                                        <PathGeometry.Figures>
+                                                            <MultiBinding Converter="{StaticResource routeToPathConverter}">
+                                                                <Binding RelativeSource="{RelativeSource TemplatedParent}"
+                                                                         Path="Source.(gsCtrls:GraphCanvas.X)" />
+                                                                <Binding RelativeSource="{RelativeSource TemplatedParent}"
+                                                                         Path="Source.(gsCtrls:GraphCanvas.Y)" />
+                                                                <Binding RelativeSource="{RelativeSource TemplatedParent}"
+                                                                         Path="Source.ActualWidth" />
+                                                                <Binding RelativeSource="{RelativeSource TemplatedParent}"
+                                                                         Path="Source.ActualHeight" />
+                                                                <Binding RelativeSource="{RelativeSource TemplatedParent}"
+                                                                         Path="Target.(gsCtrls:GraphCanvas.X)" />
+                                                                <Binding RelativeSource="{RelativeSource TemplatedParent}"
+                                                                         Path="Target.(gsCtrls:GraphCanvas.Y)" />
+                                                                <Binding RelativeSource="{RelativeSource TemplatedParent}"
+                                                                         Path="Target.ActualWidth" />
+                                                                <Binding RelativeSource="{RelativeSource TemplatedParent}"
+                                                                         Path="Target.ActualHeight" />
+                                                                <Binding RelativeSource="{RelativeSource TemplatedParent}"
+                                                                         Path="Tag" />
+                                                            </MultiBinding>
+                                                        </PathGeometry.Figures>
+                                                    </PathGeometry>
+                                                </Path.Data>
+                                            </Path>
+                                        </Canvas>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
                         <DataTemplate DataType="{x:Type vm:StateDefinitionGraphViewModel}">
                             <Border Background="#fffff3d3"
-                                    BorderBrush="{TemplateBinding Control.BorderBrush}"
-                                    BorderThickness="1"
-                                    CornerRadius="2"
-                                    Padding="{TemplateBinding Control.Padding}"
-                                    MinWidth="120"
-                                    MinHeight="70">
+                                    Style="{StaticResource VertexBorderStyle}">
                                 <Grid>
                                     <CheckBox IsChecked="{Binding IsSelected}"
                                               Content="Selected" />
@@ -69,12 +125,7 @@
                     <self:StateDefinitionGraphLayout.Resources>
                         <DataTemplate DataType="{x:Type vm:StateDefinitionGraphViewModel}">
                             <Border Background="#fffff3d3"
-                                    BorderBrush="{TemplateBinding Control.BorderBrush}"
-                                    BorderThickness="1"
-                                    CornerRadius="2"
-                                    Padding="{TemplateBinding Control.Padding}"
-                                    MinWidth="120"
-                                    MinHeight="70">
+                                    Style="{StaticResource VertexBorderStyle}">
                                 <Grid>
                                     <CheckBox IsChecked="{Binding IsSelectedDestination}"
                                               Content="Selected as destination" />
@@ -86,12 +137,7 @@
                         </DataTemplate>
                         <DataTemplate DataType="{x:Type vm:StateChangeGraphViewModel}">
                             <Border Background="Green"
-                                    BorderBrush="{TemplateBinding Control.BorderBrush}"
-                                    BorderThickness="1"
-                                    CornerRadius="2"
-                                    Padding="{TemplateBinding Control.Padding}"
-                                    MinWidth="120"
-                                    MinHeight="70">
+                                    Style="{StaticResource VertexBorderStyle}">
                                 <Grid>
                                     <CheckBox IsChecked="{Binding IsSelected}" />
                                     <TextBlock Text="{Binding Name}"
@@ -102,12 +148,8 @@
                         </DataTemplate>
                         <DataTemplate DataType="{x:Type vm:ActionGraphViewModel}">
                             <Border Background="Blue"
-                                    BorderBrush="{TemplateBinding Control.BorderBrush}"
-                                    BorderThickness="1"
                                     CornerRadius="40"
-                                    Padding="{TemplateBinding Control.Padding}"
-                                    MinWidth="120"
-                                    MinHeight="70">
+                                    Style="{StaticResource VertexBorderStyle}">
                                 <Grid>
                                     <CheckBox IsChecked="{Binding IsSelected}" />
                                     <TextBlock Text="{Binding Name}"

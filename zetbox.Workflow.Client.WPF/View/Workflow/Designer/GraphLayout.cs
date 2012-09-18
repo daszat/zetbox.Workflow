@@ -14,14 +14,17 @@ namespace zetbox.Workflow.Client.WPF.View.Workflow.Designer
         public WFDefinitionGraphLayout()
         {
             this.LayoutAlgorithmType = "Tree";
+            this.OverlapRemovalAlgorithmType = "FSA";
+            this.DestructionTransition = null;
+            this.CreationTransition = null;
+
             var p = this.LayoutParameters as GraphSharp.Algorithms.Layout.Simple.Tree.SimpleTreeLayoutParameters;
             if (p != null)
             {
                 p.Direction = GraphSharp.Algorithms.Layout.LayoutDirection.LeftToRight;
+                p.VertexGap = 50;
+                p.LayerGap = 50;
             }
-            this.OverlapRemovalAlgorithmType = "FSA";
-            ((GraphSharp.Algorithms.OverlapRemoval.OverlapRemovalParameters)this.OverlapRemovalParameters).HorizontalGap = 40f;
-            ((GraphSharp.Algorithms.OverlapRemoval.OverlapRemovalParameters)this.OverlapRemovalParameters).VerticalGap = 20f;
         }
     }
 
@@ -31,15 +34,17 @@ namespace zetbox.Workflow.Client.WPF.View.Workflow.Designer
         public StateDefinitionGraphLayout()
         {
             this.LayoutAlgorithmType = "Tree";
+            this.OverlapRemovalAlgorithmType = "FSA";
+            this.DestructionTransition = null;
+            this.CreationTransition = null;
+
             var p = this.LayoutParameters as GraphSharp.Algorithms.Layout.Simple.Tree.SimpleTreeLayoutParameters;
             if (p != null)
             {
                 p.Direction = GraphSharp.Algorithms.Layout.LayoutDirection.LeftToRight;
+                p.VertexGap = 50;
+                p.LayerGap = 50;
             }
-
-            this.OverlapRemovalAlgorithmType = "FSA";
-            ((GraphSharp.Algorithms.OverlapRemoval.OverlapRemovalParameters)this.OverlapRemovalParameters).HorizontalGap = 40f;
-            ((GraphSharp.Algorithms.OverlapRemoval.OverlapRemovalParameters)this.OverlapRemovalParameters).VerticalGap = 20f;
         }
     }
 }
