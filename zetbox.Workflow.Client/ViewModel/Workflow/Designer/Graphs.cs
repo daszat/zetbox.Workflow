@@ -8,7 +8,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
 {
     [CLSCompliant(false)]
     public class WFDefinitionGraph
-        : BidirectionalGraph<object, IEdge<object>>
+        : BidirectionalGraph<StateDefinitionGraphViewModel, IEdge<StateDefinitionGraphViewModel>>
     {
         public WFDefinitionGraph() { }
 
@@ -16,6 +16,19 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             : base(allowParallelEdges) { }
 
         public WFDefinitionGraph(bool allowParallelEdges, int vertexCapacity)
+            : base(allowParallelEdges, vertexCapacity) { }
+    }
+
+    [CLSCompliant(false)]
+    public class StateDefinitionGraph
+        : BidirectionalGraph<object, IEdge<object>>
+    {
+        public StateDefinitionGraph() { }
+
+        public StateDefinitionGraph(bool allowParallelEdges)
+            : base(allowParallelEdges) { }
+
+        public StateDefinitionGraph(bool allowParallelEdges, int vertexCapacity)
             : base(allowParallelEdges, vertexCapacity) { }
     }
 }

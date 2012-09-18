@@ -9,7 +9,12 @@ using GraphSharp.Controls;
 namespace zetbox.Workflow.Client.WPF.View.Workflow.Designer
 {
     [CLSCompliant(false)]
-    public class WFDefinitionGraphLayout : GraphLayout<object, IEdge<object>, WFDefinitionGraph>
+    public class WFDefinitionGraphLayout : GraphLayout<StateDefinitionGraphViewModel, IEdge<StateDefinitionGraphViewModel>, WFDefinitionGraph>
+    {
+    }
+
+    [CLSCompliant(false)]
+    public class StateDefinitionGraphLayout : GraphLayout<object, IEdge<object>, StateDefinitionGraph>
     {
     }
 }

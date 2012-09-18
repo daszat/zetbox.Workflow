@@ -96,7 +96,7 @@
     <Compile Include="View\Workflow\Designer\WFDefinitionEditor.xaml.cs">
       <DependentUpon>WFDefinitionEditor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Workflow\Designer\WFDefinitionGraphLayout.cs" />
+    <Compile Include="View\Workflow\Designer\GraphLayout.cs" />
     <Compile Include="View\Workflow\StateEditor.xaml.cs">
       <DependentUpon>StateEditor.xaml</DependentUpon>
     </Compile>
