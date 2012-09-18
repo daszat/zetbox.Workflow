@@ -71,10 +71,6 @@
                           VerticalScrollBarVisibility="Visible">
                 <self:WFDefinitionGraphLayout x:Name="definitionGraphLayout"
                                               Graph="{Binding DefinitionGraph}"
-                                              LayoutAlgorithmType="FR"
-                                              OverlapRemovalConstraint="Automatic"
-                                              OverlapRemovalAlgorithmType="FSA"
-                                              EdgeRoutingConstraint="Automatic"
                                               HighlightAlgorithmType="Simple">
                     <self:WFDefinitionGraphLayout.Resources>
                         <Style TargetType="{x:Type gsCtrls:VertexControl}">
@@ -111,10 +107,6 @@
                           VerticalScrollBarVisibility="Visible">
                 <self:StateDefinitionGraphLayout x:Name="stateGraphLayout"
                                                  Graph="{Binding StateDefinitionGraph}"
-                                                 LayoutAlgorithmType="FR"
-                                                 OverlapRemovalConstraint="Automatic"
-                                                 OverlapRemovalAlgorithmType="FSA"
-                                                 EdgeRoutingConstraint="Automatic"
                                                  HighlightAlgorithmType="Simple">
                     <self:StateDefinitionGraphLayout.Resources>
                         <Style TargetType="{x:Type gsCtrls:VertexControl}">
