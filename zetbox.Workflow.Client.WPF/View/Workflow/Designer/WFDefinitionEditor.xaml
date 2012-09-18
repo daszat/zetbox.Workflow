@@ -81,20 +81,6 @@
                                     </ControlTemplate>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="BorderBrush"
-                                    Value="Black" />
-                            <Style.Triggers>
-                                <Trigger Property="gsCtrls:GraphElementBehaviour.IsHighlighted"
-                                         Value="True">
-                                    <Setter Property="BorderBrush"
-                                            Value="Blue" />
-                                </Trigger>
-                                <Trigger Property="gsCtrls:GraphElementBehaviour.IsSemiHighlighted"
-                                         Value="True">
-                                    <Setter Property="BorderBrush"
-                                            Value="Red" />
-                                </Trigger>
-                            </Style.Triggers>
                         </Style>
                     </self:WFDefinitionGraphLayout.Resources>
                 </self:WFDefinitionGraphLayout>
@@ -117,20 +103,6 @@
                                     </ControlTemplate>
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="BorderBrush"
-                                    Value="Black" />
-                            <Style.Triggers>
-                                <Trigger Property="gsCtrls:GraphElementBehaviour.IsHighlighted"
-                                         Value="True">
-                                    <Setter Property="BorderBrush"
-                                            Value="Blue" />
-                                </Trigger>
-                                <Trigger Property="gsCtrls:GraphElementBehaviour.IsSemiHighlighted"
-                                         Value="True">
-                                    <Setter Property="BorderBrush"
-                                            Value="Red" />
-                                </Trigger>
-                            </Style.Triggers>
                         </Style>
                     </self:StateDefinitionGraphLayout.Resources>
                 </self:StateDefinitionGraphLayout>
