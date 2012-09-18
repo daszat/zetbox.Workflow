@@ -104,6 +104,8 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
 
         #region StateDefinitionGraph
         private StateDefinitionGraph _StatedefinitionGraph;
+        private Dictionary<wf.Action, ActionGraphViewModel> _actionViewModels = new Dictionary<wf.Action, ActionGraphViewModel>();
+        private Dictionary<wf.StateChange, StateChangeGraphViewModel> _stateChangeViewModels = new Dictionary<wf.StateChange, StateChangeGraphViewModel>();
         public StateDefinitionGraph StateDefinitionGraph
         {
             get
@@ -120,10 +122,12 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
         {
             if (SelectedStateDefinition == null) return;
             _StatedefinitionGraph = new StateDefinitionGraph(true);
+            _actionViewModels = new Dictionary<wf.Action, ActionGraphViewModel>();
+            _stateChangeViewModels = new Dictionary<wf.StateChange, StateChangeGraphViewModel>();
 
             foreach (var action in SelectedStateDefinition.StateDefinition.Actions)
             {
-                _StatedefinitionGraph.AddVertex(action);
+                _StatedefinitionGraph.AddVertex(_actionViewModels[action] = ViewModelFactory.CreateViewModel<ActionGraphViewModel.Factory>().Invoke(DataContext, this, action));
             }
 
             foreach (var state in WFDefinition.StateDefinitions)
@@ -133,15 +137,16 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
 
             foreach (var change in SelectedStateDefinition.StateDefinition.StateChanges)
             {
-                _StatedefinitionGraph.AddVertex(change);
+                var changeVM = _stateChangeViewModels[change] = ViewModelFactory.CreateViewModel<StateChangeGraphViewModel.Factory>().Invoke(DataContext, this, change);
+                _StatedefinitionGraph.AddVertex(changeVM);
                 foreach (var action in change.InvokedByActions)
                 {
-                    _StatedefinitionGraph.AddEdge(new TaggedEdge<object, object>(action, change, change));
+                    _StatedefinitionGraph.AddEdge(new TaggedEdge<object, StateChangeGraphViewModel>(_actionViewModels[action], changeVM, changeVM));
                 }
 
                 foreach (wf.StateDefinition dest in change.NextStates)
                 {
-                    _StatedefinitionGraph.AddEdge(new TaggedEdge<object, wf.StateChange>(change, _stateViewModels[dest], change));
+                    _StatedefinitionGraph.AddEdge(new TaggedEdge<object, StateChangeGraphViewModel>(changeVM, _stateViewModels[dest], changeVM));
                 }
             }
         }

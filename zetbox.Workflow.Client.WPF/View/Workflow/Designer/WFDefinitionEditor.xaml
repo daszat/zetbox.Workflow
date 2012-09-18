@@ -3,11 +3,62 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:self="clr-namespace:zetbox.Workflow.Client.WPF.View.Workflow.Designer"
+             xmlns:vm="clr-namespace:zetbox.Workflow.Client.ViewModel.Workflow.Designer;assembly=zetbox.Workflow.Client"
              xmlns:gsCtrls="clr-namespace:GraphSharp.Controls;assembly=GraphSharp.Controls"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
              d:DesignHeight="300"
              d:DesignWidth="300">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type vm:StateDefinitionGraphViewModel}">
+            <Border Background="#fffff3d3"
+                    BorderBrush="{TemplateBinding Control.BorderBrush}"
+                    BorderThickness="1"
+                    CornerRadius="2"
+                    Padding="{TemplateBinding Control.Padding}"
+                    MinWidth="120"
+                    MinHeight="70">
+                <Grid>
+                    <CheckBox IsChecked="{Binding IsSelected}" />
+                    <TextBlock Text="{Binding Name}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" />
+                </Grid>
+            </Border>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:StateChangeGraphViewModel}">
+            <Border Background="Green"
+                    BorderBrush="{TemplateBinding Control.BorderBrush}"
+                    BorderThickness="1"
+                    CornerRadius="2"
+                    Padding="{TemplateBinding Control.Padding}"
+                    MinWidth="120"
+                    MinHeight="70">
+                <Grid>
+                    <CheckBox IsChecked="{Binding IsSelected}" />
+                    <TextBlock Text="{Binding Name}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" />
+                </Grid>
+            </Border>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:ActionGraphViewModel}">
+            <Border Background="Blue"
+                    BorderBrush="{TemplateBinding Control.BorderBrush}"
+                    BorderThickness="1"
+                    CornerRadius="40"
+                    Padding="{TemplateBinding Control.Padding}"
+                    MinWidth="120"
+                    MinHeight="70">
+                <Grid>
+                    <CheckBox IsChecked="{Binding IsSelected}" />
+                    <TextBlock Text="{Binding Name}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" />
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -30,19 +81,7 @@
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type gsCtrls:VertexControl}">
-                                        <Border Background="White"
-                                                BorderBrush="{TemplateBinding BorderBrush}"
-                                                BorderThickness="1"
-                                                CornerRadius="1,1,1,1"
-                                                Padding="{TemplateBinding Padding}"
-                                                MinWidth="50"
-                                                MinHeight="30">
-                                            <StackPanel>
-                                                <CheckBox IsChecked="{Binding IsSelected}">
-                                                    <TextBlock Text="{Binding Name}" />
-                                                </CheckBox>
-                                            </StackPanel>
-                                        </Border>
+                                        <ContentPresenter Content="{Binding}" />
                                     </ControlTemplate>
                                 </Setter.Value>
                             </Setter>
@@ -77,6 +116,31 @@
                                                  OverlapRemovalAlgorithmType="FSA"
                                                  EdgeRoutingConstraint="Automatic"
                                                  HighlightAlgorithmType="Simple">
+                    <self:StateDefinitionGraphLayout.Resources>
+                        <Style TargetType="{x:Type gsCtrls:VertexControl}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type gsCtrls:VertexControl}">
+                                        <ContentPresenter Content="{Binding}" />
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="BorderBrush"
+                                    Value="Black" />
+                            <Style.Triggers>
+                                <Trigger Property="gsCtrls:GraphElementBehaviour.IsHighlighted"
+                                         Value="True">
+                                    <Setter Property="BorderBrush"
+                                            Value="Blue" />
+                                </Trigger>
+                                <Trigger Property="gsCtrls:GraphElementBehaviour.IsSemiHighlighted"
+                                         Value="True">
+                                    <Setter Property="BorderBrush"
+                                            Value="Red" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </self:StateDefinitionGraphLayout.Resources>
                 </self:StateDefinitionGraphLayout>
             </ScrollViewer>
         </GroupBox>
