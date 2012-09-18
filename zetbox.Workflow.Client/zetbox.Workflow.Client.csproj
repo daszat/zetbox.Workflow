@@ -100,7 +100,9 @@
   <ItemGroup>
     <Compile Include="ClientModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\Workflow\Designer\WFDefinitionDesigner.cs" />
     <Compile Include="ViewModel\Workflow\StateViewModel.cs" />
+    <Compile Include="ViewModel\Workflow\WFDefinitionViewModel.cs" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
