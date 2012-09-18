@@ -32,6 +32,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
         }
 
         public event EventHandler IsSelectedChanged;
+        public event EventHandler IsSelectedDestinationChanged;
 
         private bool _isSelected = false;
         public bool IsSelected
@@ -58,6 +59,33 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                 temp(this, EventArgs.Empty);
             }
             OnPropertyChanged("IsSelected");
+        }
+
+        private bool _isSelectedDestination = false;
+        public bool IsSelectedDestination
+        {
+            get
+            {
+                return _isSelectedDestination;
+            }
+            set
+            {
+                if (_isSelectedDestination != value)
+                {
+                    _isSelectedDestination = value;
+                    OnIsSelectedDestinationChanged();
+                }
+            }
+        }
+
+        protected void OnIsSelectedDestinationChanged()
+        {
+            var temp = IsSelectedDestinationChanged;
+            if (temp != null)
+            {
+                temp(this, EventArgs.Empty);
+            }
+            OnPropertyChanged("IsSelectedDestination");
         }
     }
 }
