@@ -31,14 +31,15 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <GroupBox Grid.Column="0"
-                  Grid.Row="0"
+        <GroupBox Grid.Row="0"
+                  Grid.Column="0"                  
                   Header="Workflow">
             <ScrollViewer HorizontalScrollBarVisibility="Visible"
                           VerticalScrollBarVisibility="Visible">
@@ -114,8 +115,12 @@
                 </self:WFDefinitionGraphLayout>
             </ScrollViewer>
         </GroupBox>
-        <GroupBox Grid.Column="0"
-                  Grid.Row="1"
+        <GridSplitter Grid.Row="1"
+                      Grid.Column="0"                      
+                      Grid.ColumnSpan="2"
+                      ResizeDirection="Rows" />
+        <GroupBox Grid.Row="2"                  
+                  Grid.Column="0"                  
                   Header="{Binding SelectedStateDefinition.Name}">
             <ScrollViewer HorizontalScrollBarVisibility="Visible"
                           VerticalScrollBarVisibility="Visible">
@@ -179,20 +184,20 @@
                 <ctrls:CommandButton CommandViewModel="{Binding NewStateCommand}" />
             </StackPanel>
         </GroupBox>
-        <GroupBox Grid.Row="1"
+        <GroupBox Grid.Row="2"
                   Grid.Column="1"
                   Header="Commands">
             <StackPanel>
                 <ctrls:CommandButton CommandViewModel="{Binding AddActionCommand}" />
                 <ctrls:CommandButton CommandViewModel="{Binding NewStateChangeCommand}" />
-                <StackPanel Orientation="Horizontal">
+                <UniformGrid Rows="1">
                     <ctrls:CommandButton CommandViewModel="{Binding LinkActionChangeCommand}" />
                     <ctrls:CommandButton CommandViewModel="{Binding UnlinkActionChangeCommand}" />
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                </UniformGrid>
+                <UniformGrid Rows="1">
                     <ctrls:CommandButton CommandViewModel="{Binding LinkChangeStateCommand}" />
                     <ctrls:CommandButton CommandViewModel="{Binding UnlinkChangeStateCommand}" />
-                </StackPanel>
+                </UniformGrid>
             </StackPanel>
         </GroupBox>
     </Grid>
