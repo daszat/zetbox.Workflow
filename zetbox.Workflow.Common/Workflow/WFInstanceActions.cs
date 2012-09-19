@@ -1,14 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Zetbox.API;
-
+﻿
 namespace Zetbox.Basic.Workflow
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using Zetbox.API;
+    using Zetbox.API.Common;
+
     [Implementor]
     public static class WFInstanceActions
     {
+        private static IIdentityResolver _idResolver;
+        public WFInstanceActions(IIdentityResolver idResolver)
+        {
+            _idResolver = idResolver;
+        }
+
         [Invocation]
         public static void ToString(WFInstance obj, MethodReturnEventArgs<string> e)
         {
@@ -60,6 +68,25 @@ namespace Zetbox.Basic.Workflow
         [Invocation]
         public static void Abort(WFInstance obj)
         {
+        }
+
+        [Invocation]
+        public static void AddLogEntry(WFInstance obj, string formatString)
+        {
+            if (!string.IsNullOrEmpty(formatString))
+            {
+                var identity = _idResolver.GetCurrent();
+                var ctx = obj.Context;
+
+                var msg = formatString
+                    .Replace("{User}", (identity ?? (object)string.Empty).ToString())
+                    .Replace("{Date}", DateTime.Today.ToShortDateString())
+                    .Replace("{Time}", DateTime.Now.ToShortTimeString());
+                var logEntry = ctx.Create<LogEntry>();
+                logEntry.Message = msg;
+                logEntry.Identity = identity;
+                obj.LogEntries.Add(logEntry);
+            }
         }
     }
 }

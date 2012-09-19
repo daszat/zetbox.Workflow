@@ -12,11 +12,7 @@ namespace zetbox.Workflow.Client.Workflow.CommonInvocations
     {
         public static bool Forward(wf.Action action, wf.State current, Identity identity)
         {
-            var ctx = action.Context;
-            var logEntry = ctx.Create<wf.LogEntry>();
-            logEntry.Message = "Was forwared...";
-            current.Instance.LogEntries.Add(logEntry);
-
+            current.Instance.AddLogEntry("Was forwared...");
             return true;
         }
     }

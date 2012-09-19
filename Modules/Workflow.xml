@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-19T17:31:22.6789126Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-19T18:15:45.6262245Z" xmlns="http://dasz.at/Zetbox">
   <ZetboxBase:Module ExportGuid="e27c7e66-f806-4b0b-bf03-4e14efff5336">
     <ZetboxBase:ChangedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:CreatedOn>
@@ -4119,6 +4119,31 @@ public static void AbortCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:Name>Abort</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>c579b352-ac0c-4c0a-a28e-a99f58a05a95</ZetboxBase:ObjectClass>
   </ZetboxBase:Method>
+  <ZetboxBase:Method ExportGuid="72480481-4024-476e-b3fc-6f0b4f2e423f">
+    <ZetboxBase:ChangedOn>2012-09-19T16:15:45.6262245Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void AddLogEntry(WFInstance obj, string formatString)
+{
+}
+
+[Invocation]
+public static void AddLogEntryCanExec(WFInstance obj, MethodReturnEventArgs&lt;bool&gt; e)
+{
+}
+
+[Invocation]
+public static void AddLogEntryCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;string&gt; e)
+{
+}
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-19T16:15:10.7402291Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Description>Adds a log entry with the given format string. Known repacements: {User}, {Date} and {Time}</ZetboxBase:Description>
+    <ZetboxBase:InvokeOnServer>false</ZetboxBase:InvokeOnServer>
+    <GUI:IsDisplayable>false</GUI:IsDisplayable>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>AddLogEntry</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>c579b352-ac0c-4c0a-a28e-a99f58a05a95</ZetboxBase:ObjectClass>
+  </ZetboxBase:Method>
   <ZetboxBase:Method ExportGuid="ce6227a5-1ee4-4cde-9020-8720b4d70eba">
     <ZetboxBase:ChangedOn>2012-09-13T13:00:17.1611672Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
@@ -4232,6 +4257,17 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:Method>02c32ab5-154d-443a-891c-dcbe7bfea142</ZetboxBase:Method>
     <ZetboxBase:Parameter_pos>0</ZetboxBase:Parameter_pos>
     <ZetboxBase:Name>name</ZetboxBase:Name>
+  </ZetboxBase:StringParameter>
+  <ZetboxBase:StringParameter ExportGuid="1a9aa4fc-6ad7-48a1-a241-5136bc0a4ed8">
+    <ZetboxBase:ChangedOn>2012-09-19T16:15:45.6262245Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T16:15:10.7402291Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Description>Message as a format string. Known repacements: {User}, {Date} and {Time}</ZetboxBase:Description>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+    <ZetboxBase:IsNullable>false</ZetboxBase:IsNullable>
+    <ZetboxBase:IsReturnParameter>false</ZetboxBase:IsReturnParameter>
+    <ZetboxBase:Method>72480481-4024-476e-b3fc-6f0b4f2e423f</ZetboxBase:Method>
+    <ZetboxBase:Parameter_pos>0</ZetboxBase:Parameter_pos>
+    <ZetboxBase:Name>formatString</ZetboxBase:Name>
   </ZetboxBase:StringParameter>
   <ZetboxBase:ObjectReferenceParameter ExportGuid="d29b94fa-0466-45ff-b971-7ab9a770c0ba">
     <ZetboxBase:ChangedOn>2012-09-13T12:58:35.1883347Z</ZetboxBase:ChangedOn>

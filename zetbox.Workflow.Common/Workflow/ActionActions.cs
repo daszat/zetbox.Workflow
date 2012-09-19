@@ -65,16 +65,7 @@ namespace Zetbox.Basic.Workflow
             }
 
             // Add logfile entry
-            if (!string.IsNullOrEmpty(obj.LogMessageFormat))
-            {
-                var msg = obj.LogMessageFormat
-                    .Replace("{User}", (string)(identity ?? (object)string.Empty))
-                    .Replace("{Date}", DateTime.Today.ToShortDateString())
-                    .Replace("{Time}", DateTime.Now.ToShortTimeString());
-                var logEntry = ctx.Create<LogEntry>();
-                logEntry.Message = msg;
-                current.Instance.LogEntries.Add(logEntry);
-            }
+            current.Instance.AddLogEntry(obj.LogMessageFormat);
 
             // find and execute state change
             var stateChangeList = current.StateDefinition.StateChanges.Where(sc => sc.InvokedByActions.Contains(obj)).ToList();
