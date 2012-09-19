@@ -7,7 +7,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
     using Zetbox.Client.Presentables;
     using Zetbox.API;
 
-    [ViewModelDescriptor]
+    // [ViewModelDescriptor] Used internal
     public class HiddenGraphElementViewModel : ViewModel
     {
         public new delegate HiddenGraphElementViewModel Factory(IZetboxContext dataCtx, ViewModel parent);

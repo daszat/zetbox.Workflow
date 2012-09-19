@@ -8,7 +8,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
     using Zetbox.API;
     using wf = Zetbox.Basic.Workflow;
 
-    [ViewModelDescriptor]
+    // [ViewModelDescriptor] Used internal
     public class StateDefinitionGraphViewModel : ViewModel
     {
         public new delegate StateDefinitionGraphViewModel Factory(IZetboxContext dataCtx, ViewModel parent, wf.StateDefinition stateDef);
