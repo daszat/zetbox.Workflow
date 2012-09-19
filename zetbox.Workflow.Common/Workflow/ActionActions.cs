@@ -1,13 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Zetbox.API;
-using System.Text.RegularExpressions;
-using Zetbox.API.Common;
-
+﻿
 namespace Zetbox.Basic.Workflow
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using Zetbox.API;
+    using System.Text.RegularExpressions;
+    using Zetbox.API.Common;
+    using Zetbox.App.Base;
+
+
+    /// <summary>
+    /// An action invocation prototype. Return false to skip a state change and log entry.
+    /// </summary>
+    /// <param name="action">the calling action</param>
+    /// <param name="current">the current workflow state</param>
+    /// <param name="identity">the current identity or null, if the identity cannot be resolved</param>
+    /// <returns>False to skip a state change and log entry.</returns>
+    public delegate bool ActionInvocationPrototype(Action action, State current, Identity identity);
+
     [Implementor]
     public class ActionActions
     {
@@ -40,12 +52,23 @@ namespace Zetbox.Basic.Workflow
         {
             if(current == null) throw new ArgumentException("current");
             var ctx = obj.Context;
+            var identity = _idResolver.GetCurrent();
+
+            // call invocation
+            if (obj.HasValidInvocation())
+            {
+                var result = obj.CallInvocation<bool>(typeof(ActionInvocationPrototype), obj, current, identity);
+                if (result == false)
+                {
+                    return;
+                }
+            }
 
             // Add logfile entry
             if (!string.IsNullOrEmpty(obj.LogMessageFormat))
             {
                 var msg = obj.LogMessageFormat
-                    .Replace("{User}", (string)(_idResolver.GetCurrent() ?? (object)string.Empty))
+                    .Replace("{User}", (string)(identity ?? (object)string.Empty))
                     .Replace("{Date}", DateTime.Today.ToShortDateString())
                     .Replace("{Time}", DateTime.Now.ToShortTimeString());
                 var logEntry = ctx.Create<LogEntry>();
@@ -53,7 +76,6 @@ namespace Zetbox.Basic.Workflow
                 current.Instance.LogEntries.Add(logEntry);
             }
 
-            // call invocation
             // find and execute state change
             var stateChangeList = current.StateDefinition.StateChanges.Where(sc => sc.InvokedByActions.Contains(obj)).ToList();
             if (stateChangeList.Count == 0)

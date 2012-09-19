@@ -1,14 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Zetbox.API;
-
+﻿
 namespace Zetbox.Basic.Workflow
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using Zetbox.API;
+    using Zetbox.API.Common;
+    using Zetbox.App.Base;
+
+    /// <summary>
+    /// An state change invocation prototype. If nothing changes, return StateChange.NextStates. If the state should end, return null or empty. If specific states should be entered, return them.
+    /// </summary>
+    /// <param name="stateChange">the calling state change</param>
+    /// <param name="current">the current workflow state</param>
+    /// <param name="identity">the current identity or null, if the identity cannot be resolved</param>
+    /// <returns>A list of next states.</returns>
+    public delegate List<StateDefinition> StateChangeInvocationPrototype(StateChange stateChange, State current, Identity identity);
+
     [Implementor]
-    public static class StateChangeActions
+    public class StateChangeActions
     {
+        private static IIdentityResolver _idResolver;
+        public StateChangeActions(IIdentityResolver idResolver)
+        {
+            _idResolver = idResolver;
+        }
+
         [Invocation]
         public static void ToString(StateChange obj, MethodReturnEventArgs<string> e)
         {
@@ -44,9 +62,14 @@ namespace Zetbox.Basic.Workflow
         public static void Execute(StateChange obj, Zetbox.Basic.Workflow.State current)
         {
             var ctx = obj.Context;
-            var nextStates = obj.NextStates;
+            var identity = _idResolver.GetCurrent();
+
+            var nextStates = obj.NextStates.ToList();
             // call invocation
-            // nextStates = obj.ExecuteInvocation(...., nextStates);
+            if (obj.HasValidInvocation())
+            {
+                nextStates = obj.CallInvocation<List<StateDefinition>>(typeof(StateChangeInvocationPrototype), obj, current, identity);
+            }
 
             var stateEnds = true;
             if (nextStates == null || nextStates.Count == 0)
