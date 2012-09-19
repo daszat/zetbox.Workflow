@@ -27,9 +27,8 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow
         {
             var result = base.CreatePropertyGroups();
 
-            result.Add(ViewModelFactory.CreateViewModel<SinglePropertyGroupViewModel.Factory>().Invoke(DataContext, this, "Designer", new[] { 
-                ViewModelFactory.CreateViewModel<LabeledViewContainerViewModel.Factory>().Invoke(DataContext, this, "Workflow", "", 
-                    ViewModelFactory.CreateViewModel<WFDefinitionDesigner.Factory>().Invoke(DataContext, this, WFDefinition))
+            result.Add(ViewModelFactory.CreateViewModel<CustomPropertyGroupViewModel.Factory>().Invoke(DataContext, this, "Designer", new[] { 
+                    ViewModelFactory.CreateViewModel<WFDefinitionDesigner.Factory>().Invoke(DataContext, this, WFDefinition)
             }));
 
             return result;
