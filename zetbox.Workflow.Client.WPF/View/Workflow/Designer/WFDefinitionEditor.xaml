@@ -27,6 +27,27 @@
             <Setter Property="MinHeight"
                     Value="70" />
         </Style>
+        <Style TargetType="{x:Type gsCtrls:EdgeControl}"
+               x:Key="EdgeControlStyle">
+            <Setter Property="Opacity"
+                    Value="1" />
+            <Setter Property="Foreground"
+                    Value="Black" />
+            <Style.Triggers>
+                <Trigger Property="gsCtrls:GraphElementBehaviour.IsHighlighted"
+                         Value="True">
+                    <Setter Property="Foreground"
+                            Value="Blue" />
+                </Trigger>
+                <Trigger Property="gsCtrls:GraphElementBehaviour.IsSemiHighlighted"
+                         Value="True">
+                    <Setter Property="Foreground"
+                            Value="Red" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type gsCtrls:EdgeControl}"
+               BasedOn="{StaticResource EdgeControlStyle}" />
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -47,7 +68,8 @@
                                               Graph="{Binding DefinitionGraph}"
                                               HighlightAlgorithmType="Simple">
                     <self:WFDefinitionGraphLayout.Resources>
-                        <Style TargetType="{x:Type gsCtrls:EdgeControl}">
+                        <Style TargetType="{x:Type gsCtrls:EdgeControl}"
+                               BasedOn="{StaticResource EdgeControlStyle}">
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type gsCtrls:EdgeControl}">
@@ -128,6 +150,11 @@
                                                  Graph="{Binding StateDefinitionGraph}"
                                                  HighlightAlgorithmType="Simple">
                     <self:StateDefinitionGraphLayout.Resources>
+                        <DataTemplate DataType="{x:Type vm:HiddenGraphElementViewModel}">
+                            <Border Background="Transparent"
+                                    Style="{StaticResource VertexBorderStyle}">
+                            </Border>
+                        </DataTemplate>
                         <DataTemplate DataType="{x:Type vm:StateDefinitionGraphViewModel}">
                             <Border Background="#fffff3d3"
                                     Style="{StaticResource VertexBorderStyle}">

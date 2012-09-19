@@ -21,6 +21,8 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             : base(appCtx, dataCtx, parent)
         {
             WFDefinition = obj;
+            _hiddenAction = appCtx.Factory.CreateViewModel<HiddenGraphElementViewModel.Factory>().Invoke(dataCtx, this);
+            _hiddenStateChange = appCtx.Factory.CreateViewModel<HiddenGraphElementViewModel.Factory>().Invoke(dataCtx, this);
         }
 
         public wf.WFDefinition WFDefinition { get; private set; }
@@ -121,6 +123,8 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
         private Dictionary<wf.StateDefinition, StateDefinitionGraphViewModel> _stateViewModels = new Dictionary<wf.StateDefinition, StateDefinitionGraphViewModel>();
         private Dictionary<wf.Action, ActionGraphViewModel> _actionViewModels = new Dictionary<wf.Action, ActionGraphViewModel>();
         private Dictionary<wf.StateChange, StateChangeGraphViewModel> _stateChangeViewModels = new Dictionary<wf.StateChange, StateChangeGraphViewModel>();
+        private readonly HiddenGraphElementViewModel _hiddenAction;
+        private readonly HiddenGraphElementViewModel _hiddenStateChange;
 
         private StateDefinitionGraphViewModel ToStateDefinitionViewModel(wf.StateDefinition state)
         {
@@ -242,7 +246,6 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
         }
         #endregion
 
-
         #region StateDefinitionGraph
         private StateDefinitionGraph _StatedefinitionGraph;
         public StateDefinitionGraph StateDefinitionGraph
@@ -266,6 +269,13 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             {
                 _StatedefinitionGraph.AddVertex(ToActionViewModel(action));
             }
+            _StatedefinitionGraph.AddVertex(_hiddenAction);
+
+            foreach (var change in SelectedStateDefinition.StateDefinition.StateChanges)
+            {
+                _StatedefinitionGraph.AddVertex(ToStateChangeViewModel(change));
+            }
+            _StatedefinitionGraph.AddVertex(_hiddenStateChange);
 
             foreach (var state in WFDefinition.StateDefinitions)
             {
@@ -274,7 +284,6 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
 
             foreach (var change in SelectedStateDefinition.StateDefinition.StateChanges)
             {
-                _StatedefinitionGraph.AddVertex(ToStateChangeViewModel(change));
                 foreach (var action in change.InvokedByActions)
                 {
                     _StatedefinitionGraph.AddEdge(new TaggedEdge<object, StateChangeGraphViewModel>(ToActionViewModel(action), ToStateChangeViewModel(change), ToStateChangeViewModel(change)));
@@ -285,6 +294,23 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                     _StatedefinitionGraph.AddEdge(new TaggedEdge<object, StateChangeGraphViewModel>(ToStateChangeViewModel(change), ToStateDefinitionViewModel(dest), ToStateChangeViewModel(change)));
                 }
             }
+
+            foreach (var vertex in _StatedefinitionGraph.Vertices)
+            {
+                if (_StatedefinitionGraph.IsInEdgesEmpty(vertex))
+                {
+                    if (vertex is StateChangeGraphViewModel)
+                    {
+                        _StatedefinitionGraph.AddEdge(new TaggedEdge<object, HiddenGraphElementViewModel>(_hiddenAction, vertex, _hiddenStateChange));
+                    }
+                    else if (vertex is StateDefinitionGraphViewModel)
+                    {
+                        _StatedefinitionGraph.AddEdge(new TaggedEdge<object, HiddenGraphElementViewModel>(_hiddenStateChange, vertex, _hiddenStateChange));
+                    }
+                }
+            }
+
+            _StatedefinitionGraph.AddEdge(new TaggedEdge<object, HiddenGraphElementViewModel>(_hiddenAction, _hiddenStateChange, _hiddenStateChange));
         }
 
         private void ResetStateDefinitionGraph()
@@ -354,11 +380,11 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             {
                 if (_LinkChangeStateCommand == null)
                 {
-                    _LinkChangeStateCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this, 
+                    _LinkChangeStateCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this,
                         "Link change & state",
-                        "Links a state change logic and a destination state", 
+                        "Links a state change logic and a destination state",
                         LinkStateChange,
-                        () => SelectedStateChange != null && SelectedDestinationStateDefinition != null && !SelectedStateChange.StateChange.NextStates.Contains(SelectedDestinationStateDefinition.StateDefinition), 
+                        () => SelectedStateChange != null && SelectedDestinationStateDefinition != null && !SelectedStateChange.StateChange.NextStates.Contains(SelectedDestinationStateDefinition.StateDefinition),
                         null);
                 }
                 return _LinkChangeStateCommand;
@@ -385,11 +411,11 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             {
                 if (_AddActionCommand == null)
                 {
-                    _AddActionCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this, 
+                    _AddActionCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this,
                         "Add an Action",
-                        "Adds a existing Action to this state", 
-                        AddAction, 
-                        () => SelectedStateDefinition != null, 
+                        "Adds a existing Action to this state",
+                        AddAction,
+                        () => SelectedStateDefinition != null,
                         null);
                 }
                 return _AddActionCommand;
@@ -409,7 +435,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                         {
                             SelectedStateDefinition.StateDefinition.Actions.Add(action);
                         }
-                        if(lst.Count() > 0)
+                        if (lst.Count() > 0)
                         {
                             SelectedAction = ToActionViewModel((wf.Action)lst.First().Object);
                         }
@@ -427,9 +453,9 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             {
                 if (_NewStateChangeCommand == null)
                 {
-                    _NewStateChangeCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this, "New state change", "Creates a new state change logic", 
-                        NewStateChange, 
-                        () => SelectedStateDefinition != null, 
+                    _NewStateChangeCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this, "New state change", "Creates a new state change logic",
+                        NewStateChange,
+                        () => SelectedStateDefinition != null,
                         null);
                 }
                 return _NewStateChangeCommand;
@@ -486,7 +512,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                 {
                     _UnlinkChangeStateCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this,
                         "Unlink change & state",
-                        "Unlinks a state change logic and a destination state", 
+                        "Unlinks a state change logic and a destination state",
                         UnlinkChangeState,
                         () => SelectedStateChange != null && SelectedDestinationStateDefinition != null && SelectedStateChange.StateChange.NextStates.Contains(SelectedDestinationStateDefinition.StateDefinition),
                         null);
