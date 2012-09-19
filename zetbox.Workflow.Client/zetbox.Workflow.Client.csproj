@@ -109,6 +109,8 @@
   <ItemGroup>
     <Compile Include="ClientModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workflow\CommonInvocations\Action.cs" />
+    <Compile Include="Workflow\CommonInvocations\StateChange.cs" />
     <Compile Include="ViewModel\Workflow\Designer\ActionGraphViewModel.cs" />
     <Compile Include="ViewModel\Workflow\Designer\HiddenGraphElementViewModel.cs" />
     <Compile Include="ViewModel\Workflow\Designer\StateChangeGraphViewModel.cs" />

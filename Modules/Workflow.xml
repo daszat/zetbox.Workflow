@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-19T16:34:25.82948Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-19T17:31:22.6789126Z" xmlns="http://dasz.at/Zetbox">
   <ZetboxBase:Module ExportGuid="e27c7e66-f806-4b0b-bf03-4e14efff5336">
     <ZetboxBase:ChangedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:CreatedOn>
@@ -4828,6 +4828,13 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:CreatedOn>2012-09-12T09:42:33.3736238Z</ZetboxBase:CreatedOn>
     <ZetboxBase:Property>42742ed5-db02-497f-b576-fdd76c888304</ZetboxBase:Property>
   </ZetboxBase:CurrentDateTimeDefaultValue>
+  <ZetboxBase:Assembly ExportGuid="6321a6f0-b4d3-4cd4-85fe-b8f4e5e69054">
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:DeploymentRestrictions>0</ZetboxBase:DeploymentRestrictions>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>QuickGraph, Version=3.3.51106.0, Culture=neutral, PublicKeyToken=f3fb40175eec2af3</ZetboxBase:Name>
+  </ZetboxBase:Assembly>
   <ZetboxBase:Assembly ExportGuid="bf525f9e-4262-4f62-8910-ba034503fd7e">
     <ZetboxBase:ChangedOn>2012-09-12T14:18:43.6292987Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-12T14:18:43.6292987Z</ZetboxBase:CreatedOn>
@@ -4856,12 +4863,101 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
     <ZetboxBase:Name>zetbox.Workflow.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ZetboxBase:Name>
   </ZetboxBase:Assembly>
+  <ZetboxBase:TypeRef ExportGuid="0a0d892b-de5f-49bd-911e-1ee4ff02dd64">
+    <ZetboxBase:Assembly>6321a6f0-b4d3-4cd4-85fe-b8f4e5e69054</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>QuickGraph.BidirectionalGraph`2</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="c3894db1-122b-4a9a-a167-ea35e3fb3d38">
+    <ZetboxBase:Assembly>6321a6f0-b4d3-4cd4-85fe-b8f4e5e69054</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>QuickGraph.BidirectionalGraph`2</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="1d9f5adf-cf56-485d-9bf2-d4bfe608a8b9">
+    <ZetboxBase:Assembly>6321a6f0-b4d3-4cd4-85fe-b8f4e5e69054</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>QuickGraph.IEdge`1</ZetboxBase:FullName>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="5a7b8828-0bbc-4d57-8423-09574eb936ee">
+    <ZetboxBase:Assembly>6321a6f0-b4d3-4cd4-85fe-b8f4e5e69054</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>QuickGraph.IEdge`1</ZetboxBase:FullName>
+  </ZetboxBase:TypeRef>
   <ZetboxBase:TypeRef ExportGuid="81b10ebc-2859-49dc-8e59-c6637fdf336f">
     <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
     <ZetboxBase:ChangedOn>2012-09-13T14:03:04.8076643Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-13T14:03:04.8076643Z</ZetboxBase:CreatedOn>
     <ZetboxBase:FullName>zetbox.Workflow.Client.ClientModule</ZetboxBase:FullName>
     <ZetboxBase:Parent>2790156b-feec-4b8e-bbfd-2555f6bfff40</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="6ecf2b0f-2a1f-4898-9fba-9d0a992d15e6">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.Designer.ActionGraphViewModel</ZetboxBase:FullName>
+    <ZetboxBase:Parent>6012afb5-9ef6-4552-9481-b46a39f8f54d</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="a6f626b5-d0ee-45e3-8211-28f08b43a7a8">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.Designer.ActionGraphViewModel+Factory</ZetboxBase:FullName>
+    <ZetboxBase:Parent>68559faa-c4b4-4bb2-bb0d-49bb83a081a7</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="33ac997a-8a42-4bce-9735-5094b560edd8">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.Designer.HiddenGraphElementViewModel</ZetboxBase:FullName>
+    <ZetboxBase:Parent>6012afb5-9ef6-4552-9481-b46a39f8f54d</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="b5b8f5a5-a2fa-460e-aae9-0a8356baff96">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.Designer.HiddenGraphElementViewModel+Factory</ZetboxBase:FullName>
+    <ZetboxBase:Parent>68559faa-c4b4-4bb2-bb0d-49bb83a081a7</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="b2b9d5c9-651b-4b47-bc3d-baefceea17d3">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.Designer.StateChangeGraphViewModel</ZetboxBase:FullName>
+    <ZetboxBase:Parent>6012afb5-9ef6-4552-9481-b46a39f8f54d</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="37f344d6-c441-4b2e-ac64-7fc601678c91">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.Designer.StateChangeGraphViewModel+Factory</ZetboxBase:FullName>
+    <ZetboxBase:Parent>68559faa-c4b4-4bb2-bb0d-49bb83a081a7</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="fb7d353c-592e-4459-a8e5-6f6cbb8d5d7a">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.Designer.StateDefinitionGraph</ZetboxBase:FullName>
+    <ZetboxBase:Parent>0a0d892b-de5f-49bd-911e-1ee4ff02dd64</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="d16ede47-5502-492d-a93c-6619f65c1987">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.Designer.StateDefinitionGraphViewModel</ZetboxBase:FullName>
+    <ZetboxBase:Parent>6012afb5-9ef6-4552-9481-b46a39f8f54d</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="f574cfb1-7e26-4586-8834-f8e8f2637685">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.Designer.StateDefinitionGraphViewModel+Factory</ZetboxBase:FullName>
+    <ZetboxBase:Parent>68559faa-c4b4-4bb2-bb0d-49bb83a081a7</ZetboxBase:Parent>
   </ZetboxBase:TypeRef>
   <ZetboxBase:TypeRef ExportGuid="26871bcb-fa80-437d-9c15-d7d3fe157fcd">
     <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
@@ -4876,6 +4972,13 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:CreatedOn>2012-09-18T08:02:56.686848Z</ZetboxBase:CreatedOn>
     <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.Designer.WFDefinitionDesigner+Factory</ZetboxBase:FullName>
     <ZetboxBase:Parent>68559faa-c4b4-4bb2-bb0d-49bb83a081a7</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="0c08fcf2-251b-4b87-8a7f-417a9e61a020">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.Designer.WFDefinitionGraph</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c3894db1-122b-4a9a-a167-ea35e3fb3d38</ZetboxBase:Parent>
   </ZetboxBase:TypeRef>
   <ZetboxBase:TypeRef ExportGuid="1dd08119-6db3-48c4-a5f1-6215273ddd94">
     <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
@@ -4905,6 +5008,20 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.WFDefinitionViewModel+Factory</ZetboxBase:FullName>
     <ZetboxBase:Parent>68559faa-c4b4-4bb2-bb0d-49bb83a081a7</ZetboxBase:Parent>
   </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="7803b422-890a-4a73-bc51-704da47ff5f6">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.Workflow.CommonInvocations.Action</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="819641f4-4fc5-4741-be65-743c1c3d0582">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.Workflow.CommonInvocations.StateChange</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
   <ZetboxBase:TypeRef ExportGuid="154f6c18-071f-45fc-8ea5-9cdedf2b9d7a">
     <ZetboxBase:Assembly>03de75d8-4b6a-4406-81bb-7b105dd31d14</ZetboxBase:Assembly>
     <ZetboxBase:ChangedOn>2012-09-13T13:57:35.2438143Z</ZetboxBase:ChangedOn>
@@ -4926,6 +5043,119 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:FullName>zetbox.Workflow.Client.WPF.View.Workflow.StateEditor</ZetboxBase:FullName>
     <ZetboxBase:Parent>1fda132a-a95c-4483-9f9d-1e952fa20245</ZetboxBase:Parent>
   </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="f8fe1455-06cc-4f16-86ec-eb86036672aa">
+    <ZetboxBase:Assembly>1d1c8920-d01d-464c-bc3b-233b399dbdcb</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>Zetbox.Basic.Workflow.ActionActions</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="1c969f64-a367-4ee0-94bb-d5656b07e856">
+    <ZetboxBase:Assembly>1d1c8920-d01d-464c-bc3b-233b399dbdcb</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>Zetbox.Basic.Workflow.ActionInvocationPrototype</ZetboxBase:FullName>
+    <ZetboxBase:Parent>68559faa-c4b4-4bb2-bb0d-49bb83a081a7</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="9019547e-d829-4c3b-ae12-9c5378211090">
+    <ZetboxBase:Assembly>1d1c8920-d01d-464c-bc3b-233b399dbdcb</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>Zetbox.Basic.Workflow.StateActions</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="80414569-c44f-4caa-99c6-5fb879267303">
+    <ZetboxBase:Assembly>1d1c8920-d01d-464c-bc3b-233b399dbdcb</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>Zetbox.Basic.Workflow.StateChangeActions</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="815c84b6-20f4-4d27-a2d2-9cf066412add">
+    <ZetboxBase:Assembly>1d1c8920-d01d-464c-bc3b-233b399dbdcb</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>Zetbox.Basic.Workflow.StateChangeInvocationPrototype</ZetboxBase:FullName>
+    <ZetboxBase:Parent>68559faa-c4b4-4bb2-bb0d-49bb83a081a7</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="ac17c81e-5c1e-46d8-bf0e-e08b8f33b378">
+    <ZetboxBase:Assembly>1d1c8920-d01d-464c-bc3b-233b399dbdcb</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>Zetbox.Basic.Workflow.StateDefinitionActions</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="4c90a071-c6f2-4594-a9e8-2355c778e13b">
+    <ZetboxBase:Assembly>1d1c8920-d01d-464c-bc3b-233b399dbdcb</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>Zetbox.Basic.Workflow.WFDefinitionActions</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="0750d8e6-ae50-4cb4-884c-04c154235674">
+    <ZetboxBase:Assembly>1d1c8920-d01d-464c-bc3b-233b399dbdcb</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>Zetbox.Basic.Workflow.WFInstanceActions</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="06ec5eaa-e82e-416a-97bb-37183706dc7b">
+    <ZetboxBase:Assembly>1d1c8920-d01d-464c-bc3b-233b399dbdcb</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Common.CommonModule</ZetboxBase:FullName>
+    <ZetboxBase:Parent>2790156b-feec-4b8e-bbfd-2555f6bfff40</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3">
+    <ZetboxBase:Assembly>1d1c8920-d01d-464c-bc3b-233b399dbdcb</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="c022955c-539c-426f-a18f-26fdea095016">
+    <ZetboxBase:Assembly>1d1c8920-d01d-464c-bc3b-233b399dbdcb</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-19T15:28:12.5040353Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Common.Workflow.CommonInvocations.StateChange</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry ExportGuid="43d1a428-8405-4c05-b3f8-ff31dc60be87">
+    <ZetboxBase:A>0a0d892b-de5f-49bd-911e-1ee4ff02dd64</ZetboxBase:A>
+    <ZetboxBase:A_pos>2147483647</ZetboxBase:A_pos>
+    <ZetboxBase:B>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:B>
+    <ZetboxBase:B_pos>0</ZetboxBase:B_pos>
+  </ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry>
+  <ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry ExportGuid="f1d41873-21df-47e5-8ec2-2cbce745539a">
+    <ZetboxBase:A>5a7b8828-0bbc-4d57-8423-09574eb936ee</ZetboxBase:A>
+    <ZetboxBase:A_pos>2147483647</ZetboxBase:A_pos>
+    <ZetboxBase:B>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:B>
+    <ZetboxBase:B_pos>0</ZetboxBase:B_pos>
+  </ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry>
+  <ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry ExportGuid="b2fe3712-c21a-4a1c-be61-cffd90d1ffe8">
+    <ZetboxBase:A>0a0d892b-de5f-49bd-911e-1ee4ff02dd64</ZetboxBase:A>
+    <ZetboxBase:A_pos>2147483647</ZetboxBase:A_pos>
+    <ZetboxBase:B>5a7b8828-0bbc-4d57-8423-09574eb936ee</ZetboxBase:B>
+    <ZetboxBase:B_pos>1</ZetboxBase:B_pos>
+  </ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry>
+  <ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry ExportGuid="9bdbfbc7-ec74-4c4b-b22e-8529416755dc">
+    <ZetboxBase:A>c3894db1-122b-4a9a-a167-ea35e3fb3d38</ZetboxBase:A>
+    <ZetboxBase:A_pos>2147483647</ZetboxBase:A_pos>
+    <ZetboxBase:B>1d9f5adf-cf56-485d-9bf2-d4bfe608a8b9</ZetboxBase:B>
+    <ZetboxBase:B_pos>1</ZetboxBase:B_pos>
+  </ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry>
+  <ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry ExportGuid="2c3c9fd0-322d-471c-83ea-40f483229086">
+    <ZetboxBase:A>c3894db1-122b-4a9a-a167-ea35e3fb3d38</ZetboxBase:A>
+    <ZetboxBase:A_pos>2147483647</ZetboxBase:A_pos>
+    <ZetboxBase:B>d16ede47-5502-492d-a93c-6619f65c1987</ZetboxBase:B>
+    <ZetboxBase:B_pos>0</ZetboxBase:B_pos>
+  </ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry>
+  <ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry ExportGuid="ef65b4a8-dfe7-46b9-8f59-e1ba24ba9c31">
+    <ZetboxBase:A>1d9f5adf-cf56-485d-9bf2-d4bfe608a8b9</ZetboxBase:A>
+    <ZetboxBase:A_pos>2147483647</ZetboxBase:A_pos>
+    <ZetboxBase:B>d16ede47-5502-492d-a93c-6619f65c1987</ZetboxBase:B>
+    <ZetboxBase:B_pos>0</ZetboxBase:B_pos>
+  </ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry>
   <GUI:ViewModelDescriptor ExportGuid="8aa8a194-9924-482c-b5ea-075424983368">
     <GUI:DefaultEditorKind>c3fac4ef-8d8b-456a-8e0b-da8a1bc73698</GUI:DefaultEditorKind>
     <GUI:Description>WF Definition Designer</GUI:Description>
