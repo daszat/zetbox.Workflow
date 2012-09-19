@@ -59,5 +59,28 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             }
             OnPropertyChanged("IsSelected");
         }
+
+        private ICommandViewModel _EditCommand = null;
+        public ICommandViewModel EditCommand
+        {
+            get
+            {
+                if (_EditCommand == null)
+                {
+                    _EditCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this,
+                        "Edit",
+                        "Edit this state change",
+                        Edit,
+                        null,
+                        null);
+                }
+                return _EditCommand;
+            }
+        }
+
+        public void Edit()
+        {
+            ViewModelFactory.ShowModel(DataObjectViewModel.Fetch(ViewModelFactory, DataContext, ViewModelFactory.GetWorkspace(DataContext), StateChange), true);
+        }
     }
 }

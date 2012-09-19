@@ -60,7 +60,7 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
         <GroupBox Grid.Row="0"
-                  Grid.Column="0"                  
+                  Grid.Column="0"
                   Header="Workflow">
             <ScrollViewer HorizontalScrollBarVisibility="Visible"
                           VerticalScrollBarVisibility="Visible">
@@ -116,8 +116,13 @@
                             <Border Background="#fffff3d3"
                                     Style="{StaticResource VertexBorderStyle}">
                                 <Grid>
-                                    <CheckBox IsChecked="{Binding IsSelected}"
-                                              Content="Selected" />
+                                    <DockPanel VerticalAlignment="Top">
+                                        <CheckBox DockPanel.Dock="Left"
+                                                  IsChecked="{Binding IsSelected}"
+                                                  Content="Selected" />
+                                        <ctrls:CommandButton DockPanel.Dock="Right"
+                                                             CommandViewModel="{Binding EditCommand}" />
+                                    </DockPanel>
                                     <TextBlock Text="{Binding Name}"
                                                HorizontalAlignment="Center"
                                                VerticalAlignment="Center" />
@@ -138,11 +143,11 @@
             </ScrollViewer>
         </GroupBox>
         <GridSplitter Grid.Row="1"
-                      Grid.Column="0"                      
+                      Grid.Column="0"
                       Grid.ColumnSpan="2"
                       ResizeDirection="Rows" />
-        <GroupBox Grid.Row="2"                  
-                  Grid.Column="0"                  
+        <GroupBox Grid.Row="2"
+                  Grid.Column="0"
                   Header="{Binding SelectedStateDefinition.Name}">
             <ScrollViewer HorizontalScrollBarVisibility="Visible"
                           VerticalScrollBarVisibility="Visible">
@@ -159,8 +164,13 @@
                             <Border Background="#fffff3d3"
                                     Style="{StaticResource VertexBorderStyle}">
                                 <Grid>
-                                    <CheckBox IsChecked="{Binding IsSelectedDestination}"
-                                              Content="Selected as destination" />
+                                    <DockPanel VerticalAlignment="Top">
+                                        <CheckBox DockPanel.Dock="Left"
+                                                  IsChecked="{Binding IsSelectedDestination}"
+                                                  Content="Selected as destination" />
+                                        <ctrls:CommandButton DockPanel.Dock="Right"
+                                                             CommandViewModel="{Binding EditCommand}" />
+                                    </DockPanel>
                                     <TextBlock Text="{Binding Name}"
                                                HorizontalAlignment="Center"
                                                VerticalAlignment="Center" />
@@ -171,7 +181,13 @@
                             <Border Background="Green"
                                     Style="{StaticResource VertexBorderStyle}">
                                 <Grid>
-                                    <CheckBox IsChecked="{Binding IsSelected}" />
+                                    <DockPanel VerticalAlignment="Top">
+                                        <CheckBox DockPanel.Dock="Left"
+                                                  IsChecked="{Binding IsSelected}"
+                                                  Content="Selected" />
+                                        <ctrls:CommandButton DockPanel.Dock="Right"
+                                                             CommandViewModel="{Binding EditCommand}" />
+                                    </DockPanel>
                                     <TextBlock Text="{Binding Name}"
                                                HorizontalAlignment="Center"
                                                VerticalAlignment="Center" />
@@ -183,7 +199,13 @@
                                     CornerRadius="40"
                                     Style="{StaticResource VertexBorderStyle}">
                                 <Grid>
-                                    <CheckBox IsChecked="{Binding IsSelected}" />
+                                    <DockPanel VerticalAlignment="Top">
+                                        <CheckBox DockPanel.Dock="Left"
+                                                  IsChecked="{Binding IsSelected}"
+                                                  Content="Selected" />
+                                        <ctrls:CommandButton DockPanel.Dock="Right"
+                                                             CommandViewModel="{Binding EditCommand}" />
+                                    </DockPanel>
                                     <TextBlock Text="{Binding Name}"
                                                HorizontalAlignment="Center"
                                                VerticalAlignment="Center" />

@@ -339,6 +339,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
         {
             var stateDef = DataContext.Create<wf.StateDefinition>();
             WFDefinition.StateDefinitions.Add(stateDef);
+            stateDef.Module = WFDefinition.Module;
             SelectedStateDefinition = ToStateDefinitionViewModel(stateDef);
             ResetDefinitionGraph();
         }
@@ -467,6 +468,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             if (SelectedStateDefinition != null)
             {
                 var change = DataContext.Create<wf.StateChange>();
+                change.Module = WFDefinition.Module;
                 SelectedStateDefinition.StateDefinition.StateChanges.Add(change);
                 SelectedStateChange = ToStateChangeViewModel(change);
                 ResetStateDefinitionGraph();
