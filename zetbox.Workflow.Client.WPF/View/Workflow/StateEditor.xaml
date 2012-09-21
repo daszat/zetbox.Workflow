@@ -48,6 +48,12 @@
                     <ctrls:LabeledView DataContext="{Binding InstanceViewModel.PropertyModelsByName[States]}" />
                 </StackPanel>
             </TabItem>
+            <TabItem Header="Responsibles">
+                <StackPanel>
+                    <ctrls:LabeledView DataContext="{Binding PropertyModelsByName[Persons]}" />
+                    <ctrls:LabeledView DataContext="{Binding PropertyModelsByName[Groups]}" />
+                </StackPanel>
+            </TabItem>
         </TabControl>
 
         <GroupBox Header="Payload">
