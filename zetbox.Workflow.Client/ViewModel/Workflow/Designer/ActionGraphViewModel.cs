@@ -11,15 +11,15 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
     // [ViewModelDescriptor] Used internal
     public class ActionGraphViewModel : ViewModel
     {
-        public new delegate ActionGraphViewModel Factory(IZetboxContext dataCtx, ViewModel parent, wf.Action action);
+        public new delegate ActionGraphViewModel Factory(IZetboxContext dataCtx, ViewModel parent, wf.ParameterizedActionDefinition action);
 
-        public ActionGraphViewModel(IViewModelDependencies appCtx, IZetboxContext dataCtx, ViewModel parent, wf.Action action)
+        public ActionGraphViewModel(IViewModelDependencies appCtx, IZetboxContext dataCtx, ViewModel parent, wf.ParameterizedActionDefinition action)
             : base(appCtx, dataCtx, parent)
         {
             Action = action;
         }
 
-        public wf.Action Action { get; private set; }
+        public wf.ParameterizedActionDefinition Action { get; private set; }
 
         public override string Name
         {

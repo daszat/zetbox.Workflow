@@ -11,15 +11,15 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
     // [ViewModelDescriptor] Used internal
     public class StateChangeGraphViewModel : ViewModel
     {
-        public new delegate StateChangeGraphViewModel Factory(IZetboxContext dataCtx, ViewModel parent, wf.StateChange change);
+        public new delegate StateChangeGraphViewModel Factory(IZetboxContext dataCtx, ViewModel parent, wf.StateChangeDefinition change);
 
-        public StateChangeGraphViewModel(IViewModelDependencies appCtx, IZetboxContext dataCtx, ViewModel parent, wf.StateChange change)
+        public StateChangeGraphViewModel(IViewModelDependencies appCtx, IZetboxContext dataCtx, ViewModel parent, wf.StateChangeDefinition change)
             : base(appCtx, dataCtx, parent)
         {
             StateChange = change;
         }
 
-        public wf.StateChange StateChange { get; private set; }
+        public wf.StateChangeDefinition StateChange { get; private set; }
 
         public override string Name
         {

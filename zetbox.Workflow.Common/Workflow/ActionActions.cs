@@ -50,7 +50,7 @@ namespace Zetbox.Basic.Workflow
         }
 
         [Invocation]
-        public static void Execute(Action obj, Zetbox.Basic.Workflow.State current)
+        public static void Execute(Action obj, ParameterizedActionDefinition paramedAction, State current)
         {
             if(current == null) throw new ArgumentException("current");
             var ctx = obj.Context;
@@ -70,7 +70,7 @@ namespace Zetbox.Basic.Workflow
             current.Instance.AddLogEntry(obj.LogMessageFormat);
 
             // find and execute state change
-            var stateChangeList = current.StateDefinition.StateChanges.Where(sc => sc.InvokedByActions.Contains(obj)).ToList();
+            var stateChangeList = current.StateDefinition.StateChanges.Where(sc => sc.InvokedByActions.Contains(paramedAction)).ToList();
             if (stateChangeList.Count == 0)
             {
                 // Action does not invoke a state change

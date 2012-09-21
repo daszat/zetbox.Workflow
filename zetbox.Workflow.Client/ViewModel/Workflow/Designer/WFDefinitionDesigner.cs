@@ -121,8 +121,8 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
 
         #region ViewModelsCache
         private Dictionary<wf.StateDefinition, StateDefinitionGraphViewModel> _stateViewModels = new Dictionary<wf.StateDefinition, StateDefinitionGraphViewModel>();
-        private Dictionary<wf.Action, ActionGraphViewModel> _actionViewModels = new Dictionary<wf.Action, ActionGraphViewModel>();
-        private Dictionary<wf.StateChange, StateChangeGraphViewModel> _stateChangeViewModels = new Dictionary<wf.StateChange, StateChangeGraphViewModel>();
+        private Dictionary<wf.ParameterizedActionDefinition, ActionGraphViewModel> _actionViewModels = new Dictionary<wf.ParameterizedActionDefinition, ActionGraphViewModel>();
+        private Dictionary<wf.StateChangeDefinition, StateChangeGraphViewModel> _stateChangeViewModels = new Dictionary<wf.StateChangeDefinition, StateChangeGraphViewModel>();
         private readonly HiddenGraphElementViewModel _hiddenAction;
         private readonly HiddenGraphElementViewModel _hiddenStateChange;
 
@@ -161,7 +161,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             return _stateViewModels[state];
         }
 
-        private StateChangeGraphViewModel ToStateChangeViewModel(wf.StateChange change)
+        private StateChangeGraphViewModel ToStateChangeViewModel(wf.StateChangeDefinition change)
         {
             if (!_stateChangeViewModels.ContainsKey(change))
             {
@@ -183,7 +183,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             return _stateChangeViewModels[change];
         }
 
-        private ActionGraphViewModel ToActionViewModel(wf.Action action)
+        private ActionGraphViewModel ToActionViewModel(wf.ParameterizedActionDefinition action)
         {
             if (!_actionViewModels.ContainsKey(action))
             {
@@ -432,13 +432,13 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                     null,
                     (lst) =>
                     {
-                        foreach (var action in lst.Select(i => i.Object).Cast<wf.Action>())
+                        foreach (var action in lst.Select(i => i.Object).Cast<wf.ParameterizedActionDefinition>())
                         {
                             SelectedStateDefinition.StateDefinition.Actions.Add(action);
                         }
                         if (lst.Count() > 0)
                         {
-                            SelectedAction = ToActionViewModel((wf.Action)lst.First().Object);
+                            SelectedAction = ToActionViewModel((wf.ParameterizedActionDefinition)lst.First().Object);
                         }
                         ResetStateDefinitionGraph();
                     },
@@ -467,7 +467,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
         {
             if (SelectedStateDefinition != null)
             {
-                var change = DataContext.Create<wf.StateChange>();
+                var change = DataContext.Create<wf.StateChangeDefinition>();
                 change.Module = WFDefinition.Module;
                 SelectedStateDefinition.StateDefinition.StateChanges.Add(change);
                 SelectedStateChange = ToStateChangeViewModel(change);

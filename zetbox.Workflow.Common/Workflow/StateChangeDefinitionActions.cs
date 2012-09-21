@@ -16,27 +16,27 @@ namespace Zetbox.Basic.Workflow
     /// <param name="current">the current workflow state</param>
     /// <param name="identity">the current identity or null, if the identity cannot be resolved</param>
     /// <returns>A list of next states.</returns>
-    public delegate List<StateDefinition> StateChangeInvocationPrototype(StateChange stateChange, State current, Identity identity);
+    public delegate List<StateDefinition> StateChangeInvocationPrototype(StateChangeDefinition stateChange, State current, Identity identity);
 
     [Implementor]
-    public class StateChangeActions
+    public class StateChangeDefinitionActions
     {
         private static IIdentityResolver _idResolver;
         private static IInvocationExecutor _invocationExec;
-        public StateChangeActions(IIdentityResolver idResolver, IInvocationExecutor invocationExec)
+        public StateChangeDefinitionActions(IIdentityResolver idResolver, IInvocationExecutor invocationExec)
         {
             _idResolver = idResolver;
             _invocationExec = invocationExec;
         }
 
         [Invocation]
-        public static void ToString(StateChange obj, MethodReturnEventArgs<string> e)
+        public static void ToString(StateChangeDefinition obj, MethodReturnEventArgs<string> e)
         {
             e.Result = obj.Name;
         }
 
         [Invocation]
-        public static void isValid_InvokedByActions(StateChange obj, PropertyIsValidEventArgs e)
+        public static void isValid_InvokedByActions(StateChangeDefinition obj, PropertyIsValidEventArgs e)
         {
             // Check if actions invoke only one state change
             if (obj.StateDefinition != null)
@@ -44,12 +44,12 @@ namespace Zetbox.Basic.Workflow
                 var allOtherActions = obj.StateDefinition.StateChanges.Except(new[] { obj }).SelectMany(sc => sc.InvokedByActions);
                 var actions = allOtherActions.Intersect(obj.InvokedByActions).ToList();
                 e.IsValid = actions.Count == 0;
-                e.Error = e.IsValid ? string.Empty : "A Action is invoking more than one state change. This state change is one of it. Actions found: " + string.Join(", ", actions.Select(a => a.Name).ToArray());
+                e.Error = e.IsValid ? string.Empty : "A Action is invoking more than one state change. This state change is one of it. Actions found: " + string.Join(", ", actions.Select(a => a.Action.Name).ToArray());
             }
         }
 
         [Invocation]
-        public static void isValid_NextStates(StateChange obj, PropertyIsValidEventArgs e)
+        public static void isValid_NextStates(StateChangeDefinition obj, PropertyIsValidEventArgs e)
         {
             // Check if next states are member of the same workflow definition
             if (obj.StateDefinition != null)
@@ -61,7 +61,7 @@ namespace Zetbox.Basic.Workflow
         }
 
         [Invocation]
-        public static void Execute(StateChange obj, Zetbox.Basic.Workflow.State current)
+        public static void Execute(StateChangeDefinition obj, Zetbox.Basic.Workflow.State current)
         {
             var ctx = obj.Context;
             var identity = _idResolver.GetCurrent();
