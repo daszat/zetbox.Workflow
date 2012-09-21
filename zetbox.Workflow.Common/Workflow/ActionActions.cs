@@ -18,7 +18,7 @@ namespace Zetbox.Basic.Workflow
     /// <param name="current">the current workflow state</param>
     /// <param name="identity">the current identity or null, if the identity cannot be resolved</param>
     /// <returns>False to skip a state change and log entry.</returns>
-    public delegate bool ActionInvocationPrototype(Action action, State current, Identity identity);
+    public delegate bool ActionInvocationPrototype(Action action, ParameterizedActionDefinition parameter, State current, Identity identity);
 
     [Implementor]
     public class ActionActions

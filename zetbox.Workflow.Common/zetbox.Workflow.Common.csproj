@@ -72,6 +72,7 @@
     <Compile Include="Workflow\CommonInvocations\Action.cs" />
     <Compile Include="Workflow\CommonInvocations\StateChange.cs" />
     <Compile Include="Workflow\ParameterizedActionDefinitionActions.cs" />
+    <Compile Include="Workflow\SchedulerActionActions.cs" />
     <Compile Include="Workflow\StateDefinitionActions.cs" />
     <Compile Include="Workflow\ActionActions.cs" />
     <Compile Include="Workflow\StateChangeDefinitionActions.cs" />

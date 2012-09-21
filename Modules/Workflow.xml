@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-21T15:42:53.8912073Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-21T17:33:01.397135Z" xmlns="http://dasz.at/Zetbox">
   <ZetboxBase:Module ExportGuid="e27c7e66-f806-4b0b-bf03-4e14efff5336">
     <ZetboxBase:ChangedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:CreatedOn>
@@ -144,6 +144,146 @@ public static void ObjectIsValid(ParameterizedActionDefinition obj, ObjectIsVali
     <ZetboxBase:IsFrozenObject>false</ZetboxBase:IsFrozenObject>
     <GUI:IsSimpleObject>false</GUI:IsSimpleObject>
     <ZetboxBase:TableName>ParameterizedActionDefinitions</ZetboxBase:TableName>
+  </ZetboxBase:ObjectClass>
+  <ZetboxBase:ObjectClass ExportGuid="62053394-6f4e-45f6-814b-77c7446d859b">
+    <ZetboxBase:ChangedOn>2012-09-21T15:14:19.4549636Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-21T15:14:19.4549636Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Description>Parameterized action definition for scheduler actions</ZetboxBase:Description>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>ScheduledActionDefinition</ZetboxBase:Name>
+    <GUI:ShowIconInLists>false</GUI:ShowIconInLists>
+    <GUI:ShowIdInLists>false</GUI:ShowIdInLists>
+    <GUI:ShowNameInLists>false</GUI:ShowNameInLists>
+    <ZetboxBase:BaseObjectClass>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:BaseObjectClass>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void ToString(ScheduledActionDefinition obj, MethodReturnEventArgs&lt;string&gt; e)
+{
+}
+
+[Invocation]
+public static void NotifyPreSave(ScheduledActionDefinition obj)
+{
+}
+
+[Invocation]
+public static void NotifyPostSave(ScheduledActionDefinition obj)
+{
+}
+
+[Invocation]
+public static void NotifyCreated(ScheduledActionDefinition obj)
+{
+}
+
+[Invocation]
+public static void NotifyDeleting(ScheduledActionDefinition obj)
+{
+}
+
+[Invocation]
+public static void ObjectIsValid(ScheduledActionDefinition obj, ObjectIsValidEventArgs e)
+{
+}
+
+</ZetboxBase:CodeTemplate>
+    <GUI:DefaultViewModelDescriptor>d8e95ac5-d46a-4dfa-a574-12ea299eadc4</GUI:DefaultViewModelDescriptor>
+    <ZetboxBase:IsAbstract>false</ZetboxBase:IsAbstract>
+    <ZetboxBase:IsFrozenObject>false</ZetboxBase:IsFrozenObject>
+    <GUI:IsSimpleObject>false</GUI:IsSimpleObject>
+    <ZetboxBase:TableName>ScheduledActionDefinitions</ZetboxBase:TableName>
+  </ZetboxBase:ObjectClass>
+  <ZetboxBase:ObjectClass ExportGuid="48c4d27b-9944-4550-9000-a41eed623d76">
+    <ZetboxBase:ChangedOn>2012-09-21T15:02:17.288658Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-21T15:02:17.288658Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Description>A action that is able to schedule another action at relative or absolute points in time</ZetboxBase:Description>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>SchedulerAction</ZetboxBase:Name>
+    <GUI:ShowIconInLists>false</GUI:ShowIconInLists>
+    <GUI:ShowIdInLists>false</GUI:ShowIdInLists>
+    <GUI:ShowNameInLists>false</GUI:ShowNameInLists>
+    <ZetboxBase:BaseObjectClass>f33e0ab3-84ee-4543-90c1-a615191118d2</ZetboxBase:BaseObjectClass>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void ToString(SchedulerAction obj, MethodReturnEventArgs&lt;string&gt; e)
+{
+}
+
+[Invocation]
+public static void NotifyPreSave(SchedulerAction obj)
+{
+}
+
+[Invocation]
+public static void NotifyPostSave(SchedulerAction obj)
+{
+}
+
+[Invocation]
+public static void NotifyCreated(SchedulerAction obj)
+{
+}
+
+[Invocation]
+public static void NotifyDeleting(SchedulerAction obj)
+{
+}
+
+[Invocation]
+public static void ObjectIsValid(SchedulerAction obj, ObjectIsValidEventArgs e)
+{
+}
+
+</ZetboxBase:CodeTemplate>
+    <GUI:DefaultViewModelDescriptor>d8e95ac5-d46a-4dfa-a574-12ea299eadc4</GUI:DefaultViewModelDescriptor>
+    <ZetboxBase:IsAbstract>false</ZetboxBase:IsAbstract>
+    <ZetboxBase:IsFrozenObject>false</ZetboxBase:IsFrozenObject>
+    <GUI:IsSimpleObject>false</GUI:IsSimpleObject>
+    <ZetboxBase:TableName>SchedulerActions</ZetboxBase:TableName>
+  </ZetboxBase:ObjectClass>
+  <ZetboxBase:ObjectClass ExportGuid="7246da29-bf13-4b7b-88ed-e8424045ba8c">
+    <ZetboxBase:ChangedOn>2012-09-21T14:57:31.9763391Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-21T14:50:59.9479163Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Description>An entry for the workflow scheduler</ZetboxBase:Description>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>SchedulerEntry</ZetboxBase:Name>
+    <GUI:ShowIconInLists>false</GUI:ShowIconInLists>
+    <GUI:ShowIdInLists>false</GUI:ShowIdInLists>
+    <GUI:ShowNameInLists>false</GUI:ShowNameInLists>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void ToString(SchedulerEntry obj, MethodReturnEventArgs&lt;string&gt; e)
+{
+}
+
+[Invocation]
+public static void NotifyPreSave(SchedulerEntry obj)
+{
+}
+
+[Invocation]
+public static void NotifyPostSave(SchedulerEntry obj)
+{
+}
+
+[Invocation]
+public static void NotifyCreated(SchedulerEntry obj)
+{
+}
+
+[Invocation]
+public static void NotifyDeleting(SchedulerEntry obj)
+{
+}
+
+[Invocation]
+public static void ObjectIsValid(SchedulerEntry obj, ObjectIsValidEventArgs e)
+{
+}
+
+</ZetboxBase:CodeTemplate>
+    <GUI:DefaultViewModelDescriptor>d8e95ac5-d46a-4dfa-a574-12ea299eadc4</GUI:DefaultViewModelDescriptor>
+    <ZetboxBase:IsAbstract>false</ZetboxBase:IsAbstract>
+    <ZetboxBase:IsFrozenObject>false</ZetboxBase:IsFrozenObject>
+    <GUI:IsSimpleObject>true</GUI:IsSimpleObject>
+    <ZetboxBase:TableName>SchedulerEntries</ZetboxBase:TableName>
   </ZetboxBase:ObjectClass>
   <ZetboxBase:ObjectClass ExportGuid="1d502a56-825c-462a-87d7-d705a4e0ba8d">
     <ZetboxBase:ChangedOn>2012-09-12T09:43:50.1840171Z</ZetboxBase:ChangedOn>
@@ -1122,7 +1262,7 @@ public static void isValid_Action(ParameterizedActionDefinition obj, PropertyIsV
   </ZetboxBase:ObjectReferenceProperty>
   <ZetboxBase:ObjectReferenceProperty ExportGuid="bcb83879-6209-4766-9843-22cbf1f9624f">
     <ZetboxBase:CategoryTags>Changed</ZetboxBase:CategoryTags>
-    <ZetboxBase:ChangedOn>2012-09-21T13:11:32.9166217Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ChangedOn>2012-09-21T15:30:28.3393806Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
 public static void get_ChangedBy(ParameterizedActionDefinition obj, PropertyGetterEventArgs&lt;Zetbox.App.Base.Identity&gt; e)
 {
@@ -1151,14 +1291,14 @@ public static void isValid_ChangedBy(ParameterizedActionDefinition obj, Property
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
     <ZetboxBase:Name>ChangedBy</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:ObjectClass>
-    <ZetboxBase:Properties_pos>6</ZetboxBase:Properties_pos>
+    <ZetboxBase:Properties_pos>8</ZetboxBase:Properties_pos>
     <GUI:ValueModelDescriptor>83aae6fd-0fae-4348-b313-737a6e751027</GUI:ValueModelDescriptor>
     <ZetboxBase:EagerLoading>false</ZetboxBase:EagerLoading>
     <ZetboxBase:RelationEnd>488bcafe-b5df-4dd6-8e14-c6839b8c26a1</ZetboxBase:RelationEnd>
   </ZetboxBase:ObjectReferenceProperty>
   <ZetboxBase:DateTimeProperty ExportGuid="98b5bc1b-21aa-4ef6-8caf-abab73b45ed4">
     <ZetboxBase:CategoryTags>Changed</ZetboxBase:CategoryTags>
-    <ZetboxBase:ChangedOn>2012-09-21T13:11:32.9166217Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ChangedOn>2012-09-21T15:30:28.3393806Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
 public static void get_ChangedOn(ParameterizedActionDefinition obj, PropertyGetterEventArgs&lt;DateTime&gt; e)
 {
@@ -1188,7 +1328,7 @@ public static void isValid_ChangedOn(ParameterizedActionDefinition obj, Property
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
     <ZetboxBase:Name>ChangedOn</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:ObjectClass>
-    <ZetboxBase:Properties_pos>4</ZetboxBase:Properties_pos>
+    <ZetboxBase:Properties_pos>6</ZetboxBase:Properties_pos>
     <GUI:ValueModelDescriptor>fc74b434-3801-4e4a-ab67-e65a9e014005</GUI:ValueModelDescriptor>
     <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
     <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
@@ -1196,7 +1336,7 @@ public static void isValid_ChangedOn(ParameterizedActionDefinition obj, Property
   </ZetboxBase:DateTimeProperty>
   <ZetboxBase:ObjectReferenceProperty ExportGuid="1776654d-cfd9-49cd-8a8a-cda5eeb41560">
     <ZetboxBase:CategoryTags>Changed</ZetboxBase:CategoryTags>
-    <ZetboxBase:ChangedOn>2012-09-21T13:11:32.9166217Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ChangedOn>2012-09-21T15:30:28.3393806Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
 public static void get_CreatedBy(ParameterizedActionDefinition obj, PropertyGetterEventArgs&lt;Zetbox.App.Base.Identity&gt; e)
 {
@@ -1225,14 +1365,14 @@ public static void isValid_CreatedBy(ParameterizedActionDefinition obj, Property
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
     <ZetboxBase:Name>CreatedBy</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:ObjectClass>
-    <ZetboxBase:Properties_pos>5</ZetboxBase:Properties_pos>
+    <ZetboxBase:Properties_pos>7</ZetboxBase:Properties_pos>
     <GUI:ValueModelDescriptor>83aae6fd-0fae-4348-b313-737a6e751027</GUI:ValueModelDescriptor>
     <ZetboxBase:EagerLoading>false</ZetboxBase:EagerLoading>
     <ZetboxBase:RelationEnd>22344145-1d1e-4365-813b-5b856845b130</ZetboxBase:RelationEnd>
   </ZetboxBase:ObjectReferenceProperty>
   <ZetboxBase:DateTimeProperty ExportGuid="ce313303-c395-4fab-a48a-65ebd0274c6b">
     <ZetboxBase:CategoryTags>Changed</ZetboxBase:CategoryTags>
-    <ZetboxBase:ChangedOn>2012-09-21T13:11:32.9166217Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ChangedOn>2012-09-21T15:30:28.3393806Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
 public static void get_CreatedOn(ParameterizedActionDefinition obj, PropertyGetterEventArgs&lt;DateTime&gt; e)
 {
@@ -1262,7 +1402,7 @@ public static void isValid_CreatedOn(ParameterizedActionDefinition obj, Property
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
     <ZetboxBase:Name>CreatedOn</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:ObjectClass>
-    <ZetboxBase:Properties_pos>3</ZetboxBase:Properties_pos>
+    <ZetboxBase:Properties_pos>5</ZetboxBase:Properties_pos>
     <GUI:ValueModelDescriptor>fc74b434-3801-4e4a-ab67-e65a9e014005</GUI:ValueModelDescriptor>
     <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
     <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
@@ -1270,7 +1410,7 @@ public static void isValid_CreatedOn(ParameterizedActionDefinition obj, Property
   </ZetboxBase:DateTimeProperty>
   <ZetboxBase:GuidProperty ExportGuid="c249eef4-3c26-4f2a-9259-004dbeb6a3e0">
     <ZetboxBase:CategoryTags>Export</ZetboxBase:CategoryTags>
-    <ZetboxBase:ChangedOn>2012-09-21T13:11:32.9166217Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ChangedOn>2012-09-21T15:30:28.3393806Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
 public static void get_ExportGuid(ParameterizedActionDefinition obj, PropertyGetterEventArgs&lt;Guid&gt; e)
 {
@@ -1300,15 +1440,91 @@ public static void isValid_ExportGuid(ParameterizedActionDefinition obj, Propert
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
     <ZetboxBase:Name>ExportGuid</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:ObjectClass>
-    <ZetboxBase:Properties_pos>8</ZetboxBase:Properties_pos>
+    <ZetboxBase:Properties_pos>10</ZetboxBase:Properties_pos>
     <GUI:ValueModelDescriptor>2b6fb70f-a382-4057-a139-cc33333d619d</GUI:ValueModelDescriptor>
     <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
     <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
     <ZetboxBase:IsList>false</ZetboxBase:IsList>
   </ZetboxBase:GuidProperty>
+  <ZetboxBase:BoolProperty ExportGuid="38566d3e-b17a-414b-a4f2-b4b704fcfe5d">
+    <ZetboxBase:CategoryTags>Summary</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:30:28.3393806Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_IsOnEnterAction(ParameterizedActionDefinition obj, PropertyGetterEventArgs&lt;bool&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_IsOnEnterAction(ParameterizedActionDefinition obj, PropertyPreSetterEventArgs&lt;bool&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_IsOnEnterAction(ParameterizedActionDefinition obj, PropertyPostSetterEventArgs&lt;bool&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_IsOnEnterAction(ParameterizedActionDefinition obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.IsOnEnterAction == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:30:19.9559011Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:DefaultValue>f6b1863e-ab76-4bb8-9eb4-4830bc337098</ZetboxBase:DefaultValue>
+    <ZetboxBase:Label>Is on-enter action</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>IsOnEnterAction</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>4</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>09d1f453-d0d9-429e-88e7-e84b33de7c2e</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:BoolProperty>
+  <ZetboxBase:BoolProperty ExportGuid="6a060f90-c3e5-404d-bd2d-0976cbf99998">
+    <ZetboxBase:CategoryTags>Summary</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:30:19.9559011Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_IsVisible(ParameterizedActionDefinition obj, PropertyGetterEventArgs&lt;bool&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_IsVisible(ParameterizedActionDefinition obj, PropertyPreSetterEventArgs&lt;bool&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_IsVisible(ParameterizedActionDefinition obj, PropertyPostSetterEventArgs&lt;bool&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_IsVisible(ParameterizedActionDefinition obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.IsVisible == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:30:19.9559011Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:DefaultValue>a663ca6e-6241-45f3-a410-f97f040d95f7</ZetboxBase:DefaultValue>
+    <ZetboxBase:Label>Is visible</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>IsVisible</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>3</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>09d1f453-d0d9-429e-88e7-e84b33de7c2e</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:BoolProperty>
   <ZetboxBase:ObjectReferenceProperty ExportGuid="8ce85c16-277b-43df-ba46-4830ffee69ba">
     <ZetboxBase:CategoryTags>MetaData</ZetboxBase:CategoryTags>
-    <ZetboxBase:ChangedOn>2012-09-21T13:11:32.9166217Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ChangedOn>2012-09-21T15:30:28.3393806Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
 public static void get_Module(ParameterizedActionDefinition obj, PropertyGetterEventArgs&lt;Zetbox.App.Base.Module&gt; e)
 {
@@ -1336,7 +1552,7 @@ public static void isValid_Module(ParameterizedActionDefinition obj, PropertyIsV
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
     <ZetboxBase:Name>Module</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:ObjectClass>
-    <ZetboxBase:Properties_pos>7</ZetboxBase:Properties_pos>
+    <ZetboxBase:Properties_pos>9</ZetboxBase:Properties_pos>
     <GUI:RequestedKind>d30d2676-7f2f-4f0d-895a-e46f19b8f526</GUI:RequestedKind>
     <GUI:ValueModelDescriptor>83aae6fd-0fae-4348-b313-737a6e751027</GUI:ValueModelDescriptor>
     <ZetboxBase:EagerLoading>false</ZetboxBase:EagerLoading>
@@ -1412,6 +1628,810 @@ public static void isValid_StateDefinition(ParameterizedActionDefinition obj, Pr
     <GUI:ValueModelDescriptor>83aae6fd-0fae-4348-b313-737a6e751027</GUI:ValueModelDescriptor>
     <ZetboxBase:EagerLoading>false</ZetboxBase:EagerLoading>
     <ZetboxBase:RelationEnd>a32a82b4-5f98-4923-8e90-9a7faa27b9f7</ZetboxBase:RelationEnd>
+  </ZetboxBase:ObjectReferenceProperty>
+  <ZetboxBase:IntProperty ExportGuid="3324b753-f33f-472f-8706-aebfba763bb7">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:33:01.397135Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_Days(ScheduledActionDefinition obj, PropertyGetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_Days(ScheduledActionDefinition obj, PropertyPreSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_Days(ScheduledActionDefinition obj, PropertyPostSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_Days(ScheduledActionDefinition obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.Days == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:21:55.4550453Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>Days</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>62053394-6f4e-45f6-814b-77c7446d859b</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>8</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>edaf9334-dc36-4778-aa33-1e5cdaeeb767</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:IntProperty>
+  <ZetboxBase:BoolProperty ExportGuid="5cb8a563-af45-422c-9cf8-3bd75e8bb062">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:28:25.4823536Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_EveryDay(ScheduledActionDefinition obj, PropertyGetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_EveryDay(ScheduledActionDefinition obj, PropertyPreSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_EveryDay(ScheduledActionDefinition obj, PropertyPostSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_EveryDay(ScheduledActionDefinition obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.EveryDay == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:20:40.0587328Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Label>Every day</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>EveryDay</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>62053394-6f4e-45f6-814b-77c7446d859b</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>5</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>09d1f453-d0d9-429e-88e7-e84b33de7c2e</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:BoolProperty>
+  <ZetboxBase:BoolProperty ExportGuid="3227c35a-c1df-4588-a0a7-851842967f46">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:33:01.397135Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_EveryMonth(ScheduledActionDefinition obj, PropertyGetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_EveryMonth(ScheduledActionDefinition obj, PropertyPreSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_EveryMonth(ScheduledActionDefinition obj, PropertyPostSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_EveryMonth(ScheduledActionDefinition obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.EveryMonth == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:25:53.1626414Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Label>Every month</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>EveryMonth</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>62053394-6f4e-45f6-814b-77c7446d859b</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>3</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>09d1f453-d0d9-429e-88e7-e84b33de7c2e</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:BoolProperty>
+  <ZetboxBase:BoolProperty ExportGuid="0a740047-7791-4758-b39d-71e9b3aaafb9">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:33:01.397135Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_EveryQuater(ScheduledActionDefinition obj, PropertyGetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_EveryQuater(ScheduledActionDefinition obj, PropertyPreSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_EveryQuater(ScheduledActionDefinition obj, PropertyPostSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_EveryQuater(ScheduledActionDefinition obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.EveryQuater == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:19:03.4932096Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Label>Every quater</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>EveryQuater</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>62053394-6f4e-45f6-814b-77c7446d859b</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>2</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>09d1f453-d0d9-429e-88e7-e84b33de7c2e</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:BoolProperty>
+  <ZetboxBase:EnumerationProperty ExportGuid="2a5ef994-ecac-4959-82e2-ac3dac8956cc">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:33:01.397135Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_EveryWeekDay(ScheduledActionDefinition obj, PropertyGetterEventArgs&lt;Zetbox.App.Base.DayOfWeek?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_EveryWeekDay(ScheduledActionDefinition obj, PropertyPreSetterEventArgs&lt;Zetbox.App.Base.DayOfWeek?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_EveryWeekDay(ScheduledActionDefinition obj, PropertyPostSetterEventArgs&lt;Zetbox.App.Base.DayOfWeek?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_EveryWeekDay(ScheduledActionDefinition obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.EveryWeekDay == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:14:19.4549636Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Label>Every week day</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>EveryWeekDay</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>62053394-6f4e-45f6-814b-77c7446d859b</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>4</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>a6ff986c-a485-4c4d-947c-e59d14112ec2</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+    <ZetboxBase:Enumeration>3961bb73-7ab6-4529-9457-ede6927224c7</ZetboxBase:Enumeration>
+  </ZetboxBase:EnumerationProperty>
+  <ZetboxBase:BoolProperty ExportGuid="1290a10f-681d-4983-be98-9c03e73495da">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:33:01.397135Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_EveryYear(ScheduledActionDefinition obj, PropertyGetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_EveryYear(ScheduledActionDefinition obj, PropertyPreSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_EveryYear(ScheduledActionDefinition obj, PropertyPostSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_EveryYear(ScheduledActionDefinition obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.EveryYear == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:19:03.4932096Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Label>Every year</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>EveryYear</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>62053394-6f4e-45f6-814b-77c7446d859b</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>1</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>09d1f453-d0d9-429e-88e7-e84b33de7c2e</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:BoolProperty>
+  <ZetboxBase:IntProperty ExportGuid="1e953d4e-8ea6-4402-b239-dfb36965fe07">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:33:01.397135Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_Hours(ScheduledActionDefinition obj, PropertyGetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_Hours(ScheduledActionDefinition obj, PropertyPreSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_Hours(ScheduledActionDefinition obj, PropertyPostSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_Hours(ScheduledActionDefinition obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.Hours == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:21:55.4550453Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>Hours</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>62053394-6f4e-45f6-814b-77c7446d859b</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>9</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>edaf9334-dc36-4778-aa33-1e5cdaeeb767</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:IntProperty>
+  <ZetboxBase:ObjectReferenceProperty ExportGuid="79506859-644d-4503-ad9c-055b4c53df3b">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:33:01.397135Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_InvokeAction(ScheduledActionDefinition obj, PropertyGetterEventArgs&lt;Zetbox.Basic.Workflow.ParameterizedActionDefinition&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_InvokeAction(ScheduledActionDefinition obj, PropertyPreSetterEventArgs&lt;Zetbox.Basic.Workflow.ParameterizedActionDefinition&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_InvokeAction(ScheduledActionDefinition obj, PropertyPostSetterEventArgs&lt;Zetbox.Basic.Workflow.ParameterizedActionDefinition&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_InvokeAction(ScheduledActionDefinition obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.InvokeAction == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:32:36.5647146Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Label>Invoke action</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>InvokeAction</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>62053394-6f4e-45f6-814b-77c7446d859b</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>0</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>83aae6fd-0fae-4348-b313-737a6e751027</GUI:ValueModelDescriptor>
+    <ZetboxBase:EagerLoading>false</ZetboxBase:EagerLoading>
+    <ZetboxBase:RelationEnd>68d8e7e3-4340-48e8-acdc-6bdd1d5b478f</ZetboxBase:RelationEnd>
+  </ZetboxBase:ObjectReferenceProperty>
+  <ZetboxBase:IntProperty ExportGuid="2f4b3b5a-cf19-4484-b3cb-0cc93752b568">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:33:01.397135Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_Minutes(ScheduledActionDefinition obj, PropertyGetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_Minutes(ScheduledActionDefinition obj, PropertyPreSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_Minutes(ScheduledActionDefinition obj, PropertyPostSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_Minutes(ScheduledActionDefinition obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.Minutes == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:21:55.4550453Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>Minutes</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>62053394-6f4e-45f6-814b-77c7446d859b</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>10</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>edaf9334-dc36-4778-aa33-1e5cdaeeb767</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:IntProperty>
+  <ZetboxBase:IntProperty ExportGuid="5fabb1da-dc4a-4312-9576-79e269d6e679">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:33:01.397135Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_Months(ScheduledActionDefinition obj, PropertyGetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_Months(ScheduledActionDefinition obj, PropertyPreSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_Months(ScheduledActionDefinition obj, PropertyPostSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_Months(ScheduledActionDefinition obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.Months == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:21:55.4550453Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>Months</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>62053394-6f4e-45f6-814b-77c7446d859b</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>7</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>edaf9334-dc36-4778-aa33-1e5cdaeeb767</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:IntProperty>
+  <ZetboxBase:IntProperty ExportGuid="5999a7f8-aa8b-4312-8d23-af9794673d12">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:28:24.2472829Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_Days(SchedulerAction obj, PropertyGetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_Days(SchedulerAction obj, PropertyPreSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_Days(SchedulerAction obj, PropertyPostSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_Days(SchedulerAction obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.Days == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:07:31.3836232Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>Days</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>48c4d27b-9944-4550-9000-a41eed623d76</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>6</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>edaf9334-dc36-4778-aa33-1e5cdaeeb767</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:IntProperty>
+  <ZetboxBase:BoolProperty ExportGuid="09345519-a1ad-416d-b0c6-568220ab289d">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:28:24.2472829Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_EveryDay(SchedulerAction obj, PropertyGetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_EveryDay(SchedulerAction obj, PropertyPreSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_EveryDay(SchedulerAction obj, PropertyPostSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_EveryDay(SchedulerAction obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.EveryDay == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:26:51.1239566Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Label>Every day</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>EveryDay</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>48c4d27b-9944-4550-9000-a41eed623d76</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>4</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>09d1f453-d0d9-429e-88e7-e84b33de7c2e</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:BoolProperty>
+  <ZetboxBase:BoolProperty ExportGuid="3323e529-5080-4da4-ad57-bdc28014296c">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:28:24.2472829Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_EveryMonth(SchedulerAction obj, PropertyGetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_EveryMonth(SchedulerAction obj, PropertyPreSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_EveryMonth(SchedulerAction obj, PropertyPostSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_EveryMonth(SchedulerAction obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.EveryMonth == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:26:51.1239566Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Label>Every month</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>EveryMonth</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>48c4d27b-9944-4550-9000-a41eed623d76</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>2</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>09d1f453-d0d9-429e-88e7-e84b33de7c2e</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:BoolProperty>
+  <ZetboxBase:BoolProperty ExportGuid="ad944ebd-a450-4386-b381-611011d03faa">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:28:24.2472829Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_EveryQuater(SchedulerAction obj, PropertyGetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_EveryQuater(SchedulerAction obj, PropertyPreSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_EveryQuater(SchedulerAction obj, PropertyPostSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_EveryQuater(SchedulerAction obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.EveryQuater == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:27:19.7005911Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Label>Every quater</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>EveryQuater</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>48c4d27b-9944-4550-9000-a41eed623d76</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>1</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>09d1f453-d0d9-429e-88e7-e84b33de7c2e</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:BoolProperty>
+  <ZetboxBase:EnumerationProperty ExportGuid="263decc9-7509-4cca-b07a-c07c37204f15">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:28:24.2472829Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_EveryWeekDay(SchedulerAction obj, PropertyGetterEventArgs&lt;Zetbox.App.Base.DayOfWeek?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_EveryWeekDay(SchedulerAction obj, PropertyPreSetterEventArgs&lt;Zetbox.App.Base.DayOfWeek?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_EveryWeekDay(SchedulerAction obj, PropertyPostSetterEventArgs&lt;Zetbox.App.Base.DayOfWeek?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_EveryWeekDay(SchedulerAction obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.EveryWeekDay == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:26:51.1239566Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Label>Every week day</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>EveryWeekDay</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>48c4d27b-9944-4550-9000-a41eed623d76</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>3</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>a6ff986c-a485-4c4d-947c-e59d14112ec2</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+    <ZetboxBase:Enumeration>3961bb73-7ab6-4529-9457-ede6927224c7</ZetboxBase:Enumeration>
+  </ZetboxBase:EnumerationProperty>
+  <ZetboxBase:BoolProperty ExportGuid="cb8ccb54-400a-47f3-85cc-7c307b903d2d">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:28:24.2472829Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_EveryYear(SchedulerAction obj, PropertyGetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_EveryYear(SchedulerAction obj, PropertyPreSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_EveryYear(SchedulerAction obj, PropertyPostSetterEventArgs&lt;bool?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_EveryYear(SchedulerAction obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.EveryYear == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:26:51.1239566Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Label>Every year</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>EveryYear</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>48c4d27b-9944-4550-9000-a41eed623d76</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>0</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>09d1f453-d0d9-429e-88e7-e84b33de7c2e</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:BoolProperty>
+  <ZetboxBase:IntProperty ExportGuid="212be54f-c89f-4877-94e9-b3fd29ae12fa">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:28:24.2472829Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_Hours(SchedulerAction obj, PropertyGetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_Hours(SchedulerAction obj, PropertyPreSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_Hours(SchedulerAction obj, PropertyPostSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_Hours(SchedulerAction obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.Hours == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:07:31.3836232Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>Hours</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>48c4d27b-9944-4550-9000-a41eed623d76</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>7</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>edaf9334-dc36-4778-aa33-1e5cdaeeb767</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:IntProperty>
+  <ZetboxBase:IntProperty ExportGuid="9944684b-2e92-4ea1-861a-5c123fe0c73f">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:28:24.2472829Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_Minutes(SchedulerAction obj, PropertyGetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_Minutes(SchedulerAction obj, PropertyPreSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_Minutes(SchedulerAction obj, PropertyPostSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_Minutes(SchedulerAction obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.Minutes == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:07:31.3836232Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>Minutes</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>48c4d27b-9944-4550-9000-a41eed623d76</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>8</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>edaf9334-dc36-4778-aa33-1e5cdaeeb767</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:IntProperty>
+  <ZetboxBase:IntProperty ExportGuid="d8b3df4e-159f-4e25-b35f-7f3340542097">
+    <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T15:28:24.2472829Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_Months(SchedulerAction obj, PropertyGetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_Months(SchedulerAction obj, PropertyPreSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_Months(SchedulerAction obj, PropertyPostSetterEventArgs&lt;int?&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_Months(SchedulerAction obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.Months == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T15:07:31.3836232Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>Months</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>48c4d27b-9944-4550-9000-a41eed623d76</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>5</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>edaf9334-dc36-4778-aa33-1e5cdaeeb767</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:IntProperty>
+  <ZetboxBase:ObjectReferenceProperty ExportGuid="c6ad9a83-ccaf-427b-88b9-b36472c03192">
+    <ZetboxBase:CategoryTags>Summary</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T14:53:30.0064992Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_Action(SchedulerEntry obj, PropertyGetterEventArgs&lt;Zetbox.Basic.Workflow.ParameterizedActionDefinition&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_Action(SchedulerEntry obj, PropertyPreSetterEventArgs&lt;Zetbox.Basic.Workflow.ParameterizedActionDefinition&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_Action(SchedulerEntry obj, PropertyPostSetterEventArgs&lt;Zetbox.Basic.Workflow.ParameterizedActionDefinition&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_Action(SchedulerEntry obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.Action == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T14:53:30.0064992Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>Action</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>7246da29-bf13-4b7b-88ed-e8424045ba8c</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>200</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>83aae6fd-0fae-4348-b313-737a6e751027</GUI:ValueModelDescriptor>
+    <ZetboxBase:EagerLoading>false</ZetboxBase:EagerLoading>
+    <ZetboxBase:RelationEnd>6af1572d-f23d-4d5e-b5ef-4ef3afa5322f</ZetboxBase:RelationEnd>
+  </ZetboxBase:ObjectReferenceProperty>
+  <ZetboxBase:DateTimeProperty ExportGuid="9f31b9dd-6a6f-4577-9a0c-31ae8f5a17b5">
+    <ZetboxBase:CategoryTags>Summary</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T14:52:02.7565088Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_InvokeOn(SchedulerEntry obj, PropertyGetterEventArgs&lt;DateTime&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_InvokeOn(SchedulerEntry obj, PropertyPreSetterEventArgs&lt;DateTime&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_InvokeOn(SchedulerEntry obj, PropertyPostSetterEventArgs&lt;DateTime&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_InvokeOn(SchedulerEntry obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.InvokeOn == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T14:52:02.7565088Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Label>Invoke on</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>InvokeOn</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>7246da29-bf13-4b7b-88ed-e8424045ba8c</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>100</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>fc74b434-3801-4e4a-ab67-e65a9e014005</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+    <ZetboxBase:DateTimeStyle>1</ZetboxBase:DateTimeStyle>
+  </ZetboxBase:DateTimeProperty>
+  <ZetboxBase:ObjectReferenceProperty ExportGuid="b8cbaa69-b4c0-4a76-886e-e94329025981">
+    <ZetboxBase:CategoryTags>State</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T14:57:31.9763391Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_State(SchedulerEntry obj, PropertyGetterEventArgs&lt;Zetbox.Basic.Workflow.State&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_State(SchedulerEntry obj, PropertyPreSetterEventArgs&lt;Zetbox.Basic.Workflow.State&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_State(SchedulerEntry obj, PropertyPostSetterEventArgs&lt;Zetbox.Basic.Workflow.State&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_State(SchedulerEntry obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.State == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>State</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>7246da29-bf13-4b7b-88ed-e8424045ba8c</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>300</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>83aae6fd-0fae-4348-b313-737a6e751027</GUI:ValueModelDescriptor>
+    <ZetboxBase:EagerLoading>false</ZetboxBase:EagerLoading>
+    <ZetboxBase:RelationEnd>fd59309d-518d-42cb-89f1-a7de1996697d</ZetboxBase:RelationEnd>
   </ZetboxBase:ObjectReferenceProperty>
   <ZetboxBase:ObjectReferenceProperty ExportGuid="19005c91-a0ca-4315-bed0-3f7f3d52e5a0">
     <ZetboxBase:CategoryTags>Changed</ZetboxBase:CategoryTags>
@@ -1637,7 +2657,7 @@ public static void isValid_Groups(State obj, PropertyIsValidEventArgs e)
   </ZetboxBase:ObjectReferenceProperty>
   <ZetboxBase:ObjectReferenceProperty ExportGuid="71d529df-4a42-4c7b-aa37-e2e1b17f8b4b">
     <ZetboxBase:CategoryTags>Instance</ZetboxBase:CategoryTags>
-    <ZetboxBase:ChangedOn>2012-09-13T09:23:20.7612022Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ChangedOn>2012-09-21T14:57:02.4846522Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
 public static void get_Instance(State obj, PropertyGetterEventArgs&lt;Zetbox.Basic.Workflow.WFInstance&gt; e)
 {
@@ -1665,7 +2685,7 @@ public static void isValid_Instance(State obj, PropertyIsValidEventArgs e)
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
     <ZetboxBase:Name>Instance</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>1d502a56-825c-462a-87d7-d705a4e0ba8d</ZetboxBase:ObjectClass>
-    <ZetboxBase:Properties_pos>505</ZetboxBase:Properties_pos>
+    <ZetboxBase:Properties_pos>506</ZetboxBase:Properties_pos>
     <GUI:ValueModelDescriptor>83aae6fd-0fae-4348-b313-737a6e751027</GUI:ValueModelDescriptor>
     <ZetboxBase:EagerLoading>true</ZetboxBase:EagerLoading>
     <ZetboxBase:RelationEnd>e55ca651-f83c-4235-906d-342e8533e9ca</ZetboxBase:RelationEnd>
@@ -1778,6 +2798,42 @@ public static void isValid_Persons(State obj, PropertyIsValidEventArgs e)
     <GUI:ValueModelDescriptor>67a49c49-b890-4d35-a8db-1f8e43bfc7df</GUI:ValueModelDescriptor>
     <ZetboxBase:EagerLoading>true</ZetboxBase:EagerLoading>
     <ZetboxBase:RelationEnd>6648fec3-4211-4211-9832-800e7bebf9e2</ZetboxBase:RelationEnd>
+  </ZetboxBase:ObjectReferenceProperty>
+  <ZetboxBase:ObjectReferenceProperty ExportGuid="27a480b3-785b-47f0-9005-0dd7850d53c0">
+    <ZetboxBase:CategoryTags>ScheduledActions</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2012-09-21T14:57:02.4846522Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_ScheduledActions(State obj, PropertyGetterEventArgs&lt;ICollection&lt;Zetbox.Basic.Workflow.SchedulerEntry&gt;&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_ScheduledActions(State obj, PropertyPreSetterEventArgs&lt;ICollection&lt;Zetbox.Basic.Workflow.SchedulerEntry&gt;&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_ScheduledActions(State obj, PropertyPostSetterEventArgs&lt;ICollection&lt;Zetbox.Basic.Workflow.SchedulerEntry&gt;&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_ScheduledActions(State obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.ScheduledActions == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Label>Scheduled actions</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>ScheduledActions</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>1d502a56-825c-462a-87d7-d705a4e0ba8d</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>505</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>67a49c49-b890-4d35-a8db-1f8e43bfc7df</GUI:ValueModelDescriptor>
+    <ZetboxBase:EagerLoading>false</ZetboxBase:EagerLoading>
+    <ZetboxBase:RelationEnd>8656d06e-b207-48d0-9119-a24606739a75</ZetboxBase:RelationEnd>
   </ZetboxBase:ObjectReferenceProperty>
   <ZetboxBase:ObjectReferenceProperty ExportGuid="c7d2ab1b-8bd2-415a-8d99-4b8a02d3c31e">
     <ZetboxBase:CategoryTags>Summary</ZetboxBase:CategoryTags>
@@ -3570,6 +4626,36 @@ public static void isValid_Workflow(WFInstance obj, PropertyIsValidEventArgs e)
     <ZetboxBase:Storage>1</ZetboxBase:Storage>
     <ZetboxBase:Verb>was</ZetboxBase:Verb>
   </ZetboxBase:Relation>
+  <ZetboxBase:Relation ExportGuid="4144ca9f-8ce9-4833-adaa-b836720e32a2">
+    <ZetboxBase:A>68d8e7e3-4340-48e8-acdc-6bdd1d5b478f</ZetboxBase:A>
+    <ZetboxBase:B>d1f6dc21-231b-4fe3-9c9a-0ac8ed54fcd6</ZetboxBase:B>
+    <ZetboxBase:ChangedOn>2012-09-21T15:32:36.5647146Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:Containment>0</ZetboxBase:Containment>
+    <ZetboxBase:CreatedOn>2012-09-21T15:32:36.5647146Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Storage>1</ZetboxBase:Storage>
+    <ZetboxBase:Verb>invokes</ZetboxBase:Verb>
+  </ZetboxBase:Relation>
+  <ZetboxBase:Relation ExportGuid="ae1a020b-1d88-4ff2-8e3d-ed7ca2cdd081">
+    <ZetboxBase:A>6af1572d-f23d-4d5e-b5ef-4ef3afa5322f</ZetboxBase:A>
+    <ZetboxBase:B>8e09acc5-c642-41cf-b080-5ef8d1035a56</ZetboxBase:B>
+    <ZetboxBase:ChangedOn>2012-09-21T14:53:30.0064992Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:Containment>0</ZetboxBase:Containment>
+    <ZetboxBase:CreatedOn>2012-09-21T14:53:30.0064992Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Storage>1</ZetboxBase:Storage>
+    <ZetboxBase:Verb>invokes</ZetboxBase:Verb>
+  </ZetboxBase:Relation>
+  <ZetboxBase:Relation ExportGuid="1c3de545-9013-4f2b-acf9-2b2bce89b47f">
+    <ZetboxBase:A>8656d06e-b207-48d0-9119-a24606739a75</ZetboxBase:A>
+    <ZetboxBase:B>fd59309d-518d-42cb-89f1-a7de1996697d</ZetboxBase:B>
+    <ZetboxBase:ChangedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:Containment>1</ZetboxBase:Containment>
+    <ZetboxBase:CreatedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Storage>2</ZetboxBase:Storage>
+    <ZetboxBase:Verb>has</ZetboxBase:Verb>
+  </ZetboxBase:Relation>
   <ZetboxBase:Relation ExportGuid="a5e79fbe-6e8a-4d29-bbe1-a891186e30c4">
     <ZetboxBase:A>29b897a0-b7cd-49dc-bb8e-da93a5ca90f1</ZetboxBase:A>
     <ZetboxBase:B>59c5cfb3-a939-45e5-bc89-a4868d1e37a4</ZetboxBase:B>
@@ -4115,6 +5201,15 @@ public static void isValid_Workflow(WFInstance obj, PropertyIsValidEventArgs e)
     <ZetboxBase:RoleName>Actions</ZetboxBase:RoleName>
     <ZetboxBase:Type>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:Type>
   </ZetboxBase:RelationEnd>
+  <ZetboxBase:RelationEnd ExportGuid="d1f6dc21-231b-4fe3-9c9a-0ac8ed54fcd6">
+    <ZetboxBase:BParent>4144ca9f-8ce9-4833-adaa-b836720e32a2</ZetboxBase:BParent>
+    <ZetboxBase:ChangedOn>2012-09-21T15:32:36.5647146Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-21T15:32:36.5647146Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:Multiplicity>2</ZetboxBase:Multiplicity>
+    <ZetboxBase:RoleName>InvokeAction</ZetboxBase:RoleName>
+    <ZetboxBase:Type>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:Type>
+  </ZetboxBase:RelationEnd>
   <ZetboxBase:RelationEnd ExportGuid="22344145-1d1e-4365-813b-5b856845b130">
     <ZetboxBase:AParent>ab82edf2-9343-4514-98bc-c2b5ddd8a0c3</ZetboxBase:AParent>
     <ZetboxBase:ChangedOn>2012-09-21T12:43:48.2754096Z</ZetboxBase:ChangedOn>
@@ -4155,6 +5250,45 @@ public static void isValid_Workflow(WFInstance obj, PropertyIsValidEventArgs e)
     <ZetboxBase:RoleName>PActionDef</ZetboxBase:RoleName>
     <ZetboxBase:Type>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:Type>
   </ZetboxBase:RelationEnd>
+  <ZetboxBase:RelationEnd ExportGuid="8e09acc5-c642-41cf-b080-5ef8d1035a56">
+    <ZetboxBase:BParent>ae1a020b-1d88-4ff2-8e3d-ed7ca2cdd081</ZetboxBase:BParent>
+    <ZetboxBase:ChangedOn>2012-09-21T14:53:30.0064992Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-21T14:53:30.0064992Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:Multiplicity>2</ZetboxBase:Multiplicity>
+    <ZetboxBase:RoleName>ParamAction</ZetboxBase:RoleName>
+    <ZetboxBase:Type>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:Type>
+  </ZetboxBase:RelationEnd>
+  <ZetboxBase:RelationEnd ExportGuid="68d8e7e3-4340-48e8-acdc-6bdd1d5b478f">
+    <ZetboxBase:AParent>4144ca9f-8ce9-4833-adaa-b836720e32a2</ZetboxBase:AParent>
+    <ZetboxBase:ChangedOn>2012-09-21T15:32:36.5647146Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-21T15:32:36.5647146Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:Multiplicity>3</ZetboxBase:Multiplicity>
+    <ZetboxBase:Navigator>79506859-644d-4503-ad9c-055b4c53df3b</ZetboxBase:Navigator>
+    <ZetboxBase:RoleName>SchedParamAction</ZetboxBase:RoleName>
+    <ZetboxBase:Type>62053394-6f4e-45f6-814b-77c7446d859b</ZetboxBase:Type>
+  </ZetboxBase:RelationEnd>
+  <ZetboxBase:RelationEnd ExportGuid="fd59309d-518d-42cb-89f1-a7de1996697d">
+    <ZetboxBase:BParent>1c3de545-9013-4f2b-acf9-2b2bce89b47f</ZetboxBase:BParent>
+    <ZetboxBase:ChangedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:Multiplicity>3</ZetboxBase:Multiplicity>
+    <ZetboxBase:Navigator>b8cbaa69-b4c0-4a76-886e-e94329025981</ZetboxBase:Navigator>
+    <ZetboxBase:RoleName>ScheduledActions</ZetboxBase:RoleName>
+    <ZetboxBase:Type>7246da29-bf13-4b7b-88ed-e8424045ba8c</ZetboxBase:Type>
+  </ZetboxBase:RelationEnd>
+  <ZetboxBase:RelationEnd ExportGuid="6af1572d-f23d-4d5e-b5ef-4ef3afa5322f">
+    <ZetboxBase:AParent>ae1a020b-1d88-4ff2-8e3d-ed7ca2cdd081</ZetboxBase:AParent>
+    <ZetboxBase:ChangedOn>2012-09-21T14:53:30.0064992Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-21T14:53:30.0064992Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:Multiplicity>3</ZetboxBase:Multiplicity>
+    <ZetboxBase:Navigator>c6ad9a83-ccaf-427b-88b9-b36472c03192</ZetboxBase:Navigator>
+    <ZetboxBase:RoleName>SchedulerEntry</ZetboxBase:RoleName>
+    <ZetboxBase:Type>7246da29-bf13-4b7b-88ed-e8424045ba8c</ZetboxBase:Type>
+  </ZetboxBase:RelationEnd>
   <ZetboxBase:RelationEnd ExportGuid="29b897a0-b7cd-49dc-bb8e-da93a5ca90f1">
     <ZetboxBase:AParent>a5e79fbe-6e8a-4d29-bbe1-a891186e30c4</ZetboxBase:AParent>
     <ZetboxBase:ChangedOn>2012-09-12T10:42:51.9837385Z</ZetboxBase:ChangedOn>
@@ -4192,6 +5326,16 @@ public static void isValid_Workflow(WFInstance obj, PropertyIsValidEventArgs e)
     <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
     <ZetboxBase:Multiplicity>3</ZetboxBase:Multiplicity>
     <ZetboxBase:Navigator>f59834cc-22aa-42aa-a011-71f581f83c66</ZetboxBase:Navigator>
+    <ZetboxBase:RoleName>State</ZetboxBase:RoleName>
+    <ZetboxBase:Type>1d502a56-825c-462a-87d7-d705a4e0ba8d</ZetboxBase:Type>
+  </ZetboxBase:RelationEnd>
+  <ZetboxBase:RelationEnd ExportGuid="8656d06e-b207-48d0-9119-a24606739a75">
+    <ZetboxBase:AParent>1c3de545-9013-4f2b-acf9-2b2bce89b47f</ZetboxBase:AParent>
+    <ZetboxBase:ChangedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:Multiplicity>2</ZetboxBase:Multiplicity>
+    <ZetboxBase:Navigator>27a480b3-785b-47f0-9005-0dd7850d53c0</ZetboxBase:Navigator>
     <ZetboxBase:RoleName>State</ZetboxBase:RoleName>
     <ZetboxBase:Type>1d502a56-825c-462a-87d7-d705a4e0ba8d</ZetboxBase:Type>
   </ZetboxBase:RelationEnd>
@@ -4596,6 +5740,30 @@ public static void GetNameCanExecReason(ParameterizedActionDefinition obj, Metho
     <ZetboxBase:Name>GetName</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:ObjectClass>
   </ZetboxBase:Method>
+  <ZetboxBase:Method ExportGuid="51d23eef-c3be-409e-b3c7-67d44922834d">
+    <ZetboxBase:ChangedOn>2012-09-21T14:58:38.8611647Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void ScheduleAction(State obj, DateTime invokeOn, Zetbox.Basic.Workflow.ParameterizedActionDefinition action)
+{
+}
+
+[Invocation]
+public static void ScheduleActionCanExec(State obj, MethodReturnEventArgs&lt;bool&gt; e)
+{
+}
+
+[Invocation]
+public static void ScheduleActionCanExecReason(State obj, MethodReturnEventArgs&lt;string&gt; e)
+{
+}
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2012-09-21T14:58:38.8611647Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:InvokeOnServer>false</ZetboxBase:InvokeOnServer>
+    <GUI:IsDisplayable>false</GUI:IsDisplayable>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>ScheduleAction</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>1d502a56-825c-462a-87d7-d705a4e0ba8d</ZetboxBase:ObjectClass>
+  </ZetboxBase:Method>
   <ZetboxBase:Method ExportGuid="6f4077ac-88ea-463f-b5af-b9670d223215">
     <ZetboxBase:ChangedOn>2012-09-12T16:19:26.6245743Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
@@ -4830,6 +5998,28 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:Parameter_pos>0</ZetboxBase:Parameter_pos>
     <ZetboxBase:Name>name</ZetboxBase:Name>
   </ZetboxBase:StringParameter>
+  <ZetboxBase:ObjectReferenceParameter ExportGuid="41ca1b87-d9f3-494a-9fa0-2e4a5708337c">
+    <ZetboxBase:ChangedOn>2012-09-21T14:58:38.8611647Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-21T14:58:38.8611647Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+    <ZetboxBase:IsNullable>false</ZetboxBase:IsNullable>
+    <ZetboxBase:IsReturnParameter>false</ZetboxBase:IsReturnParameter>
+    <ZetboxBase:Method>51d23eef-c3be-409e-b3c7-67d44922834d</ZetboxBase:Method>
+    <ZetboxBase:Parameter_pos>1</ZetboxBase:Parameter_pos>
+    <ZetboxBase:Name>action</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>1ddf3873-cf46-4177-a79f-62f3a3e594f7</ZetboxBase:ObjectClass>
+  </ZetboxBase:ObjectReferenceParameter>
+  <ZetboxBase:DateTimeParameter ExportGuid="ccbd94f6-7181-443b-a227-126ce4371977">
+    <ZetboxBase:ChangedOn>2012-09-21T14:58:38.8611647Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-21T14:58:38.8611647Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+    <ZetboxBase:IsNullable>false</ZetboxBase:IsNullable>
+    <ZetboxBase:IsReturnParameter>false</ZetboxBase:IsReturnParameter>
+    <ZetboxBase:Method>51d23eef-c3be-409e-b3c7-67d44922834d</ZetboxBase:Method>
+    <ZetboxBase:Parameter_pos>0</ZetboxBase:Parameter_pos>
+    <ZetboxBase:Name>invokeOn</ZetboxBase:Name>
+    <ZetboxBase:DateTimeStyle>1</ZetboxBase:DateTimeStyle>
+  </ZetboxBase:DateTimeParameter>
   <ZetboxBase:ObjectReferenceParameter ExportGuid="bd9a405d-f620-4ad4-842e-4e74856b6aa7">
     <ZetboxBase:ChangedOn>2012-09-12T16:19:26.6245743Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-12T16:19:26.6245743Z</ZetboxBase:CreatedOn>
@@ -5071,6 +6261,16 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:ConstrainedProperty>c249eef4-3c26-4f2a-9259-004dbeb6a3e0</ZetboxBase:ConstrainedProperty>
     <ZetboxBase:CreatedOn>2012-09-21T12:43:21.4018726Z</ZetboxBase:CreatedOn>
   </ZetboxBase:NotNullableConstraint>
+  <ZetboxBase:NotNullableConstraint ExportGuid="86e5a0a8-f7d2-483c-b2a0-2ada7c2e6e56">
+    <ZetboxBase:ChangedOn>2012-09-21T15:30:19.9559011Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>38566d3e-b17a-414b-a4f2-b4b704fcfe5d</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2012-09-21T15:30:19.9559011Z</ZetboxBase:CreatedOn>
+  </ZetboxBase:NotNullableConstraint>
+  <ZetboxBase:NotNullableConstraint ExportGuid="2b357edc-343a-496f-bc32-e85864be3618">
+    <ZetboxBase:ChangedOn>2012-09-21T15:30:19.9559011Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>6a060f90-c3e5-404d-bd2d-0976cbf99998</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2012-09-21T15:30:19.9559011Z</ZetboxBase:CreatedOn>
+  </ZetboxBase:NotNullableConstraint>
   <ZetboxBase:NotNullableConstraint ExportGuid="a58d2b83-d8fe-4562-9f24-5ba388e4a264">
     <ZetboxBase:ChangedOn>2012-09-21T13:11:11.0573714Z</ZetboxBase:ChangedOn>
     <ZetboxBase:ConstrainedProperty>f2bc7811-4b93-4da7-bef3-606e41f4ae7f</ZetboxBase:ConstrainedProperty>
@@ -5088,6 +6288,41 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:ConstrainedProperty>2dbe2de3-16c5-4b98-94ba-be7680e27660</ZetboxBase:ConstrainedProperty>
     <ZetboxBase:CreatedOn>2012-09-21T12:50:07.6131065Z</ZetboxBase:CreatedOn>
   </ZetboxBase:NotNullableConstraint>
+  <ZetboxBase:NotNullableConstraint ExportGuid="e46f5b35-6299-46c5-81c8-d522f0a862ec">
+    <ZetboxBase:ChangedOn>2012-09-21T15:32:36.5647146Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>79506859-644d-4503-ad9c-055b4c53df3b</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2012-09-21T15:32:36.5647146Z</ZetboxBase:CreatedOn>
+  </ZetboxBase:NotNullableConstraint>
+  <ZetboxBase:NotNullableConstraint ExportGuid="5f12d116-b9bc-4485-880b-12e96b362d5d">
+    <ZetboxBase:ChangedOn>2012-09-21T14:53:30.0064992Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>c6ad9a83-ccaf-427b-88b9-b36472c03192</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2012-09-21T14:53:30.0064992Z</ZetboxBase:CreatedOn>
+  </ZetboxBase:NotNullableConstraint>
+  <ZetboxBase:ViewReadOnlyConstraint ExportGuid="be94e9bf-af2c-427d-90c8-6da8ea9e4ef1">
+    <ZetboxBase:ChangedOn>2012-09-21T14:53:30.0064992Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>c6ad9a83-ccaf-427b-88b9-b36472c03192</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2012-09-21T14:53:30.0064992Z</ZetboxBase:CreatedOn>
+  </ZetboxBase:ViewReadOnlyConstraint>
+  <ZetboxBase:NotNullableConstraint ExportGuid="dd5defa9-2683-4079-9f3e-caab2eb44ec2">
+    <ZetboxBase:ChangedOn>2012-09-21T14:52:02.7565088Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>9f31b9dd-6a6f-4577-9a0c-31ae8f5a17b5</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2012-09-21T14:52:02.7565088Z</ZetboxBase:CreatedOn>
+  </ZetboxBase:NotNullableConstraint>
+  <ZetboxBase:ViewReadOnlyConstraint ExportGuid="90eb6fe1-382e-4163-9672-272b20205844">
+    <ZetboxBase:ChangedOn>2012-09-21T14:52:02.7565088Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>9f31b9dd-6a6f-4577-9a0c-31ae8f5a17b5</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2012-09-21T14:52:02.7565088Z</ZetboxBase:CreatedOn>
+  </ZetboxBase:ViewReadOnlyConstraint>
+  <ZetboxBase:NotNullableConstraint ExportGuid="7eae9768-43b4-41ef-82d9-720554821916">
+    <ZetboxBase:ChangedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>b8cbaa69-b4c0-4a76-886e-e94329025981</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:CreatedOn>
+  </ZetboxBase:NotNullableConstraint>
+  <ZetboxBase:ViewReadOnlyConstraint ExportGuid="e3efc21f-6f6c-4715-b402-7ec9b3f2f70d">
+    <ZetboxBase:ChangedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>b8cbaa69-b4c0-4a76-886e-e94329025981</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:CreatedOn>
+  </ZetboxBase:ViewReadOnlyConstraint>
   <ZetboxBase:ClientReadOnlyConstraint ExportGuid="7a63498d-3870-422a-b06f-924cb8e23ce5">
     <ZetboxBase:ChangedOn>2012-09-12T09:44:37.247709Z</ZetboxBase:ChangedOn>
     <ZetboxBase:ConstrainedProperty>19005c91-a0ca-4315-bed0-3f7f3d52e5a0</ZetboxBase:ConstrainedProperty>
@@ -5142,6 +6377,11 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:ChangedOn>2012-09-12T10:51:34.6869362Z</ZetboxBase:ChangedOn>
     <ZetboxBase:ConstrainedProperty>5dc2c02c-e705-45f8-86a4-dea0b65621b8</ZetboxBase:ConstrainedProperty>
     <ZetboxBase:CreatedOn>2012-09-12T10:51:34.6869362Z</ZetboxBase:CreatedOn>
+  </ZetboxBase:ViewReadOnlyConstraint>
+  <ZetboxBase:ViewReadOnlyConstraint ExportGuid="43794340-7240-444c-b07b-eb976bd07fc8">
+    <ZetboxBase:ChangedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>27a480b3-785b-47f0-9005-0dd7850d53c0</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2012-09-21T14:56:37.3352138Z</ZetboxBase:CreatedOn>
   </ZetboxBase:ViewReadOnlyConstraint>
   <ZetboxBase:ClientReadOnlyConstraint ExportGuid="e03a9dc4-29d5-4a18-84be-23e05385561e">
     <ZetboxBase:ChangedOn>2012-09-12T09:49:18.5575488Z</ZetboxBase:ChangedOn>
@@ -5496,6 +6736,18 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:CreatedOn>2012-09-21T12:43:21.4018726Z</ZetboxBase:CreatedOn>
     <ZetboxBase:Property>c249eef4-3c26-4f2a-9259-004dbeb6a3e0</ZetboxBase:Property>
   </ZetboxBase:NewGuidDefaultValue>
+  <ZetboxBase:BoolDefaultValue ExportGuid="f6b1863e-ab76-4bb8-9eb4-4830bc337098">
+    <ZetboxBase:ChangedOn>2012-09-21T15:30:19.9559011Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-21T15:30:19.9559011Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Property>38566d3e-b17a-414b-a4f2-b4b704fcfe5d</ZetboxBase:Property>
+    <ZetboxBase:BoolValue>false</ZetboxBase:BoolValue>
+  </ZetboxBase:BoolDefaultValue>
+  <ZetboxBase:BoolDefaultValue ExportGuid="a663ca6e-6241-45f3-a410-f97f040d95f7">
+    <ZetboxBase:ChangedOn>2012-09-21T15:30:19.9559011Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-21T15:30:19.9559011Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Property>6a060f90-c3e5-404d-bd2d-0976cbf99998</ZetboxBase:Property>
+    <ZetboxBase:BoolValue>true</ZetboxBase:BoolValue>
+  </ZetboxBase:BoolDefaultValue>
   <ZetboxBase:CurrentDateTimeDefaultValue ExportGuid="107a24b0-d45b-4b26-bf00-56ee360ef58e">
     <ZetboxBase:ChangedOn>2012-09-12T09:44:37.247709Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-12T09:44:37.247709Z</ZetboxBase:CreatedOn>

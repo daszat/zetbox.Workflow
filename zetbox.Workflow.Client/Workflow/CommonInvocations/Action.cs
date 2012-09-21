@@ -22,7 +22,7 @@ namespace zetbox.Workflow.Client.Workflow.CommonInvocations
             _frozenCtx = frozenCtx;
         }
 
-        public bool Forward(wf.Action action, wf.State current, Identity identity)
+        public bool Forward(wf.Action action, wf.ParameterizedActionDefinition parameter, wf.State current, Identity identity)
         {
             var ctx = current.Context;
             var retVal = false;

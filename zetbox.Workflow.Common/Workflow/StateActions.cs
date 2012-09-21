@@ -27,5 +27,15 @@ namespace Zetbox.Basic.Workflow
             obj.Recalculate("IsActive");
             obj.Instance.Recalculate("IsActive");
         }
+
+        [Invocation]
+        public static void ScheduleAction(State obj, DateTime invokeOn, Zetbox.Basic.Workflow.ParameterizedActionDefinition action)
+        {
+            var ctx = obj.Context;
+            var entry = ctx.Create<SchedulerEntry>();
+            entry.Action = action;
+            entry.InvokeOn = invokeOn;
+            obj.ScheduledActions.Add(entry);
+        }
     }
 }
