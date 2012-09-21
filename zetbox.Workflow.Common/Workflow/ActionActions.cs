@@ -24,9 +24,11 @@ namespace Zetbox.Basic.Workflow
     public class ActionActions
     {
         private static IIdentityResolver _idResolver;
-        public ActionActions(IIdentityResolver idResolver)
+        private static IInvocationExecutor _invocationExec;
+        public ActionActions(IIdentityResolver idResolver, IInvocationExecutor invocationExec)
         {
             _idResolver = idResolver;
+            _invocationExec = invocationExec;
         }
 
         [Invocation]
@@ -55,9 +57,9 @@ namespace Zetbox.Basic.Workflow
             var identity = _idResolver.GetCurrent();
 
             // call invocation
-            if (obj.HasValidInvocation())
+            if (_invocationExec.HasValidInvocation(obj))
             {
-                var result = obj.CallInvocation<bool>(typeof(ActionInvocationPrototype), obj, current, identity);
+                var result = _invocationExec.CallInvocation<bool>(obj, typeof(ActionInvocationPrototype), obj, current, identity);
                 if (result == false)
                 {
                     return;

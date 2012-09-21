@@ -22,9 +22,11 @@ namespace Zetbox.Basic.Workflow
     public class StateChangeActions
     {
         private static IIdentityResolver _idResolver;
-        public StateChangeActions(IIdentityResolver idResolver)
+        private static IInvocationExecutor _invocationExec;
+        public StateChangeActions(IIdentityResolver idResolver, IInvocationExecutor invocationExec)
         {
             _idResolver = idResolver;
+            _invocationExec = invocationExec;
         }
 
         [Invocation]
@@ -66,9 +68,9 @@ namespace Zetbox.Basic.Workflow
 
             var nextStates = obj.NextStates.ToList();
             // call invocation
-            if (obj.HasValidInvocation())
+            if (_invocationExec.HasValidInvocation(obj))
             {
-                nextStates = obj.CallInvocation<List<StateDefinition>>(typeof(StateChangeInvocationPrototype), obj, current, identity);
+                nextStates = _invocationExec.CallInvocation<List<StateDefinition>>(obj, typeof(StateChangeInvocationPrototype), obj, current, identity);
             }
 
             var stateEnds = true;

@@ -7,12 +7,21 @@ namespace zetbox.Workflow.Client.Workflow.CommonInvocations
     using System.Text;
     using wf = Zetbox.Basic.Workflow;
     using Zetbox.App.Base;
+using Zetbox.Client.Presentables;
     
-    public static class Action
+    public class Action
     {
-        public static bool Forward(wf.Action action, wf.State current, Identity identity)
+        private readonly IViewModelFactory _vmf;
+
+        public Action(IViewModelFactory vmf)
         {
-            current.Instance.AddLogEntry("Was forwared...");
+            _vmf = vmf;
+        }
+
+        public bool Forward(wf.Action action, wf.State current, Identity identity)
+        {
+            _vmf.ShowMessage("Hello from Action", "Hello");
+            current.Instance.AddLogEntry("Was forwared to ");
             return true;
         }
     }

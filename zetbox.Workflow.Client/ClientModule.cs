@@ -20,7 +20,9 @@ namespace zetbox.Workflow.Client
             moduleBuilder.RegisterViewModels(typeof(ClientModule).Assembly);
 
             // Register explicit overrides here
-
+            moduleBuilder
+                .RegisterType<Workflow.CommonInvocations.Action>()
+                .SingleInstance();
         }
     }
 }

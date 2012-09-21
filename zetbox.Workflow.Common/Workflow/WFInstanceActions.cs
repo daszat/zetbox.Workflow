@@ -7,9 +7,10 @@ namespace Zetbox.Basic.Workflow
     using System.Text;
     using Zetbox.API;
     using Zetbox.API.Common;
+    using Zetbox.App.Base;
 
     [Implementor]
-    public static class WFInstanceActions
+    public class WFInstanceActions
     {
         private static IIdentityResolver _idResolver;
         public WFInstanceActions(IIdentityResolver idResolver)
@@ -75,8 +76,13 @@ namespace Zetbox.Basic.Workflow
         {
             if (!string.IsNullOrEmpty(formatString))
             {
-                var identity = _idResolver.GetCurrent();
                 var ctx = obj.Context;
+                Identity identity = null;
+                var currentIdentity = _idResolver.GetCurrent();
+                if (currentIdentity != null)
+                {
+                    identity = ctx.Find<Identity>(currentIdentity.ID);
+                }
 
                 var msg = formatString
                     .Replace("{User}", (identity ?? (object)string.Empty).ToString())
