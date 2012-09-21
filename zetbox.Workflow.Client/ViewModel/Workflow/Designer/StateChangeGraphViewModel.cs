@@ -17,6 +17,15 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             : base(appCtx, dataCtx, parent)
         {
             StateChange = change;
+            StateChange.PropertyChanged += (s, e) =>
+            {
+                switch (e.PropertyName)
+                {
+                    case "Name":
+                        OnPropertyChanged("Name");
+                        break;
+                }
+            };
         }
 
         public wf.StateChangeDefinition StateChange { get; private set; }

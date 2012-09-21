@@ -369,6 +369,10 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                 if (!SelectedStateChange.StateChange.InvokedByActions.Contains(SelectedAction.Action))
                 {
                     SelectedStateChange.StateChange.InvokedByActions.Add(SelectedAction.Action);
+                    if (string.IsNullOrEmpty(SelectedStateChange.StateChange.Name))
+                    {
+                        SelectedStateChange.StateChange.Name = SelectedAction.Action.Name;
+                    }
                     ResetStateDefinitionGraph();
                 }
             }
