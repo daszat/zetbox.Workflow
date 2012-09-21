@@ -27,7 +27,12 @@ namespace Zetbox.Basic.Workflow
         [Invocation]
         public static void GetName(ParameterizedActionDefinition obj, MethodReturnEventArgs<string> e)
         {
-            e.Result = obj.Module != null ? string.Format("Workflow.ParameterizedActionDefinition.{0}.{1}", obj.Module.Namespace, Regex.Replace(obj.Action.Name, "\\W", "_")) : null;
+            e.Result = obj.Module != null ? 
+                string.Format("Workflow.ParameterizedActionDefinition.{0}.{1}.{2}.{3}",
+                    obj.StateDefinition.WFDefinition.Module.Namespace,
+                    Regex.Replace(obj.StateDefinition.WFDefinition.Name, "\\W", "_"),
+                    Regex.Replace(obj.StateDefinition.Name, "\\W", "_"),
+                    Regex.Replace(obj.Action.Name, "\\W", "_")) : null;
         }
     }
 }

@@ -19,7 +19,11 @@ namespace Zetbox.Basic.Workflow
         [Invocation]
         public static void GetName(StateDefinition obj, MethodReturnEventArgs<string> e)
         {
-            e.Result = obj.Module != null ? string.Format("Workflow.StateDefinitions.{0}.{1}", obj.Module.Namespace, Regex.Replace(obj.Name, "\\W", "_")) : null;
+            e.Result = obj.Module != null ? 
+                string.Format("Workflow.StateDefinitions.{0}.{1}.{2}", 
+                obj.WFDefinition.Module.Namespace, 
+                Regex.Replace(obj.WFDefinition.Name, "\\W", "_"),
+                Regex.Replace(obj.Name, "\\W", "_")) : null;
         }
     }
 }
