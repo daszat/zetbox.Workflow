@@ -432,13 +432,20 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                     null,
                     (lst) =>
                     {
-                        foreach (var action in lst.Select(i => i.Object).Cast<wf.ParameterizedActionDefinition>())
+                        wf.ParameterizedActionDefinition actionToSelect = null;
+                        foreach (var action in lst.Select(i => i.Object).Cast<wf.Action>())
                         {
-                            SelectedStateDefinition.StateDefinition.Actions.Add(action);
+                            var paramAction = (wf.ParameterizedActionDefinition)DataContext.Create(DataContext.GetInterfaceType(action.ParameterType.GetDataType()));
+                            paramAction.Action = action;
+                            paramAction.Module = WFDefinition.Module;
+                            paramAction.Name = action.Name;
+                            SelectedStateDefinition.StateDefinition.Actions.Add(paramAction);
+
+                            if (actionToSelect == null) actionToSelect = paramAction;
                         }
-                        if (lst.Count() > 0)
+                        if (actionToSelect!= null)
                         {
-                            SelectedAction = ToActionViewModel((wf.ParameterizedActionDefinition)lst.First().Object);
+                            SelectedAction = ToActionViewModel(actionToSelect);
                         }
                         ResetStateDefinitionGraph();
                     },
