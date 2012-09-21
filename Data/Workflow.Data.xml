@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:Workflow="Zetbox.Basic.Workflow" date="2012-09-21T15:12:25.4116242Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:Workflow="Zetbox.Basic.Workflow" date="2012-09-21T15:42:53.8912073Z" xmlns="http://dasz.at/Zetbox">
   <Workflow:Action ExportGuid="6a55cf90-c334-42a6-83ed-15d65c71664d">
     <Workflow:ChangedOn>2012-09-19T16:02:40.6013237Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-12T12:44:51.9511851Z</Workflow:CreatedOn>
@@ -7,6 +7,7 @@
     <Workflow:LogMessageFormat>{User} has declined</Workflow:LogMessageFormat>
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>Decline</Workflow:Name>
+    <Workflow:ParameterType>1ddf3873-cf46-4177-a79f-62f3a3e594f7</Workflow:ParameterType>
   </Workflow:Action>
   <Workflow:Action ExportGuid="6b9ace99-b484-4561-8eda-0c91e52493fb">
     <Workflow:ChangedOn>2012-09-19T16:01:25.970055Z</Workflow:ChangedOn>
@@ -16,6 +17,7 @@
     <Workflow:MemberName>Forward</Workflow:MemberName>
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>Forward</Workflow:Name>
+    <Workflow:ParameterType>1ddf3873-cf46-4177-a79f-62f3a3e594f7</Workflow:ParameterType>
   </Workflow:Action>
   <Workflow:Action ExportGuid="e5ab1ebc-3e5d-467f-acba-2026f3f58a92">
     <Workflow:ChangedOn>2012-09-19T16:02:40.6013237Z</Workflow:ChangedOn>
@@ -24,6 +26,7 @@
     <Workflow:LogMessageFormat>{User} has accepted</Workflow:LogMessageFormat>
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>Accept</Workflow:Name>
+    <Workflow:ParameterType>1ddf3873-cf46-4177-a79f-62f3a3e594f7</Workflow:ParameterType>
   </Workflow:Action>
   <Workflow:Action ExportGuid="f92dca07-8f58-4af7-9487-7993aaa534a9">
     <Workflow:ChangedOn>2012-09-12T12:45:15.0185045Z</Workflow:ChangedOn>
@@ -31,6 +34,7 @@
     <Workflow:Description>Send back for improvements</Workflow:Description>
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>Improve</Workflow:Name>
+    <Workflow:ParameterType>1ddf3873-cf46-4177-a79f-62f3a3e594f7</Workflow:ParameterType>
   </Workflow:Action>
   <Workflow:StateChangeDefinition ExportGuid="1e13a5bc-c608-4dc7-b501-cdb83ad19e1b">
     <Workflow:ChangedOn>2012-09-19T15:59:13.6934892Z</Workflow:ChangedOn>
