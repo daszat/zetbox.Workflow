@@ -93,6 +93,9 @@
   <ItemGroup>
     <Compile Include="ClientWPFModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Workflow\WFInstanceEditor.xaml.cs">
+      <DependentUpon>WFInstanceEditor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Workflow\Designer\EdgeRouteToPathConverter.cs" />
     <Compile Include="View\Workflow\Designer\GraphConverterHelper.cs" />
     <Compile Include="View\Workflow\Designer\WFDefinitionEditor.xaml.cs">
@@ -117,6 +120,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="View\Workflow\WFInstanceEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\Workflow\Designer\WFDefinitionEditor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

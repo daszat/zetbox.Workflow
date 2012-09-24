@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:Workflow="Zetbox.Basic.Workflow" date="2012-09-21T17:33:01.397135Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:Workflow="Zetbox.Basic.Workflow" date="2012-09-24T17:38:50.2279614Z" xmlns="http://dasz.at/Zetbox">
   <Workflow:ScheduledActionDefinition ExportGuid="2afd5488-f7b1-4c0d-a8c2-60ead1214aec">
     <Workflow:Action>b440428d-61a5-4542-ac0e-fca521f11bb8</Workflow:Action>
     <Workflow:ChangedOn>2012-09-24T08:25:36.2188366Z</Workflow:ChangedOn>
@@ -11,6 +11,30 @@
     <Workflow:StateDefinition>666b52d8-a7bb-4d22-b3f4-58e1e85e1406</Workflow:StateDefinition>
     <Workflow:Actions_pos>3</Workflow:Actions_pos>
     <Workflow:InvokeAction>c048eda3-e36e-4fca-ac4a-651604bd151c</Workflow:InvokeAction>
+  </Workflow:ScheduledActionDefinition>
+  <Workflow:ScheduledActionDefinition ExportGuid="6dff806b-541b-4ff3-bcae-28dd2cdd0049">
+    <Workflow:Action>20c24e3f-5191-4b97-bff4-7645f53d57eb</Workflow:Action>
+    <Workflow:ChangedOn>2012-09-24T15:18:57.6257485Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-24T15:18:57.6257485Z</Workflow:CreatedOn>
+    <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
+    <Workflow:IsVisible>true</Workflow:IsVisible>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>EmptyScheduler</Workflow:Name>
+    <Workflow:StateDefinition>f142cca9-239b-4e35-ab81-312160e8c8c9</Workflow:StateDefinition>
+    <Workflow:Actions_pos>2</Workflow:Actions_pos>
+    <Workflow:InvokeAction>55c5745c-cce8-4598-b71c-e113122953f3</Workflow:InvokeAction>
+  </Workflow:ScheduledActionDefinition>
+  <Workflow:ScheduledActionDefinition ExportGuid="7fe81fb7-64bd-4042-92e2-2e0e6361b242">
+    <Workflow:Action>52fad819-fa6d-4d45-985a-9a968b9db96f</Workflow:Action>
+    <Workflow:ChangedOn>2012-09-24T15:28:04.6430361Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-24T15:28:04.6430361Z</Workflow:CreatedOn>
+    <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
+    <Workflow:IsVisible>true</Workflow:IsVisible>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>TwoWeekScheduler</Workflow:Name>
+    <Workflow:StateDefinition>6b698ca5-498e-4e6e-b2e9-34b59827f272</Workflow:StateDefinition>
+    <Workflow:Actions_pos>4</Workflow:Actions_pos>
+    <Workflow:InvokeAction>ced1b782-6109-4888-b209-5ace54a534d7</Workflow:InvokeAction>
   </Workflow:ScheduledActionDefinition>
   <Workflow:SchedulerAction ExportGuid="05f1e20a-aa39-40e3-99c6-d8ee0345a858">
     <Workflow:ChangedOn>2012-09-24T08:31:10.3949504Z</Workflow:ChangedOn>

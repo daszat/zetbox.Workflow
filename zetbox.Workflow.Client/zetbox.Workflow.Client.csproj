@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="ClientModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\Workflow\WFInstanceViewModel.cs" />
     <Compile Include="ViewModel\Workflow\InvokeActionObjRefPropertyViewModel.cs" />
     <Compile Include="Workflow\ActionActions.cs" />
     <Compile Include="Workflow\CommonInvocations\Action.cs" />

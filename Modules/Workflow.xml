@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-24T17:09:01.5706561Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-24T17:38:50.2279614Z" xmlns="http://dasz.at/Zetbox">
   <ZetboxBase:Module ExportGuid="e27c7e66-f806-4b0b-bf03-4e14efff5336">
     <ZetboxBase:ChangedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:CreatedOn>
@@ -507,7 +507,7 @@ public static void ObjectIsValid(WFInstance obj, ObjectIsValidEventArgs e)
 }
 
 </ZetboxBase:CodeTemplate>
-    <GUI:DefaultViewModelDescriptor>d8e95ac5-d46a-4dfa-a574-12ea299eadc4</GUI:DefaultViewModelDescriptor>
+    <GUI:DefaultViewModelDescriptor>18f5bafe-349a-49e4-a4f7-44d17fd23ecb</GUI:DefaultViewModelDescriptor>
     <ZetboxBase:IsAbstract>false</ZetboxBase:IsAbstract>
     <ZetboxBase:IsFrozenObject>false</ZetboxBase:IsFrozenObject>
     <GUI:IsSimpleObject>false</GUI:IsSimpleObject>
@@ -6824,6 +6824,13 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:CreatedOn>2012-09-12T09:42:33.3736238Z</ZetboxBase:CreatedOn>
     <ZetboxBase:Property>42742ed5-db02-497f-b576-fdd76c888304</ZetboxBase:Property>
   </ZetboxBase:CurrentDateTimeDefaultValue>
+  <ZetboxBase:Assembly ExportGuid="30836fda-6ca1-4b8b-9dbf-3dbf9394bd23">
+    <ZetboxBase:ChangedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:DeploymentRestrictions>1</ZetboxBase:DeploymentRestrictions>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>GraphSharp.Controls, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null</ZetboxBase:Name>
+  </ZetboxBase:Assembly>
   <ZetboxBase:Assembly ExportGuid="6321a6f0-b4d3-4cd4-85fe-b8f4e5e69054">
     <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
@@ -6859,6 +6866,27 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
     <ZetboxBase:Name>zetbox.Workflow.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ZetboxBase:Name>
   </ZetboxBase:Assembly>
+  <ZetboxBase:TypeRef ExportGuid="ff426d46-ac36-4b41-80e6-4634fb6aa226">
+    <ZetboxBase:Assembly>30836fda-6ca1-4b8b-9dbf-3dbf9394bd23</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>GraphSharp.Controls.GraphCanvas</ZetboxBase:FullName>
+    <ZetboxBase:Parent>7b31af0f-f119-47c7-be66-b1c63e043b8f</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="5be46a14-376e-42a5-8253-4da98d17a4f5">
+    <ZetboxBase:Assembly>30836fda-6ca1-4b8b-9dbf-3dbf9394bd23</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>GraphSharp.Controls.GraphLayout`3</ZetboxBase:FullName>
+    <ZetboxBase:Parent>ff426d46-ac36-4b41-80e6-4634fb6aa226</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="796a183e-70d1-4f16-b814-fce5e9c5ad22">
+    <ZetboxBase:Assembly>30836fda-6ca1-4b8b-9dbf-3dbf9394bd23</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>GraphSharp.Controls.GraphLayout`3</ZetboxBase:FullName>
+    <ZetboxBase:Parent>ff426d46-ac36-4b41-80e6-4634fb6aa226</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
   <ZetboxBase:TypeRef ExportGuid="0a0d892b-de5f-49bd-911e-1ee4ff02dd64">
     <ZetboxBase:Assembly>6321a6f0-b4d3-4cd4-85fe-b8f4e5e69054</ZetboxBase:Assembly>
     <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
@@ -7032,6 +7060,20 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.WFDefinitionViewModel+Factory</ZetboxBase:FullName>
     <ZetboxBase:Parent>68559faa-c4b4-4bb2-bb0d-49bb83a081a7</ZetboxBase:Parent>
   </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="491e2267-0cbe-4739-b2a9-11b941b4dbdc">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-24T15:38:50.2279614Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:38:50.2279614Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.WFInstanceViewModel</ZetboxBase:FullName>
+    <ZetboxBase:Parent>a07f30a6-b920-4fef-98ac-53155791e804</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="793ee482-ce0a-479f-ba11-433033f9bbb5">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-24T15:38:50.2279614Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:38:50.2279614Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.WFInstanceViewModel+Factory</ZetboxBase:FullName>
+    <ZetboxBase:Parent>68559faa-c4b4-4bb2-bb0d-49bb83a081a7</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
   <ZetboxBase:TypeRef ExportGuid="7803b422-890a-4a73-bc51-704da47ff5f6">
     <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
     <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
@@ -7053,6 +7095,20 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:FullName>zetbox.Workflow.Client.WPF.ClientWPFModule</ZetboxBase:FullName>
     <ZetboxBase:Parent>2790156b-feec-4b8e-bbfd-2555f6bfff40</ZetboxBase:Parent>
   </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="8f6229c9-40f0-4374-b5f9-69b02a9ad08b">
+    <ZetboxBase:Assembly>03de75d8-4b6a-4406-81bb-7b105dd31d14</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.WPF.View.Workflow.Designer.EdgeRouteToPathConverter</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="def515f8-8d0d-4bf4-917d-4a64fe6d6038">
+    <ZetboxBase:Assembly>03de75d8-4b6a-4406-81bb-7b105dd31d14</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.WPF.View.Workflow.Designer.StateDefinitionGraphLayout</ZetboxBase:FullName>
+    <ZetboxBase:Parent>5be46a14-376e-42a5-8253-4da98d17a4f5</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
   <ZetboxBase:TypeRef ExportGuid="1e4db4e8-f9e7-4fb1-b190-0f145e280e3e">
     <ZetboxBase:Assembly>03de75d8-4b6a-4406-81bb-7b105dd31d14</ZetboxBase:Assembly>
     <ZetboxBase:ChangedOn>2012-09-18T08:02:10.045086Z</ZetboxBase:ChangedOn>
@@ -7060,11 +7116,25 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:FullName>zetbox.Workflow.Client.WPF.View.Workflow.Designer.WFDefinitionEditor</ZetboxBase:FullName>
     <ZetboxBase:Parent>1fda132a-a95c-4483-9f9d-1e952fa20245</ZetboxBase:Parent>
   </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="18a07717-7861-4ec4-aa6c-d9e16942abb9">
+    <ZetboxBase:Assembly>03de75d8-4b6a-4406-81bb-7b105dd31d14</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.WPF.View.Workflow.Designer.WFDefinitionGraphLayout</ZetboxBase:FullName>
+    <ZetboxBase:Parent>796a183e-70d1-4f16-b814-fce5e9c5ad22</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
   <ZetboxBase:TypeRef ExportGuid="62787db4-a8b9-45e4-874d-e48ce7a4a93a">
     <ZetboxBase:Assembly>03de75d8-4b6a-4406-81bb-7b105dd31d14</ZetboxBase:Assembly>
     <ZetboxBase:ChangedOn>2012-09-13T13:57:35.2438143Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-13T13:57:35.2438143Z</ZetboxBase:CreatedOn>
     <ZetboxBase:FullName>zetbox.Workflow.Client.WPF.View.Workflow.StateEditor</ZetboxBase:FullName>
+    <ZetboxBase:Parent>1fda132a-a95c-4483-9f9d-1e952fa20245</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="8f55f0d0-3e33-4abd-b45f-c8f348193084">
+    <ZetboxBase:Assembly>03de75d8-4b6a-4406-81bb-7b105dd31d14</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.WPF.View.Workflow.WFInstanceEditor</ZetboxBase:FullName>
     <ZetboxBase:Parent>1fda132a-a95c-4483-9f9d-1e952fa20245</ZetboxBase:Parent>
   </ZetboxBase:TypeRef>
   <ZetboxBase:TypeRef ExportGuid="f8fe1455-06cc-4f16-86ec-eb86036672aa">
@@ -7144,6 +7214,42 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:FullName>zetbox.Workflow.Common.Workflow.CommonInvocations.StateChange</ZetboxBase:FullName>
     <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
   </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry ExportGuid="783f5f68-3e4d-47f4-9175-3215e0457cd0">
+    <ZetboxBase:A>5be46a14-376e-42a5-8253-4da98d17a4f5</ZetboxBase:A>
+    <ZetboxBase:A_pos>2147483647</ZetboxBase:A_pos>
+    <ZetboxBase:B>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:B>
+    <ZetboxBase:B_pos>0</ZetboxBase:B_pos>
+  </ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry>
+  <ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry ExportGuid="95071fef-744f-4cdf-8b42-0e8031a44650">
+    <ZetboxBase:A>5be46a14-376e-42a5-8253-4da98d17a4f5</ZetboxBase:A>
+    <ZetboxBase:A_pos>2147483647</ZetboxBase:A_pos>
+    <ZetboxBase:B>5a7b8828-0bbc-4d57-8423-09574eb936ee</ZetboxBase:B>
+    <ZetboxBase:B_pos>1</ZetboxBase:B_pos>
+  </ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry>
+  <ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry ExportGuid="8f6bb7bb-c0bb-4088-a0a1-e0bf365a8226">
+    <ZetboxBase:A>796a183e-70d1-4f16-b814-fce5e9c5ad22</ZetboxBase:A>
+    <ZetboxBase:A_pos>2147483647</ZetboxBase:A_pos>
+    <ZetboxBase:B>1d9f5adf-cf56-485d-9bf2-d4bfe608a8b9</ZetboxBase:B>
+    <ZetboxBase:B_pos>1</ZetboxBase:B_pos>
+  </ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry>
+  <ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry ExportGuid="d9047b1d-b0b4-40b6-b2d4-e03989392581">
+    <ZetboxBase:A>5be46a14-376e-42a5-8253-4da98d17a4f5</ZetboxBase:A>
+    <ZetboxBase:A_pos>2147483647</ZetboxBase:A_pos>
+    <ZetboxBase:B>fb7d353c-592e-4459-a8e5-6f6cbb8d5d7a</ZetboxBase:B>
+    <ZetboxBase:B_pos>2</ZetboxBase:B_pos>
+  </ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry>
+  <ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry ExportGuid="a1c6c7bd-28ab-4f0f-860e-5401f78e878e">
+    <ZetboxBase:A>796a183e-70d1-4f16-b814-fce5e9c5ad22</ZetboxBase:A>
+    <ZetboxBase:A_pos>2147483647</ZetboxBase:A_pos>
+    <ZetboxBase:B>d16ede47-5502-492d-a93c-6619f65c1987</ZetboxBase:B>
+    <ZetboxBase:B_pos>0</ZetboxBase:B_pos>
+  </ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry>
+  <ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry ExportGuid="f977686b-3ce0-4ce8-9a6d-cb83cd7aefc9">
+    <ZetboxBase:A>796a183e-70d1-4f16-b814-fce5e9c5ad22</ZetboxBase:A>
+    <ZetboxBase:A_pos>2147483647</ZetboxBase:A_pos>
+    <ZetboxBase:B>0c08fcf2-251b-4b87-8a7f-417a9e61a020</ZetboxBase:B>
+    <ZetboxBase:B_pos>2</ZetboxBase:B_pos>
+  </ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry>
   <ZetboxBase:TypeRef_hasGenericArguments_TypeRef_RelationEntry ExportGuid="43d1a428-8405-4c05-b3f8-ff31dc60be87">
     <ZetboxBase:A>0a0d892b-de5f-49bd-911e-1ee4ff02dd64</ZetboxBase:A>
     <ZetboxBase:A_pos>2147483647</ZetboxBase:A_pos>
@@ -7202,6 +7308,12 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
     <GUI:ViewModelRef>591b02ce-2232-42b7-bdbc-c6cb1c0ced63</GUI:ViewModelRef>
   </GUI:ViewModelDescriptor>
+  <GUI:ViewModelDescriptor ExportGuid="18f5bafe-349a-49e4-a4f7-44d17fd23ecb">
+    <GUI:DefaultEditorKind>499316a7-f0a8-477b-badf-8d4ec3dae342</GUI:DefaultEditorKind>
+    <GUI:Description>A workflow instance</GUI:Description>
+    <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
+    <GUI:ViewModelRef>491e2267-0cbe-4739-b2a9-11b941b4dbdc</GUI:ViewModelRef>
+  </GUI:ViewModelDescriptor>
   <GUI:ViewDescriptor ExportGuid="4b49c45e-ce24-4305-a4fd-7bd959b1cd9e">
     <GUI:ControlKind>c3fac4ef-8d8b-456a-8e0b-da8a1bc73698</GUI:ControlKind>
     <GUI:ControlRef>1e4db4e8-f9e7-4fb1-b190-0f145e280e3e</GUI:ControlRef>
@@ -7214,9 +7326,20 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
     <GUI:Toolkit>0</GUI:Toolkit>
   </GUI:ViewDescriptor>
+  <GUI:ViewDescriptor ExportGuid="78c195d9-f666-4051-91c0-5f22f9245206">
+    <GUI:ControlKind>499316a7-f0a8-477b-badf-8d4ec3dae342</GUI:ControlKind>
+    <GUI:ControlRef>8f55f0d0-3e33-4abd-b45f-c8f348193084</GUI:ControlRef>
+    <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
+    <GUI:Toolkit>0</GUI:Toolkit>
+  </GUI:ViewDescriptor>
   <GUI:ControlKind ExportGuid="0c8e3f56-8d57-4759-acb2-c798e7bef391">
     <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
     <GUI:Name>Zetbox.Basic.Workflow.StateEditor</GUI:Name>
+    <GUI:Parent>06bf9adc-c5bc-4552-abdc-18a96c527962</GUI:Parent>
+  </GUI:ControlKind>
+  <GUI:ControlKind ExportGuid="499316a7-f0a8-477b-badf-8d4ec3dae342">
+    <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
+    <GUI:Name>Zetbox.Basic.Workflow.WFInstanceEditor</GUI:Name>
     <GUI:Parent>06bf9adc-c5bc-4552-abdc-18a96c527962</GUI:Parent>
   </GUI:ControlKind>
   <GUI:ControlKind ExportGuid="c3fac4ef-8d8b-456a-8e0b-da8a1bc73698">
