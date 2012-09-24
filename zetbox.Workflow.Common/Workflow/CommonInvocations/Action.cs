@@ -8,9 +8,28 @@ namespace zetbox.Workflow.Common.Workflow.CommonInvocations
     using wf = Zetbox.Basic.Workflow;
     using Zetbox.App.Base;
     using Zetbox.API;
+    using System.Net.Mail;
 
     public class Action
     {
+        public readonly IMailSender _mail;
+        public Action(IMailSender mail)
+        {
+            _mail = mail;
+        }
+
+        public bool SendReminder(wf.Action action, wf.ParameterizedActionDefinition parameter, wf.State current, Identity identity)
+        {
+            var body = string.Format(@"Hello Arthur!
+
+This is an reminder of an open workflow item in your inbox.
+
+Best regards, your Workflow System");
+            var msg = new MailMessage("office@dasz.at", "arthur@dasz.at", "Reminder", body);
+            _mail.Send(msg);
+            return true;
+        }
+
         public static bool Schedule(wf.Action action, wf.ParameterizedActionDefinition parameter, wf.State current, Identity identity)
         {
             var ctx = current.Context;
