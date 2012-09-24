@@ -373,6 +373,13 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                     {
                         SelectedStateChange.StateChange.Name = SelectedAction.Action.Name;
                     }
+
+                    foreach (var change in SelectedStateDefinition.StateDefinition.StateChanges.Except(new[] { SelectedStateChange.StateChange }))
+                    {
+                        if (change.InvokedByActions.Contains(SelectedAction.Action))
+                            change.InvokedByActions.Remove(SelectedAction.Action);
+                    }
+
                     ResetStateDefinitionGraph();
                 }
             }
@@ -447,7 +454,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
 
                             if (actionToSelect == null) actionToSelect = paramAction;
                         }
-                        if (actionToSelect!= null)
+                        if (actionToSelect != null)
                         {
                             SelectedAction = ToActionViewModel(actionToSelect);
                         }
