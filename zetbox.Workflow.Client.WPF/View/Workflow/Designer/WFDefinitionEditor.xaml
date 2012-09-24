@@ -178,7 +178,7 @@
                             </Border>
                         </DataTemplate>
                         <DataTemplate DataType="{x:Type vm:StateChangeGraphViewModel}">
-                            <Border Background="Green"
+                            <Border Background="#ff99ff99"
                                     Style="{StaticResource VertexBorderStyle}">
                                 <Grid>
                                     <DockPanel VerticalAlignment="Top">
@@ -195,7 +195,7 @@
                             </Border>
                         </DataTemplate>
                         <DataTemplate DataType="{x:Type vm:ActionGraphViewModel}">
-                            <Border Background="Blue"
+                            <Border Background="#ffc0c0ff"
                                     CornerRadius="40"
                                     Style="{StaticResource VertexBorderStyle}">
                                 <Grid>
