@@ -98,6 +98,8 @@ namespace Zetbox.Basic.Workflow
             if (stateEnds)
             {
                 current.LeftOn = DateTime.Now;
+                current.Persons.Clear();
+                current.Groups.Clear();
             }
         }
     }
