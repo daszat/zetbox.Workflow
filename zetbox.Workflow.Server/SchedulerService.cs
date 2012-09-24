@@ -92,6 +92,7 @@ namespace zetbox.Workflow.Server
                                 var now = DateTime.Now;
                                 var nextSchedulerEntries = queryCtx.GetQuery<SchedulerEntry>()
                                         .Where(e => e.InvokeOn <= now)
+                                        .Where(e => e.State.IsActive)
                                         .Take(MAX_ITEMS_PER_BATCH)
                                         .ToList();
                                 if (nextSchedulerEntries.Count == 0) break;

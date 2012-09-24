@@ -100,6 +100,7 @@ namespace Zetbox.Basic.Workflow
                 current.LeftOn = DateTime.Now;
                 current.Persons.Clear();
                 current.Groups.Clear();
+                current.ScheduledActions.Clear();
             }
         }
     }
