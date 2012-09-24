@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-21T17:33:01.397135Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-09-24T17:09:01.5706561Z" xmlns="http://dasz.at/Zetbox">
   <ZetboxBase:Module ExportGuid="e27c7e66-f806-4b0b-bf03-4e14efff5336">
     <ZetboxBase:ChangedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:CreatedOn>
@@ -1889,7 +1889,7 @@ public static void isValid_Hours(ScheduledActionDefinition obj, PropertyIsValidE
   </ZetboxBase:IntProperty>
   <ZetboxBase:ObjectReferenceProperty ExportGuid="79506859-644d-4503-ad9c-055b4c53df3b">
     <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
-    <ZetboxBase:ChangedOn>2012-09-21T15:33:01.397135Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ChangedOn>2012-09-24T15:09:01.5706561Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
 public static void get_InvokeAction(ScheduledActionDefinition obj, PropertyGetterEventArgs&lt;Zetbox.Basic.Workflow.ParameterizedActionDefinition&gt; e)
 {
@@ -1919,7 +1919,7 @@ public static void isValid_InvokeAction(ScheduledActionDefinition obj, PropertyI
     <ZetboxBase:Name>InvokeAction</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>62053394-6f4e-45f6-814b-77c7446d859b</ZetboxBase:ObjectClass>
     <ZetboxBase:Properties_pos>0</ZetboxBase:Properties_pos>
-    <GUI:ValueModelDescriptor>83aae6fd-0fae-4348-b313-737a6e751027</GUI:ValueModelDescriptor>
+    <GUI:ValueModelDescriptor>48539f07-8872-4141-9918-53fc5e8b3951</GUI:ValueModelDescriptor>
     <ZetboxBase:EagerLoading>false</ZetboxBase:EagerLoading>
     <ZetboxBase:RelationEnd>68d8e7e3-4340-48e8-acdc-6bdd1d5b478f</ZetboxBase:RelationEnd>
   </ZetboxBase:ObjectReferenceProperty>
@@ -6885,6 +6885,20 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
     <ZetboxBase:FullName>QuickGraph.IEdge`1</ZetboxBase:FullName>
   </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="7327e4bf-6a91-4d06-bade-5d223bd864ed">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-24T15:08:12.5318512Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:08:12.5318512Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>Zetbox.Basic.Workflow.ActionActions</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="b61fc5be-eb0b-4c83-9616-1edff7f36f49">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-24T15:08:12.5318512Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:08:12.5318512Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>Zetbox.Basic.Workflow.SchedulerActionActions</ZetboxBase:FullName>
+    <ZetboxBase:Parent>c51c8086-60b2-410e-96c4-c1a32c1f57ee</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
   <ZetboxBase:TypeRef ExportGuid="81b10ebc-2859-49dc-8e59-c6637fdf336f">
     <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
     <ZetboxBase:ChangedOn>2012-09-13T14:03:04.8076643Z</ZetboxBase:ChangedOn>
@@ -6975,6 +6989,20 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
     <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.Designer.WFDefinitionGraph</ZetboxBase:FullName>
     <ZetboxBase:Parent>c3894db1-122b-4a9a-a167-ea35e3fb3d38</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="2be46320-7cf4-4d53-b3a3-1b24b6ffefca">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-24T15:08:12.5318512Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:08:12.5318512Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.InvokeActionObjRefPropertyViewModel</ZetboxBase:FullName>
+    <ZetboxBase:Parent>59136763-5a94-4ae5-b9ab-6d679e86245a</ZetboxBase:Parent>
+  </ZetboxBase:TypeRef>
+  <ZetboxBase:TypeRef ExportGuid="9950d12b-1383-469c-9f5b-5cd4ab904659">
+    <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
+    <ZetboxBase:ChangedOn>2012-09-24T15:08:12.5318512Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CreatedOn>2012-09-24T15:08:12.5318512Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:FullName>zetbox.Workflow.Client.ViewModel.Workflow.InvokeActionObjRefPropertyViewModel+Factory</ZetboxBase:FullName>
+    <ZetboxBase:Parent>68559faa-c4b4-4bb2-bb0d-49bb83a081a7</ZetboxBase:Parent>
   </ZetboxBase:TypeRef>
   <ZetboxBase:TypeRef ExportGuid="1dd08119-6db3-48c4-a5f1-6215273ddd94">
     <ZetboxBase:Assembly>bf525f9e-4262-4f62-8910-ba034503fd7e</ZetboxBase:Assembly>
@@ -7157,6 +7185,11 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <GUI:Description>WF Definition Designer</GUI:Description>
     <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
     <GUI:ViewModelRef>26871bcb-fa80-437d-9c15-d7d3fe157fcd</GUI:ViewModelRef>
+  </GUI:ViewModelDescriptor>
+  <GUI:ViewModelDescriptor ExportGuid="48539f07-8872-4141-9918-53fc5e8b3951">
+    <GUI:Description>PropertyViewModel for InvokeActions on a ScheduledActionDefinition object</GUI:Description>
+    <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
+    <GUI:ViewModelRef>2be46320-7cf4-4d53-b3a3-1b24b6ffefca</GUI:ViewModelRef>
   </GUI:ViewModelDescriptor>
   <GUI:ViewModelDescriptor ExportGuid="cd3eecdc-7abd-433b-9da5-472dd530ac96">
     <GUI:DefaultEditorKind>0c8e3f56-8d57-4759-acb2-c798e7bef391</GUI:DefaultEditorKind>
