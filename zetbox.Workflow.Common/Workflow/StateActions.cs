@@ -3,12 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Zetbox.API;
+using Zetbox.App.Base;
 
 namespace Zetbox.Basic.Workflow
 {
     [Implementor]
     public static class StateActions
     {
+        internal static State CreateState(WFInstance instance, StateDefinition def)
+        {
+            var ctx = instance.Context;
+            var state = ctx.Create<State>();
+            state.Instance = instance;
+            state.StateDefinition = def;
+            foreach (var action in def.Actions.Where(a => a.IsOnEnterAction))
+            {
+                action.Action.Execute(action, state);
+            }
+            return state;
+        }
+
         [Invocation]
         public static void ToString(State obj, MethodReturnEventArgs<string> e)
         {

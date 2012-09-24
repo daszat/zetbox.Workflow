@@ -46,9 +46,7 @@ namespace Zetbox.Basic.Workflow
                 obj.Workflow = workflow;
                 foreach (var stateDef in workflow.StateDefinitions.Where(s => s.IsStartState))
                 {
-                    var state = ctx.Create<State>();
-                    state.Instance = obj;
-                    state.StateDefinition = stateDef;
+                    StateActions.CreateState(obj, stateDef);
                 }
                 obj.Recalculate("IsActive");
             }

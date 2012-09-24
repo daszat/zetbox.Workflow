@@ -89,9 +89,7 @@ namespace Zetbox.Basic.Workflow
                     }
                     else
                     {
-                        var state = ctx.Create<State>();
-                        state.Instance = current.Instance;
-                        state.StateDefinition = stateDef;
+                        StateActions.CreateState(current.Instance, stateDef);
                     }
                 }
             }
