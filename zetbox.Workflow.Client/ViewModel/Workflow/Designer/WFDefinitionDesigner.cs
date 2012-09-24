@@ -201,6 +201,16 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                         SelectedAction = null;
                     }
                 };
+                vm.Action.PropertyChanged += (s, e) =>
+                {
+                    switch (e.PropertyName)
+                    {
+                        case "InvokeAction":
+                            ResetStateDefinitionGraph();
+                            break;
+                    }
+                };
+
             }
             return _actionViewModels[action];
         }
@@ -307,6 +317,14 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                     {
                         _StatedefinitionGraph.AddEdge(new TaggedEdge<object, HiddenGraphElementViewModel>(_hiddenStateChange, vertex, _hiddenStateChange));
                     }
+                }
+            }
+
+            foreach (var schedulerAction in SelectedStateDefinition.StateDefinition.Actions.OfType<wf.ScheduledActionDefinition>())
+            {
+                if (schedulerAction.InvokeAction != null)
+                {
+                    _StatedefinitionGraph.AddEdge(new TaggedEdge<object, ActionGraphViewModel>(ToActionViewModel(schedulerAction), ToActionViewModel(schedulerAction.InvokeAction), ToActionViewModel(schedulerAction)));
                 }
             }
 
