@@ -59,7 +59,7 @@ namespace Zetbox.Basic.Workflow
             // call invocation
             if (_invocationExec.HasValidInvocation(obj))
             {
-                var result = _invocationExec.CallInvocation<bool>(obj, typeof(ActionInvocationPrototype), obj, current, identity);
+                var result = _invocationExec.CallInvocation<bool>(obj, typeof(ActionInvocationPrototype), obj, paramedAction, current, identity);
                 if (result == false)
                 {
                     return;
