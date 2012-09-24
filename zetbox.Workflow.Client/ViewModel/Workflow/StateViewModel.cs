@@ -51,7 +51,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow
             var commands = base.CreateCommands();
             if (State.IsActive)
             {
-                foreach (var action in State.StateDefinition.Actions)
+                foreach (var action in State.StateDefinition.Actions.Where(a => a.IsVisible))
                 {
                     // avoid capturing the loop variable
                     var localAction = action;
