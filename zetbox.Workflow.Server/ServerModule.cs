@@ -18,6 +18,10 @@ namespace zetbox.Workflow.Server
             moduleBuilder.RegisterZetboxImplementors(typeof(ServerModule).Assembly);
 
             // Register explicit overrides here
+            moduleBuilder
+                .RegisterType<SchedulerService>()
+                .AsImplementedInterfaces()
+                .SingleInstance();
         }
     }
 }
