@@ -10,3 +10,5 @@ obj
 # Only commit repositories.config. The rest of /packages is only a local cache
 !/packages/repositories.config
 /packages/*
+
+/Configs/Zetbox.Server.Service.exe.config
