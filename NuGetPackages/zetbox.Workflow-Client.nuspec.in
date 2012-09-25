@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>zetbox.Workflow-Client</id>
+    <version>1.0.$REVNUM$.$DIRTY$</version>
+    <title>zetbox.Workflow client assemblies</title>
+    <authors>dasz.at OG</authors>
+    <owners>dasz.at OG</owners>
+    <licenseUrl>http://www.gnu.org/licenses/lgpl.html</licenseUrl>
+    <projectUrl>http://zetbox.at/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Client assemblies for zetbox.Workflow.</description>
+    <releaseNotes>First package.</releaseNotes>
+    <copyright>Copyright © 2012 dasz.at OG</copyright>
+    <dependencies>
+      <dependency id="zetboxBasic-Client" version="[1.0.4359.1]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Client\App.zetbox.Workflow\*.dll" target="lib\net35" />
+    <file src="Client\App.zetbox.Workflow\*.pdb" target="lib\net35" />
+  </files>
+</package>

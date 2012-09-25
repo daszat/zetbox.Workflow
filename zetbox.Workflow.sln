@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zetbox.Workflow.WPF", "zetb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zetbox.Workflow.Server", "zetbox.Workflow.Server\zetbox.Workflow.Server.csproj", "{9FFA0ED3-5A01-41C8-BF14-A7FF81B48BFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGetPackages", "NuGetPackages\NuGetPackages.csproj", "{570EC58C-012F-409C-9A7B-FE50D0B068EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,12 @@ Global
 		{9FFA0ED3-5A01-41C8-BF14-A7FF81B48BFF}.Linux.Debug|Any CPU.Build.0 = Linux.Debug|Any CPU
 		{9FFA0ED3-5A01-41C8-BF14-A7FF81B48BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FFA0ED3-5A01-41C8-BF14-A7FF81B48BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{570EC58C-012F-409C-9A7B-FE50D0B068EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{570EC58C-012F-409C-9A7B-FE50D0B068EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{570EC58C-012F-409C-9A7B-FE50D0B068EF}.Linux.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{570EC58C-012F-409C-9A7B-FE50D0B068EF}.Linux.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{570EC58C-012F-409C-9A7B-FE50D0B068EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{570EC58C-012F-409C-9A7B-FE50D0B068EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

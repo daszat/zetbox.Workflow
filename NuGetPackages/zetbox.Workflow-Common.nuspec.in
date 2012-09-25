@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>zetbox.Workflow-Common</id>
+    <version>1.0.$REVNUM$.$DIRTY$</version>
+    <title>zetbox.Workflow common assemblies</title>
+    <authors>dasz.at OG</authors>
+    <owners>dasz.at OG</owners>
+    <licenseUrl>http://www.gnu.org/licenses/lgpl.html</licenseUrl>
+    <projectUrl>http://zetbox.at/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Common assemblies for zetbox.Workflow.</description>
+    <releaseNotes>First package.</releaseNotes>
+    <copyright>Copyright © 2012 dasz.at OG</copyright>
+    <dependencies>
+      <dependency id="zetboxBasic-Common" version="[1.0.4359.1]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Common\App.zetbox.Workflow\*.dll" target="lib\net35" />
+    <file src="Common\App.zetbox.Workflow\*.pdb" target="lib\net35" />
+    <file src="..\..\Data\**\*.*" target="zetbox\Data" />
+    <file src="..\..\Modules\**\*.*" target="zetbox\Modules" />
+  </files>
+</package>
