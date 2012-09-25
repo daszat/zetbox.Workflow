@@ -28,7 +28,9 @@
       <DependentUpon>zetbox.Workflow-Client.nuspec.in</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </NuSpec>
-    <None Include="zetbox.Workflow-Server.nuspec.in" />
+    <None Include="zetbox.Workflow-Server.nuspec.in">
+      <SubType>Designer</SubType>
+    </None>
     <NuSpec Include="zetbox.Workflow-Server.nuspec">
       <DependentUpon>zetbox.Workflow-Server.nuspec.in</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
