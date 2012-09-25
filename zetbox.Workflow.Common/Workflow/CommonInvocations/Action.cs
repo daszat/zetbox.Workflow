@@ -65,5 +65,29 @@ Best regards, your Workflow System");
 
             return true;
         }
+
+        public static bool AddResponsibles(wf.Action action, wf.ParameterizedActionDefinition parameter, wf.State current, Identity identity)
+        {
+            var ctx = current.Context;
+            var sParameter = (wf.AddResponsiblesActionDefinition)parameter;
+
+            if (sParameter.ClearResponsibles)
+            {
+                current.Groups.Clear();
+                current.Persons.Clear();
+            }
+
+            foreach (var grp in sParameter.Groups)
+            {
+                current.Groups.Add(grp);
+            }
+
+            foreach (var person in sParameter.Persons)
+            {
+                current.Persons.Add(person);
+            }
+
+            return true;
+        }
     }
 }
