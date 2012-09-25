@@ -468,6 +468,8 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                             paramAction.Action = action;
                             paramAction.Module = WFDefinition.Module;
                             paramAction.Name = action.Name;
+                            paramAction.IsVisible = action.IsVisibleDefault;
+                            paramAction.IsOnEnterAction = action.IsOnEnterActionDefault;
                             SelectedStateDefinition.StateDefinition.Actions.Add(paramAction);
 
                             if (actionToSelect == null) actionToSelect = paramAction;
