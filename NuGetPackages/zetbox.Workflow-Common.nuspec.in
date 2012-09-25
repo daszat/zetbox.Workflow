@@ -13,7 +13,10 @@
     <releaseNotes>First package.</releaseNotes>
     <copyright>Copyright © 2012 dasz.at OG</copyright>
     <dependencies>
+      <dependency id="zetboxBasic" version="[1.0.4365.1]" />
       <dependency id="zetboxBasic-Common" version="[1.0.4365.1]" />
+      <dependency id="zetboxBasic-EF" version="[1.0.4365.1]" />
+      <dependency id="zetboxBasic-NH" version="[1.0.4365.1]" />
     </dependencies>
   </metadata>
   <files>
