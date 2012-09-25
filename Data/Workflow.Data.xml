@@ -1,5 +1,196 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ZetboxPackaging xmlns:Workflow="Zetbox.Basic.Workflow" date="2012-09-25T09:44:03.5578279Z" xmlns="http://dasz.at/Zetbox">
+  <Workflow:Action ExportGuid="2317c835-8c68-4987-be54-ab5f06451a69">
+    <Workflow:ChangedOn>2012-09-24T08:31:30.0260732Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-24T08:18:26.2172419Z</Workflow:CreatedOn>
+    <Workflow:Description>Sends an reminder mail</Workflow:Description>
+    <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
+    <Workflow:IsOnEnterActionDefault>false</Workflow:IsOnEnterActionDefault>
+    <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
+    <Workflow:Label>Send reminder</Workflow:Label>
+    <Workflow:MemberName>SendReminder</Workflow:MemberName>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>SendReminder</Workflow:Name>
+    <Workflow:ParameterType>1ddf3873-cf46-4177-a79f-62f3a3e594f7</Workflow:ParameterType>
+  </Workflow:Action>
+  <Workflow:Action ExportGuid="6a55cf90-c334-42a6-83ed-15d65c71664d">
+    <Workflow:ChangedOn>2012-09-19T16:02:40.6013237Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T12:44:51.9511851Z</Workflow:CreatedOn>
+    <Workflow:Description>Decline the current step</Workflow:Description>
+    <Workflow:IsOnEnterActionDefault>false</Workflow:IsOnEnterActionDefault>
+    <Workflow:IsVisibleDefault>true</Workflow:IsVisibleDefault>
+    <Workflow:LogMessageFormat>{User} has declined</Workflow:LogMessageFormat>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Decline</Workflow:Name>
+    <Workflow:ParameterType>1ddf3873-cf46-4177-a79f-62f3a3e594f7</Workflow:ParameterType>
+  </Workflow:Action>
+  <Workflow:Action ExportGuid="6b9ace99-b484-4561-8eda-0c91e52493fb">
+    <Workflow:ChangedOn>2012-09-19T16:01:25.970055Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T12:45:37.8408099Z</Workflow:CreatedOn>
+    <Workflow:Description>Forward to antother person or group</Workflow:Description>
+    <Workflow:Implementor>7803b422-890a-4a73-bc51-704da47ff5f6</Workflow:Implementor>
+    <Workflow:IsOnEnterActionDefault>false</Workflow:IsOnEnterActionDefault>
+    <Workflow:IsVisibleDefault>true</Workflow:IsVisibleDefault>
+    <Workflow:MemberName>Forward</Workflow:MemberName>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Forward</Workflow:Name>
+    <Workflow:ParameterType>1ddf3873-cf46-4177-a79f-62f3a3e594f7</Workflow:ParameterType>
+  </Workflow:Action>
+  <Workflow:Action ExportGuid="ceddb307-95b2-49fd-9881-52084a7e994d">
+    <Workflow:ChangedOn>2012-09-25T08:50:13.9019186Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-25T07:59:11.0907358Z</Workflow:CreatedOn>
+    <Workflow:Description>Add responsibles (Groups and/or Persons) to the current workflow state</Workflow:Description>
+    <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
+    <Workflow:IsOnEnterActionDefault>true</Workflow:IsOnEnterActionDefault>
+    <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
+    <Workflow:Label>Add responsibles</Workflow:Label>
+    <Workflow:MemberName>AddResponsibles</Workflow:MemberName>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>AddResponsibles</Workflow:Name>
+    <Workflow:ParameterType>8c1a4749-5e70-43f0-ae84-99845e58544b</Workflow:ParameterType>
+  </Workflow:Action>
+  <Workflow:Action ExportGuid="e5ab1ebc-3e5d-467f-acba-2026f3f58a92">
+    <Workflow:ChangedOn>2012-09-19T16:02:40.6013237Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T12:44:39.4154681Z</Workflow:CreatedOn>
+    <Workflow:Description>Accept the current step</Workflow:Description>
+    <Workflow:IsOnEnterActionDefault>false</Workflow:IsOnEnterActionDefault>
+    <Workflow:IsVisibleDefault>true</Workflow:IsVisibleDefault>
+    <Workflow:LogMessageFormat>{User} has accepted</Workflow:LogMessageFormat>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Accept</Workflow:Name>
+    <Workflow:ParameterType>1ddf3873-cf46-4177-a79f-62f3a3e594f7</Workflow:ParameterType>
+  </Workflow:Action>
+  <Workflow:Action ExportGuid="f92dca07-8f58-4af7-9487-7993aaa534a9">
+    <Workflow:ChangedOn>2012-09-12T12:45:15.0185045Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-12T12:45:15.0185045Z</Workflow:CreatedOn>
+    <Workflow:Description>Send back for improvements</Workflow:Description>
+    <Workflow:IsOnEnterActionDefault>false</Workflow:IsOnEnterActionDefault>
+    <Workflow:IsVisibleDefault>true</Workflow:IsVisibleDefault>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Improve</Workflow:Name>
+    <Workflow:ParameterType>1ddf3873-cf46-4177-a79f-62f3a3e594f7</Workflow:ParameterType>
+  </Workflow:Action>
+  <Workflow:ParameterizedActionDefinition ExportGuid="07f1d8bf-01a8-46a3-b3d9-4d20ae597710">
+    <Workflow:Action>e5ab1ebc-3e5d-467f-acba-2026f3f58a92</Workflow:Action>
+    <Workflow:ChangedOn>2012-09-21T14:01:53.7264021Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-21T14:01:53.7264021Z</Workflow:CreatedOn>
+    <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
+    <Workflow:IsVisible>true</Workflow:IsVisible>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Accept</Workflow:Name>
+    <Workflow:StateDefinition>6b698ca5-498e-4e6e-b2e9-34b59827f272</Workflow:StateDefinition>
+    <Workflow:Actions_pos>0</Workflow:Actions_pos>
+  </Workflow:ParameterizedActionDefinition>
+  <Workflow:ParameterizedActionDefinition ExportGuid="2f611e8c-f499-49f6-a6e3-c77fde4ce2d6">
+    <Workflow:Action>6a55cf90-c334-42a6-83ed-15d65c71664d</Workflow:Action>
+    <Workflow:ChangedOn>2012-09-21T14:01:53.7264021Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-21T14:01:53.7264021Z</Workflow:CreatedOn>
+    <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
+    <Workflow:IsVisible>true</Workflow:IsVisible>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Decline</Workflow:Name>
+    <Workflow:StateDefinition>f142cca9-239b-4e35-ab81-312160e8c8c9</Workflow:StateDefinition>
+    <Workflow:Actions_pos>1</Workflow:Actions_pos>
+  </Workflow:ParameterizedActionDefinition>
+  <Workflow:ParameterizedActionDefinition ExportGuid="33c027cb-a86e-4182-bcd4-d649ae27cc25">
+    <Workflow:Action>f92dca07-8f58-4af7-9487-7993aaa534a9</Workflow:Action>
+    <Workflow:ChangedOn>2012-09-21T14:01:53.7264021Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-21T14:01:53.7264021Z</Workflow:CreatedOn>
+    <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
+    <Workflow:IsVisible>true</Workflow:IsVisible>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Improve</Workflow:Name>
+    <Workflow:StateDefinition>6b698ca5-498e-4e6e-b2e9-34b59827f272</Workflow:StateDefinition>
+    <Workflow:Actions_pos>2</Workflow:Actions_pos>
+  </Workflow:ParameterizedActionDefinition>
+  <Workflow:ParameterizedActionDefinition ExportGuid="4af054fd-0fa8-4c2b-b05f-20371876efad">
+    <Workflow:Action>6a55cf90-c334-42a6-83ed-15d65c71664d</Workflow:Action>
+    <Workflow:ChangedOn>2012-09-21T14:01:53.7264021Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-21T14:01:53.7264021Z</Workflow:CreatedOn>
+    <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
+    <Workflow:IsVisible>true</Workflow:IsVisible>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Decline</Workflow:Name>
+    <Workflow:StateDefinition>6b698ca5-498e-4e6e-b2e9-34b59827f272</Workflow:StateDefinition>
+    <Workflow:Actions_pos>1</Workflow:Actions_pos>
+  </Workflow:ParameterizedActionDefinition>
+  <Workflow:ParameterizedActionDefinition ExportGuid="55c5745c-cce8-4598-b71c-e113122953f3">
+    <Workflow:Action>2317c835-8c68-4987-be54-ab5f06451a69</Workflow:Action>
+    <Workflow:ChangedOn>2012-09-24T15:18:57.6257485Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-24T15:18:57.6257485Z</Workflow:CreatedOn>
+    <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
+    <Workflow:IsVisible>true</Workflow:IsVisible>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>SendReminder</Workflow:Name>
+    <Workflow:StateDefinition>f142cca9-239b-4e35-ab81-312160e8c8c9</Workflow:StateDefinition>
+    <Workflow:Actions_pos>3</Workflow:Actions_pos>
+  </Workflow:ParameterizedActionDefinition>
+  <Workflow:ParameterizedActionDefinition ExportGuid="67d381d8-22ef-40c3-b1ec-ad031bf6b67a">
+    <Workflow:Action>e5ab1ebc-3e5d-467f-acba-2026f3f58a92</Workflow:Action>
+    <Workflow:ChangedOn>2012-09-21T14:01:53.7264021Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-21T14:01:53.7264021Z</Workflow:CreatedOn>
+    <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
+    <Workflow:IsVisible>true</Workflow:IsVisible>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Accept</Workflow:Name>
+    <Workflow:StateDefinition>f142cca9-239b-4e35-ab81-312160e8c8c9</Workflow:StateDefinition>
+    <Workflow:Actions_pos>0</Workflow:Actions_pos>
+  </Workflow:ParameterizedActionDefinition>
+  <Workflow:ParameterizedActionDefinition ExportGuid="6a85d449-d020-4505-ae6c-3ea13308d97f">
+    <Workflow:Action>6a55cf90-c334-42a6-83ed-15d65c71664d</Workflow:Action>
+    <Workflow:ChangedOn>2012-09-21T14:03:09.7647512Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-21T14:03:09.7647512Z</Workflow:CreatedOn>
+    <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
+    <Workflow:IsVisible>true</Workflow:IsVisible>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Decline</Workflow:Name>
+    <Workflow:StateDefinition>666b52d8-a7bb-4d22-b3f4-58e1e85e1406</Workflow:StateDefinition>
+    <Workflow:Actions_pos>1</Workflow:Actions_pos>
+  </Workflow:ParameterizedActionDefinition>
+  <Workflow:ParameterizedActionDefinition ExportGuid="c048eda3-e36e-4fca-ac4a-651604bd151c">
+    <Workflow:Action>2317c835-8c68-4987-be54-ab5f06451a69</Workflow:Action>
+    <Workflow:ChangedOn>2012-09-24T08:49:43.9276408Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-24T08:25:36.2188366Z</Workflow:CreatedOn>
+    <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
+    <Workflow:IsVisible>false</Workflow:IsVisible>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>SendReminder</Workflow:Name>
+    <Workflow:StateDefinition>666b52d8-a7bb-4d22-b3f4-58e1e85e1406</Workflow:StateDefinition>
+    <Workflow:Actions_pos>4</Workflow:Actions_pos>
+  </Workflow:ParameterizedActionDefinition>
+  <Workflow:ParameterizedActionDefinition ExportGuid="ca6eb0e8-831a-41bb-9b3f-ee621a44abce">
+    <Workflow:Action>e5ab1ebc-3e5d-467f-acba-2026f3f58a92</Workflow:Action>
+    <Workflow:ChangedOn>2012-09-21T14:03:09.7647512Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-21T14:03:09.7647512Z</Workflow:CreatedOn>
+    <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
+    <Workflow:IsVisible>true</Workflow:IsVisible>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Accept</Workflow:Name>
+    <Workflow:StateDefinition>666b52d8-a7bb-4d22-b3f4-58e1e85e1406</Workflow:StateDefinition>
+    <Workflow:Actions_pos>0</Workflow:Actions_pos>
+  </Workflow:ParameterizedActionDefinition>
+  <Workflow:ParameterizedActionDefinition ExportGuid="ced1b782-6109-4888-b209-5ace54a534d7">
+    <Workflow:Action>2317c835-8c68-4987-be54-ab5f06451a69</Workflow:Action>
+    <Workflow:ChangedOn>2012-09-24T15:28:04.6430361Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-24T15:28:04.6430361Z</Workflow:CreatedOn>
+    <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
+    <Workflow:IsVisible>true</Workflow:IsVisible>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>SendReminder</Workflow:Name>
+    <Workflow:StateDefinition>6b698ca5-498e-4e6e-b2e9-34b59827f272</Workflow:StateDefinition>
+    <Workflow:Actions_pos>3</Workflow:Actions_pos>
+  </Workflow:ParameterizedActionDefinition>
+  <Workflow:ParameterizedActionDefinition ExportGuid="f0745fb7-da6c-4fdf-aa26-9b631efeb92c">
+    <Workflow:Action>6b9ace99-b484-4561-8eda-0c91e52493fb</Workflow:Action>
+    <Workflow:ChangedOn>2012-09-21T14:03:09.7647512Z</Workflow:ChangedOn>
+    <Workflow:CreatedOn>2012-09-21T14:03:09.7647512Z</Workflow:CreatedOn>
+    <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
+    <Workflow:IsVisible>true</Workflow:IsVisible>
+    <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
+    <Workflow:Name>Forward</Workflow:Name>
+    <Workflow:StateDefinition>666b52d8-a7bb-4d22-b3f4-58e1e85e1406</Workflow:StateDefinition>
+    <Workflow:Actions_pos>2</Workflow:Actions_pos>
+  </Workflow:ParameterizedActionDefinition>
   <Workflow:ScheduledActionDefinition ExportGuid="2afd5488-f7b1-4c0d-a8c2-60ead1214aec">
     <Workflow:Action>b440428d-61a5-4542-ac0e-fca521f11bb8</Workflow:Action>
     <Workflow:ChangedOn>2012-09-24T08:25:36.2188366Z</Workflow:ChangedOn>
