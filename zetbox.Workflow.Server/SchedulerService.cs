@@ -110,6 +110,16 @@ namespace zetbox.Workflow.Server
                                             var localEntry = ctx.Find<SchedulerEntry>(entry.ID);
                                             localEntry.Action.Action.Execute(localEntry.Action, localEntry.State);
                                             ctx.Delete(localEntry);
+                                            // Re-Schedule
+                                            var scheduledActions = localEntry.State.StateDefinition.Actions
+                                                .OfType<ScheduledActionDefinition>()
+                                                .Where(ad => ad.IsRecurrent)
+                                                .Where(ad => ad.InvokeAction == localEntry)
+                                                .ToList();
+                                            foreach(var sAction in scheduledActions)
+                                            {
+                                                sAction.Action.Execute(sAction, localEntry.State);
+                                            }
                                             ctx.SubmitChanges();
                                         }
                                         catch (ConcurrencyException)
