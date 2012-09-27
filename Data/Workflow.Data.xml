@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:Workflow="Zetbox.Basic.Workflow" date="2012-09-25T09:44:03.5578279Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:Workflow="Zetbox.Basic.Workflow" date="2012-09-26T14:08:05.2782982Z" xmlns="http://dasz.at/Zetbox">
   <Workflow:Action ExportGuid="2317c835-8c68-4987-be54-ab5f06451a69">
     <Workflow:ChangedOn>2012-09-24T08:31:30.0260732Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:18:26.2172419Z</Workflow:CreatedOn>
@@ -203,19 +203,21 @@
     <Workflow:Actions_pos>3</Workflow:Actions_pos>
     <Workflow:InvokeAction>c048eda3-e36e-4fca-ac4a-651604bd151c</Workflow:InvokeAction>
     <Workflow:IsRecurrent>true</Workflow:IsRecurrent>
+    <Workflow:Schedule />
   </Workflow:ScheduledActionDefinition>
   <Workflow:ScheduledActionDefinition ExportGuid="6dff806b-541b-4ff3-bcae-28dd2cdd0049">
     <Workflow:Action>20c24e3f-5191-4b97-bff4-7645f53d57eb</Workflow:Action>
-    <Workflow:ChangedOn>2012-09-24T15:18:57.6257485Z</Workflow:ChangedOn>
+    <Workflow:ChangedOn>2012-09-26T15:32:43.7765882Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T15:18:57.6257485Z</Workflow:CreatedOn>
     <Workflow:IsOnEnterAction>false</Workflow:IsOnEnterAction>
     <Workflow:IsVisible>true</Workflow:IsVisible>
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
-    <Workflow:Name>EmptyScheduler</Workflow:Name>
+    <Workflow:Name>Remind after 10 days</Workflow:Name>
     <Workflow:StateDefinition>f142cca9-239b-4e35-ab81-312160e8c8c9</Workflow:StateDefinition>
     <Workflow:Actions_pos>2</Workflow:Actions_pos>
     <Workflow:InvokeAction>55c5745c-cce8-4598-b71c-e113122953f3</Workflow:InvokeAction>
     <Workflow:IsRecurrent>true</Workflow:IsRecurrent>
+    <Workflow:Schedule />
   </Workflow:ScheduledActionDefinition>
   <Workflow:ScheduledActionDefinition ExportGuid="7fe81fb7-64bd-4042-92e2-2e0e6361b242">
     <Workflow:Action>52fad819-fa6d-4d45-985a-9a968b9db96f</Workflow:Action>
@@ -229,9 +231,10 @@
     <Workflow:Actions_pos>4</Workflow:Actions_pos>
     <Workflow:InvokeAction>ced1b782-6109-4888-b209-5ace54a534d7</Workflow:InvokeAction>
     <Workflow:IsRecurrent>true</Workflow:IsRecurrent>
+    <Workflow:Schedule />
   </Workflow:ScheduledActionDefinition>
   <Workflow:SchedulerAction ExportGuid="05f1e20a-aa39-40e3-99c6-d8ee0345a858">
-    <Workflow:ChangedOn>2012-09-24T08:31:10.3949504Z</Workflow:ChangedOn>
+    <Workflow:ChangedOn>2012-09-26T15:30:46.4218759Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:24:03.0715089Z</Workflow:CreatedOn>
     <Workflow:Description>A scheduler action that will trigger daily</Workflow:Description>
     <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
@@ -241,10 +244,10 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>DailyScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:EveryDay>true</Workflow:EveryDay>
+    <Workflow:Schedule />
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="1fcb81c7-4347-4394-9897-0b072776dd40">
-    <Workflow:ChangedOn>2012-09-24T08:31:10.3949504Z</Workflow:ChangedOn>
+    <Workflow:ChangedOn>2012-09-26T15:30:46.4218759Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:24:29.526022Z</Workflow:CreatedOn>
     <Workflow:Description>A scheduler action that will trigger quaterly</Workflow:Description>
     <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
@@ -254,7 +257,7 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>QuaterlyScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:EveryQuater>true</Workflow:EveryQuater>
+    <Workflow:Schedule />
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="20c24e3f-5191-4b97-bff4-7645f53d57eb">
     <Workflow:ChangedOn>2012-09-24T08:29:33.7204209Z</Workflow:ChangedOn>
@@ -267,9 +270,10 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>EmptyScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
+    <Workflow:Schedule />
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="52fad819-fa6d-4d45-985a-9a968b9db96f">
-    <Workflow:ChangedOn>2012-09-24T08:31:10.3949504Z</Workflow:ChangedOn>
+    <Workflow:ChangedOn>2012-09-26T15:30:46.4218759Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:22:57.3737512Z</Workflow:CreatedOn>
     <Workflow:Description>A scheduler action that will trigger after two weeks</Workflow:Description>
     <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
@@ -279,10 +283,10 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>TwoWeekScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Days>14</Workflow:Days>
+    <Workflow:Schedule />
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="b440428d-61a5-4542-ac0e-fca521f11bb8">
-    <Workflow:ChangedOn>2012-09-24T08:31:10.3949504Z</Workflow:ChangedOn>
+    <Workflow:ChangedOn>2012-09-26T15:30:46.4218759Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:22:00.6965094Z</Workflow:CreatedOn>
     <Workflow:Description>A scheduler action that will trigger after one week</Workflow:Description>
     <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
@@ -292,10 +296,10 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>OneWeekScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Days>7</Workflow:Days>
+    <Workflow:Schedule />
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="e918c8bb-cda0-4ad4-b8e0-4ee6f3a5d159">
-    <Workflow:ChangedOn>2012-09-24T08:31:10.3949504Z</Workflow:ChangedOn>
+    <Workflow:ChangedOn>2012-09-26T15:30:46.4218759Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:23:34.0498489Z</Workflow:CreatedOn>
     <Workflow:Description>A scheduler action that will trigger monthly</Workflow:Description>
     <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
@@ -305,7 +309,7 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>MonthlyScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:EveryMonth>true</Workflow:EveryMonth>
+    <Workflow:Schedule />
   </Workflow:SchedulerAction>
   <Workflow:StateChangeDefinition ExportGuid="1e13a5bc-c608-4dc7-b501-cdb83ad19e1b">
     <Workflow:ChangedOn>2012-09-19T15:59:13.6934892Z</Workflow:ChangedOn>
