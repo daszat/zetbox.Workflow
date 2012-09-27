@@ -203,7 +203,12 @@
     <Workflow:Actions_pos>3</Workflow:Actions_pos>
     <Workflow:InvokeAction>c048eda3-e36e-4fca-ac4a-651604bd151c</Workflow:InvokeAction>
     <Workflow:IsRecurrent>true</Workflow:IsRecurrent>
-    <Workflow:Schedule />
+    <Workflow:Schedule>
+      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
+      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
+      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
+      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
+    </Workflow:Schedule>
   </Workflow:ScheduledActionDefinition>
   <Workflow:ScheduledActionDefinition ExportGuid="6dff806b-541b-4ff3-bcae-28dd2cdd0049">
     <Workflow:Action>20c24e3f-5191-4b97-bff4-7645f53d57eb</Workflow:Action>
@@ -217,7 +222,13 @@
     <Workflow:Actions_pos>2</Workflow:Actions_pos>
     <Workflow:InvokeAction>55c5745c-cce8-4598-b71c-e113122953f3</Workflow:InvokeAction>
     <Workflow:IsRecurrent>true</Workflow:IsRecurrent>
-    <Workflow:Schedule />
+    <Workflow:Schedule>
+      <DaysOffset xmlns="Zetbox.App.Base">10</DaysOffset>
+      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
+      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
+      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
+      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
+    </Workflow:Schedule>
   </Workflow:ScheduledActionDefinition>
   <Workflow:ScheduledActionDefinition ExportGuid="7fe81fb7-64bd-4042-92e2-2e0e6361b242">
     <Workflow:Action>52fad819-fa6d-4d45-985a-9a968b9db96f</Workflow:Action>
@@ -231,7 +242,12 @@
     <Workflow:Actions_pos>4</Workflow:Actions_pos>
     <Workflow:InvokeAction>ced1b782-6109-4888-b209-5ace54a534d7</Workflow:InvokeAction>
     <Workflow:IsRecurrent>true</Workflow:IsRecurrent>
-    <Workflow:Schedule />
+    <Workflow:Schedule>
+      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
+      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
+      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
+      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
+    </Workflow:Schedule>
   </Workflow:ScheduledActionDefinition>
   <Workflow:SchedulerAction ExportGuid="05f1e20a-aa39-40e3-99c6-d8ee0345a858">
     <Workflow:ChangedOn>2012-09-26T15:30:46.4218759Z</Workflow:ChangedOn>
@@ -244,7 +260,12 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>DailyScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Schedule />
+    <Workflow:Schedule>
+      <EveryDay xmlns="Zetbox.App.Base">true</EveryDay>
+      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
+      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
+      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
+    </Workflow:Schedule>
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="1fcb81c7-4347-4394-9897-0b072776dd40">
     <Workflow:ChangedOn>2012-09-26T15:30:46.4218759Z</Workflow:ChangedOn>
@@ -257,7 +278,12 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>QuaterlyScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Schedule />
+    <Workflow:Schedule>
+      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
+      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
+      <EveryQuater xmlns="Zetbox.App.Base">true</EveryQuater>
+      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
+    </Workflow:Schedule>
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="20c24e3f-5191-4b97-bff4-7645f53d57eb">
     <Workflow:ChangedOn>2012-09-24T08:29:33.7204209Z</Workflow:ChangedOn>
@@ -270,7 +296,12 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>EmptyScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Schedule />
+    <Workflow:Schedule>
+      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
+      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
+      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
+      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
+    </Workflow:Schedule>
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="52fad819-fa6d-4d45-985a-9a968b9db96f">
     <Workflow:ChangedOn>2012-09-26T15:30:46.4218759Z</Workflow:ChangedOn>
@@ -283,7 +314,13 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>TwoWeekScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Schedule />
+    <Workflow:Schedule>
+      <DaysOffset xmlns="Zetbox.App.Base">14</DaysOffset>
+      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
+      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
+      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
+      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
+    </Workflow:Schedule>
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="b440428d-61a5-4542-ac0e-fca521f11bb8">
     <Workflow:ChangedOn>2012-09-26T15:30:46.4218759Z</Workflow:ChangedOn>
@@ -296,7 +333,13 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>OneWeekScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Schedule />
+    <Workflow:Schedule>
+      <DaysOffset xmlns="Zetbox.App.Base">7</DaysOffset>
+      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
+      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
+      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
+      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
+    </Workflow:Schedule>
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="e918c8bb-cda0-4ad4-b8e0-4ee6f3a5d159">
     <Workflow:ChangedOn>2012-09-26T15:30:46.4218759Z</Workflow:ChangedOn>
@@ -309,7 +352,12 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>MonthlyScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Schedule />
+    <Workflow:Schedule>
+      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
+      <EveryMonth xmlns="Zetbox.App.Base">true</EveryMonth>
+      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
+      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
+    </Workflow:Schedule>
   </Workflow:SchedulerAction>
   <Workflow:StateChangeDefinition ExportGuid="1e13a5bc-c608-4dc7-b501-cdb83ad19e1b">
     <Workflow:ChangedOn>2012-09-19T15:59:13.6934892Z</Workflow:ChangedOn>
