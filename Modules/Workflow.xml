@@ -388,32 +388,32 @@ public static void ObjectIsValid(State obj, ObjectIsValidEventArgs e)
     <GUI:ShowIdInLists>false</GUI:ShowIdInLists>
     <GUI:ShowNameInLists>false</GUI:ShowNameInLists>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void ToString(StateChange obj, MethodReturnEventArgs&lt;string&gt; e)
+public static void ToString(StateChangeDefinition obj, MethodReturnEventArgs&lt;string&gt; e)
 {
 }
 
 [Invocation]
-public static void NotifyPreSave(StateChange obj)
+public static void NotifyPreSave(StateChangeDefinition obj)
 {
 }
 
 [Invocation]
-public static void NotifyPostSave(StateChange obj)
+public static void NotifyPostSave(StateChangeDefinition obj)
 {
 }
 
 [Invocation]
-public static void NotifyCreated(StateChange obj)
+public static void NotifyCreated(StateChangeDefinition obj)
 {
 }
 
 [Invocation]
-public static void NotifyDeleting(StateChange obj)
+public static void NotifyDeleting(StateChangeDefinition obj)
 {
 }
 
 [Invocation]
-public static void ObjectIsValid(StateChange obj, ObjectIsValidEventArgs e)
+public static void ObjectIsValid(StateChangeDefinition obj, ObjectIsValidEventArgs e)
 {
 }
 
@@ -5366,7 +5366,7 @@ public static void isValid_Workflow(WFInstance obj, PropertyIsValidEventArgs e)
   <ZetboxBase:Method ExportGuid="682e37f1-b2d9-4421-8d58-98420b8fa87a">
     <ZetboxBase:ChangedOn>2012-09-12T15:44:19.3810469Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void Execute(Action obj)
+public static void Execute(Action obj, Zetbox.Basic.Workflow.ParameterizedActionDefinition paramedAction, Zetbox.Basic.Workflow.State current)
 {
 }
 
@@ -5506,17 +5506,17 @@ public static void ScheduleActionCanExecReason(State obj, MethodReturnEventArgs&
   <ZetboxBase:Method ExportGuid="6f4077ac-88ea-463f-b5af-b9670d223215">
     <ZetboxBase:ChangedOn>2012-09-12T16:19:26.6245743Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void Execute(StateChange obj, Zetbox.Basic.Workflow.State current)
+public static void Execute(StateChangeDefinition obj, Zetbox.Basic.Workflow.State current)
 {
 }
 
 [Invocation]
-public static void ExecuteCanExec(StateChange obj, MethodReturnEventArgs&lt;bool&gt; e)
+public static void ExecuteCanExec(StateChangeDefinition obj, MethodReturnEventArgs&lt;bool&gt; e)
 {
 }
 
 [Invocation]
-public static void ExecuteCanExecReason(StateChange obj, MethodReturnEventArgs&lt;string&gt; e)
+public static void ExecuteCanExecReason(StateChangeDefinition obj, MethodReturnEventArgs&lt;string&gt; e)
 {
 }
 </ZetboxBase:CodeTemplate>
@@ -5530,17 +5530,17 @@ public static void ExecuteCanExecReason(StateChange obj, MethodReturnEventArgs&l
   <ZetboxBase:Method ExportGuid="9bb4ed91-abed-4eb3-9745-cc0d44ccd4fc">
     <ZetboxBase:ChangedOn>2012-09-19T14:34:25.82948Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void GetCodeTemplate(StateChange obj, MethodReturnEventArgs&lt;string&gt; e)
+public static void GetCodeTemplate(StateChangeDefinition obj, MethodReturnEventArgs&lt;string&gt; e)
 {
 }
 
 [Invocation]
-public static void GetCodeTemplateCanExec(StateChange obj, MethodReturnEventArgs&lt;bool&gt; e)
+public static void GetCodeTemplateCanExec(StateChangeDefinition obj, MethodReturnEventArgs&lt;bool&gt; e)
 {
 }
 
 [Invocation]
-public static void GetCodeTemplateCanExecReason(StateChange obj, MethodReturnEventArgs&lt;string&gt; e)
+public static void GetCodeTemplateCanExecReason(StateChangeDefinition obj, MethodReturnEventArgs&lt;string&gt; e)
 {
 }
 </ZetboxBase:CodeTemplate>
