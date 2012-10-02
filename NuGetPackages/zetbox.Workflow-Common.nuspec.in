@@ -13,15 +13,15 @@
     <releaseNotes>First package.</releaseNotes>
     <copyright>Copyright © 2012 dasz.at OG</copyright>
     <dependencies>
-      <dependency id="zetboxBasic" version="[1.0.4383.1]" />
-      <dependency id="zetboxBasic-Common" version="[1.0.4383.1]" />
-      <dependency id="zetboxBasic-EF" version="[1.0.4383.1]" />
-      <dependency id="zetboxBasic-NH" version="[1.0.4383.1]" />
+      <dependency id="zetboxBasic" version="[1.0.4438.1]" />
+      <dependency id="zetboxBasic-Common" version="[1.0.4438.1]" />
+      <dependency id="zetboxBasic-EF" version="[1.0.4438.1]" />
+      <dependency id="zetboxBasic-NH" version="[1.0.4438.1]" />
     </dependencies>
   </metadata>
   <files>
-    <file src="Common\App.zetbox.Workflow\*.dll" target="lib\net35" />
-    <file src="Common\App.zetbox.Workflow\*.pdb" target="lib\net35" />
+    <file src="Common\App.zetbox.Workflow\*.dll" target="lib\net40" />
+    <file src="Common\App.zetbox.Workflow\*.pdb" target="lib\net40" />
     <file src="..\..\Data\**\*.*" target="zetbox\Data" />
     <file src="..\..\Modules\**\*.*" target="zetbox\Modules" />
   </files>

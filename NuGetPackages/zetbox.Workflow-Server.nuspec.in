@@ -13,11 +13,11 @@
     <releaseNotes>First package.</releaseNotes>
     <copyright>Copyright © 2012 dasz.at OG</copyright>
     <dependencies>
-      <dependency id="zetboxBasic-Server" version="[1.0.4383.1]" />
+      <dependency id="zetboxBasic-Server" version="[1.0.4438.1]" />
     </dependencies>
   </metadata>
   <files>
-    <file src="Server\App.zetbox.Workflow\*.dll" target="lib\net35" />
-    <file src="Server\App.zetbox.Workflow\*.pdb" target="lib\net35" />
+    <file src="Server\App.zetbox.Workflow\*.dll" target="lib\net40" />
+    <file src="Server\App.zetbox.Workflow\*.pdb" target="lib\net40" />
   </files>
 </package>
