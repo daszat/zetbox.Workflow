@@ -73,14 +73,17 @@
     <Reference Include="PdfSharp.Charting, Version=1.32.2608.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
       <HintPath>..\packages\PDFsharp-MigraDoc-GDI-dasz.1.32.3883.0\lib\net35\PdfSharp.Charting.dll</HintPath>
     </Reference>
-    <Reference Include="QuickGraph, Version=3.3.51106.0, Culture=neutral, PublicKeyToken=f3fb40175eec2af3, processorArchitecture=MSIL">
-      <HintPath>..\packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.dll</HintPath>
+    <Reference Include="QuickGraph">
+      <HintPath>..\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.dll</HintPath>
     </Reference>
-    <Reference Include="QuickGraph.Data, Version=3.3.51106.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.Data.dll</HintPath>
+    <Reference Include="QuickGraph.Data">
+      <HintPath>..\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.Data.dll</HintPath>
     </Reference>
-    <Reference Include="QuickGraph.Graphviz, Version=3.3.51106.0, Culture=neutral, PublicKeyToken=f3fb40175eec2af3, processorArchitecture=MSIL">
-      <HintPath>..\packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.Graphviz.dll</HintPath>
+    <Reference Include="QuickGraph.Graphviz">
+      <HintPath>..\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.Graphviz.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Serialization">
+      <HintPath>..\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -91,19 +94,19 @@
     <Reference Include="System.Drawing" />
     <Reference Include="WindowsBase" />
     <Reference Include="Zetbox.API">
-      <HintPath>..\packages\zetboxBasic-Common.1.0.4383.1\lib\net35\Zetbox.API.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Common.1.0.4438.1\lib\net40\Zetbox.API.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Zetbox.API.Client">
-      <HintPath>..\packages\zetboxBasic-Client.1.0.4383.1\lib\net35\Zetbox.API.Client.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Client.1.0.4438.1\lib\net40\Zetbox.API.Client.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Zetbox.API.Common">
-      <HintPath>..\packages\zetboxBasic-Common.1.0.4383.1\lib\net35\Zetbox.API.Common.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Common.1.0.4438.1\lib\net40\Zetbox.API.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Zetbox.Client">
-      <HintPath>..\packages\zetboxBasic-Client.1.0.4383.1\lib\net35\Zetbox.Client.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Client.1.0.4438.1\lib\net40\Zetbox.Client.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
