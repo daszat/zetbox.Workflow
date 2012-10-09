@@ -16,6 +16,7 @@
     <OutputPath>..\bin\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="zetbox.Workflow-Common.nuspec.in" />
     <NuSpec Include="zetbox.Workflow-Common.nuspec">
       <DependentUpon>zetbox.Workflow-Common.nuspec.in</DependentUpon>
@@ -37,7 +38,13 @@
     </NuSpec>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="Properties\VersionInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MSBuildVersioning">
+      <HintPath>..\packages\MSBuildVersioning.1.0.34.0\lib\net35\MSBuildVersioning.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <Import Project="..\packages\MSBuildVersioning.1.0.34.0\lib\net35\MsBuildVersioning.targets" />
   <Target Name="GitVersionTargets" Inputs="@(Targets)" Outputs="%(Identity).Dummy">
