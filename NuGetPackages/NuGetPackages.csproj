@@ -45,7 +45,6 @@
   <ItemGroup>
     <None Include="Properties\VersionInfo.cs" />
   </ItemGroup>
-  <Import Project="..\packages\MSBuildVersioning.1.0.34.0\lib\net35\MsBuildVersioning.targets" />
   <Target Name="GitVersionTargets" Inputs="@(Targets)" Outputs="%(Identity).Dummy">
     <GitVersionFile TemplateFile="@(Targets).in" DestinationFile="@(Targets)" />
   </Target>
