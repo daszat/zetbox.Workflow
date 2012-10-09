@@ -38,13 +38,12 @@
     </NuSpec>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\VersionInfo.cs" />
+    <Compile Include="Properties\VersionInfo.Designer.cs">
+      <DependentUpon>VersionInfo.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="MSBuildVersioning">
-      <HintPath>..\packages\MSBuildVersioning.1.0.34.0\lib\net35\MSBuildVersioning.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <None Include="Properties\VersionInfo.cs" />
   </ItemGroup>
   <Import Project="..\packages\MSBuildVersioning.1.0.34.0\lib\net35\MsBuildVersioning.targets" />
   <Target Name="GitVersionTargets" Inputs="@(Targets)" Outputs="%(Identity).Dummy">
@@ -68,4 +67,8 @@
   <Target Name="Clean">
   </Target>
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <Import Project="..\packages\MSBuildVersioning.1.0.37.0\lib\net40\MsBuildVersioning.targets" />
+  <Target Name="BeforeBuild">
+    <GitVersionFile TemplateFile="Properties\VersionInfo.cs" DestinationFile="Properties\VersionInfo.Designer.cs" />
+  </Target>
 </Project>
