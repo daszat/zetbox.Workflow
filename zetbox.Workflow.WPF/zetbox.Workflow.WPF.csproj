@@ -51,9 +51,11 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="Zetbox.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ccdf16e4dd7b6d78, processorArchitecture=MSIL">
       <HintPath>..\packages\zetboxBasic-WpfExe.1.0.4490.1\lib\net40\Zetbox.API.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Zetbox.Client.WPF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ccdf16e4dd7b6d78, processorArchitecture=MSIL">
       <HintPath>..\packages\zetboxBasic-WpfExe.1.0.4490.1\lib\net40\Zetbox.Client.WPF.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -69,12 +71,16 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="SplashScreenImage.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="README.zetbox.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
