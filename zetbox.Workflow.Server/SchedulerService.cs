@@ -10,6 +10,7 @@ namespace zetbox.Workflow.Server
     using Zetbox.API.Utils;
     using Autofac;
     using Zetbox.Basic.Workflow;
+    using Zetbox.API.Server;
 
     public class SchedulerService : IService
     {
@@ -87,7 +88,7 @@ namespace zetbox.Workflow.Server
                     {
                         while (true)
                         {
-                            using (var queryCtx = localScope.Resolve<IZetboxContext>())
+                            using (var queryCtx = localScope.Resolve<IZetboxServerContext>())
                             {
                                 var now = DateTime.Now;
                                 var nextSchedulerEntries = queryCtx.GetQuery<SchedulerEntry>()
