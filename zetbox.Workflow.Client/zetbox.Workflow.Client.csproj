@@ -130,7 +130,11 @@
     <Compile Include="ViewModel\Workflow\Designer\Graphs.cs" />
     <Compile Include="ViewModel\Workflow\StateViewModel.cs" />
     <Compile Include="ViewModel\Workflow\WFDefinitionViewModel.cs" />
+    <Compile Include="Workflow\ScheduledActionDefinitionActions.cs" />
+    <Compile Include="Workflow\ParameterizedActionDefinitionActions.cs" />
     <Compile Include="Workflow\SchedulerActionActions.cs" />
+    <Compile Include="Workflow\StateChangeDefinitionActions.cs" />
+    <Compile Include="Workflow\StateDefinitionActions.cs" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

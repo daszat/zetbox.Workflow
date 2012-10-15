@@ -229,25 +229,29 @@
         <GroupBox Grid.Row="0"
                   Grid.Column="1"
                   Header="Commands">
-            <StackPanel>
+            <UniformGrid Columns="2"
+                         VerticalAlignment="Top">
                 <ctrls:CommandButton CommandViewModel="{Binding NewStateCommand}" />
-            </StackPanel>
+                <ctrls:CommandButton CommandViewModel="{Binding DeleteStateCommand}" />
+            </UniformGrid>
         </GroupBox>
         <GroupBox Grid.Row="2"
                   Grid.Column="1"
                   Header="Commands">
-            <StackPanel>
+            <UniformGrid Columns="2"
+                         VerticalAlignment="Top">
                 <ctrls:CommandButton CommandViewModel="{Binding AddActionCommand}" />
+                <ctrls:CommandButton CommandViewModel="{Binding DeleteActionCommand}" />
+
                 <ctrls:CommandButton CommandViewModel="{Binding NewStateChangeCommand}" />
-                <UniformGrid Rows="1">
-                    <ctrls:CommandButton CommandViewModel="{Binding LinkActionChangeCommand}" />
-                    <ctrls:CommandButton CommandViewModel="{Binding UnlinkActionChangeCommand}" />
-                </UniformGrid>
-                <UniformGrid Rows="1">
-                    <ctrls:CommandButton CommandViewModel="{Binding LinkChangeStateCommand}" />
-                    <ctrls:CommandButton CommandViewModel="{Binding UnlinkChangeStateCommand}" />
-                </UniformGrid>
-            </StackPanel>
+                <ctrls:CommandButton CommandViewModel="{Binding DeleteStateChangeCommand}" />
+
+                <ctrls:CommandButton CommandViewModel="{Binding LinkActionChangeCommand}" />
+                <ctrls:CommandButton CommandViewModel="{Binding UnlinkActionChangeCommand}" />
+
+                <ctrls:CommandButton CommandViewModel="{Binding LinkChangeStateCommand}" />
+                <ctrls:CommandButton CommandViewModel="{Binding UnlinkChangeStateCommand}" />
+            </UniformGrid>
         </GroupBox>
     </Grid>
 </UserControl>

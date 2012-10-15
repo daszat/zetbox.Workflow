@@ -272,8 +272,8 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
 
         private void CreateStateDefinitionGraph()
         {
-            if (SelectedStateDefinition == null) return;
             _StatedefinitionGraph = new StateDefinitionGraph(true);
+            if (SelectedStateDefinition == null) return;
 
             foreach (var action in SelectedStateDefinition.StateDefinition.Actions)
             {
@@ -360,6 +360,37 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             stateDef.Module = WFDefinition.Module;
             SelectedStateDefinition = ToStateDefinitionViewModel(stateDef);
             ResetDefinitionGraph();
+        }
+
+        private ICommandViewModel _DeleteStateCommand = null;
+        public ICommandViewModel DeleteStateCommand
+        {
+            get
+            {
+                if (_DeleteStateCommand == null)
+                {
+                    _DeleteStateCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this, "Delete State", "Deletes the current state", 
+                        DeleteState, 
+                        () => SelectedStateDefinition != null, 
+                        null);
+                }
+                return _DeleteStateCommand;
+            }
+        }
+
+        public void DeleteState()
+        {
+            if (SelectedStateDefinition != null)
+            {
+                if (ViewModelFactory.GetDecisionFromUser("Delete this state?", "Are you sure?"))
+                {
+                    _stateViewModels.Remove(SelectedStateDefinition.StateDefinition);
+                    DataContext.Delete(SelectedStateDefinition.StateDefinition);
+                    SelectedStateDefinition = null;
+                    ResetDefinitionGraph();
+                    ResetStateDefinitionGraph();
+                }
+            }
         }
 
         private ICommandViewModel _LinkActionChangeCommand = null;
@@ -485,6 +516,36 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             }
         }
 
+        private ICommandViewModel _DeleteActionCommand = null;
+        public ICommandViewModel DeleteActionCommand
+        {
+            get
+            {
+                if (_DeleteActionCommand == null)
+                {
+                    _DeleteActionCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this, "Delete Action", "Deletes the current action", 
+                        DeleteAction, 
+                        () => SelectedAction != null, 
+                        null);
+                }
+                return _DeleteActionCommand;
+            }
+        }
+
+        public void DeleteAction()
+        {
+            if (SelectedAction != null)
+            {
+                if (ViewModelFactory.GetDecisionFromUser("Delete this action?", "Are you sure?"))
+                {
+                    _actionViewModels.Remove(SelectedAction.Action);
+                    DataContext.Delete(SelectedAction.Action);
+                    SelectedAction = null;
+                    ResetStateDefinitionGraph();
+                }
+            }
+        }
+
         private ICommandViewModel _NewStateChangeCommand = null;
         public ICommandViewModel NewStateChangeCommand
         {
@@ -510,6 +571,36 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
                 SelectedStateDefinition.StateDefinition.StateChanges.Add(change);
                 SelectedStateChange = ToStateChangeViewModel(change);
                 ResetStateDefinitionGraph();
+            }
+        }
+
+        private ICommandViewModel _DeleteStateChangeCommand = null;
+        public ICommandViewModel DeleteStateChangeCommand
+        {
+            get
+            {
+                if (_DeleteStateChangeCommand == null)
+                {
+                    _DeleteStateChangeCommand = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this, "Delete state change", "Deletes the current state change", 
+                        DeleteStateChange, 
+                        () => SelectedStateChange != null, 
+                        null);
+                }
+                return _DeleteStateChangeCommand;
+            }
+        }
+
+        public void DeleteStateChange()
+        {
+            if (SelectedStateChange != null)
+            {
+                if (ViewModelFactory.GetDecisionFromUser("Delete this state change?", "Are you sure?"))
+                {
+                    _stateChangeViewModels.Remove(SelectedStateChange.StateChange);
+                    DataContext.Delete(SelectedStateChange.StateChange);
+                    SelectedStateChange = null;
+                    ResetStateDefinitionGraph();
+                }
             }
         }
 
