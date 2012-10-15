@@ -275,23 +275,32 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             _StatedefinitionGraph = new StateDefinitionGraph(true);
             if (SelectedStateDefinition == null) return;
 
-            foreach (var action in SelectedStateDefinition.StateDefinition.Actions)
+            // Actions ------------------------------
+            var scheduledActions = SelectedStateDefinition.StateDefinition.Actions.OfType<wf.ScheduledActionDefinition>().ToList();
+            foreach (var action in scheduledActions)
+            {
+                _StatedefinitionGraph.AddVertex(ToActionViewModel(action));
+            }
+            foreach (var action in SelectedStateDefinition.StateDefinition.Actions.Except(scheduledActions))
             {
                 _StatedefinitionGraph.AddVertex(ToActionViewModel(action));
             }
             _StatedefinitionGraph.AddVertex(_hiddenAction);
 
+            // State changes ------------------------------
             foreach (var change in SelectedStateDefinition.StateDefinition.StateChanges)
             {
                 _StatedefinitionGraph.AddVertex(ToStateChangeViewModel(change));
             }
             _StatedefinitionGraph.AddVertex(_hiddenStateChange);
 
+            // State definitions ------------------------------
             foreach (var state in WFDefinition.StateDefinitions)
             {
                 _StatedefinitionGraph.AddVertex(ToStateDefinitionViewModel(state));
             }
 
+            // edges ------------------------------
             foreach (var change in SelectedStateDefinition.StateDefinition.StateChanges)
             {
                 foreach (var action in change.InvokedByActions)
