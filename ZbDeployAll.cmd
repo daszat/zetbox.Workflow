@@ -21,7 +21,7 @@ call "ZbInstall.cmd" %fallbackconfig%
 
 cd bin\Debug
 
-Zetbox.Server.Service.exe %fallbackconfig% -deploy-update -generate
+Zetbox.Server.Service.exe %fallbackconfig% -deploy-update -generate -syncidentities
 IF ERRORLEVEL 1 GOTO FAIL
 
 cd ..\..
