@@ -17,7 +17,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="Client\App.zetbox.Workflow\*.dll" target="lib\net40" />
+    <file src="Client\App.zetbox.Workflow\**\*.dll" target="lib\net40" />
     <file src="Client\App.zetbox.Workflow\*.pdb" target="lib\net40" />
   </files>
 </package>
