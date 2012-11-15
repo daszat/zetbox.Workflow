@@ -6,7 +6,6 @@ using QuickGraph;
 
 namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
 {
-    [CLSCompliant(false)]
     public class WFDefinitionGraph
         : BidirectionalGraph<StateDefinitionGraphViewModel, IEdge<StateDefinitionGraphViewModel>>
     {
@@ -19,7 +18,6 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow.Designer
             : base(allowParallelEdges, vertexCapacity) { }
     }
 
-    [CLSCompliant(false)]
     public class StateDefinitionGraph
         : BidirectionalGraph<object, IEdge<object>>
     {
