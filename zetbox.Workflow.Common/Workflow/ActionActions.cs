@@ -5,8 +5,8 @@ namespace Zetbox.Basic.Workflow
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    using Zetbox.API;
     using System.Text.RegularExpressions;
+    using Zetbox.API;
     using Zetbox.API.Common;
     using Zetbox.App.Base;
 
@@ -52,8 +52,7 @@ namespace Zetbox.Basic.Workflow
         [Invocation]
         public static void Execute(Action obj, ParameterizedActionDefinition paramedAction, State current)
         {
-            if(current == null) throw new ArgumentException("current");
-            var ctx = obj.Context;
+            if (current == null) throw new ArgumentException("current");
             var identity = _idResolver.GetCurrent();
 
             // call invocation

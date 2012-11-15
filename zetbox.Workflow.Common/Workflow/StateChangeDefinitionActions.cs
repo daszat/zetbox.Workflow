@@ -63,7 +63,6 @@ namespace Zetbox.Basic.Workflow
         [Invocation]
         public static void Execute(StateChangeDefinition obj, Zetbox.Basic.Workflow.State current)
         {
-            var ctx = obj.Context;
             var identity = _idResolver.GetCurrent();
 
             var nextStates = obj.NextStates.ToList();

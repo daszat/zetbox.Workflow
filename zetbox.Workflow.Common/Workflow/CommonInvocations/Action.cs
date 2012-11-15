@@ -4,11 +4,11 @@ namespace zetbox.Workflow.Common.Workflow.CommonInvocations
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using wf = Zetbox.Basic.Workflow;
-    using Zetbox.App.Base;
-    using Zetbox.API;
     using System.Net.Mail;
+    using System.Text;
+    using Zetbox.API;
+    using Zetbox.App.Base;
+    using wf = Zetbox.Basic.Workflow;
 
     public class Action
     {
@@ -32,7 +32,6 @@ Best regards, your Workflow System");
 
         public static bool Schedule(wf.Action action, wf.ParameterizedActionDefinition parameter, wf.State current, Identity identity)
         {
-            var ctx = current.Context;
             var sAction = (wf.SchedulerAction)action;
             var sParameter = (wf.ScheduledActionDefinition)parameter;
 
@@ -46,7 +45,6 @@ Best regards, your Workflow System");
 
         public static bool AddResponsibles(wf.Action action, wf.ParameterizedActionDefinition parameter, wf.State current, Identity identity)
         {
-            var ctx = current.Context;
             var sParameter = (wf.AddResponsiblesActionDefinition)parameter;
 
             if (sParameter.ClearResponsibles)

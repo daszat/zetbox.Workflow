@@ -42,7 +42,6 @@ namespace Zetbox.Basic.Workflow
         {
             if (workflow != null)
             {
-                var ctx = obj.Context;
                 obj.Workflow = workflow;
                 foreach (var stateDef in workflow.StateDefinitions.Where(s => s.IsStartState))
                 {
