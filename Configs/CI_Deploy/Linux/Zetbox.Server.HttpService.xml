@@ -6,8 +6,8 @@
     <Modules>
       <Module>Zetbox.Server.UnifiedModule, Zetbox.Server</Module>
 
-      <Module>Zetbox.Objects.EfModule, Zetbox.Objects.EfImpl</Module>
-      <Module>Zetbox.DalProvider.Ef.EfProvider, Zetbox.DalProvider.Ef</Module>
+      <Module>Zetbox.Objects.NHibernateModule, Zetbox.Objects.NHibernateImpl</Module>
+      <Module>Zetbox.DalProvider.NHibernate.NHibernateProvider, Zetbox.DalProvider.NHibernate</Module>
 
       <Module>Zetbox.App.Projekte.Server.CustomServerActionsModule, Zetbox.App.Projekte.Server</Module>
       <Module>Zetbox.App.Projekte.Common.CustomCommonActionsModule, Zetbox.App.Projekte.Common</Module>
