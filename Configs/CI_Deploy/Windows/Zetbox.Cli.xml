@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ZetboxConfig xmlns="http://dasz.at/Zetbox/">
-  <ConfigName>zetbox.Workflow Server Configuration</ConfigName>
+  <ConfigName>zetbox.Workflow Server Cli Configuration</ConfigName>
   <Server StartServer="true">
-    <DocumentStore>DocumentStore/Server</DocumentStore>
+    <DocumentStore>DocumentStore\Server\</DocumentStore>
     <Modules>
       <Module>Zetbox.Server.UnifiedModule, Zetbox.Server</Module>
 
@@ -18,14 +18,14 @@
     </Modules>
   </Server>
   <AssemblySearchPaths>
-    <string>Common/Core</string>
-    <string>Common/Core.Generated</string>
-    <string>Server/Core</string>
-    <string>Server/NH</string>
-    <string>Server/NH.Generated</string>
-    <string>Common/App.Zetbox</string>
-    <string>Server/App.Zetbox</string>
-    <string>Server/App.zetbox.Workflow</string>
-    <string>Common/App.zetbox.Workflow</string>
+    <string>Common\Core</string>
+    <string>Common\Core.Generated</string>
+    <string>Server\Core</string>
+    <string>Server\EF</string>
+    <string>Server\EF.Generated</string>
+    <string>Common\App.Zetbox</string>
+    <string>Server\App.Zetbox</string>
+    <string>Server\App.zetbox.Workflow</string>
+    <string>Common\App.zetbox.Workflow</string>
   </AssemblySearchPaths>
 </ZetboxConfig>

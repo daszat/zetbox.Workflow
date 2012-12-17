@@ -21,7 +21,7 @@ call "ZbInstall.cmd" %fallbackconfig%
 
 cd bin\Debug
 
-Zetbox.Server.Service.exe %fallbackconfig% -deploy-update -generate -syncidentities
+Zetbox.Cli.exe %fallbackconfig% -deploy-update -generate -syncidentities
 IF ERRORLEVEL 1 GOTO FAIL
 
 cd ..\..
@@ -31,7 +31,7 @@ IF ERRORLEVEL 1 GOTO FAIL
 
 cd bin\Debug
 
-Zetbox.Server.Service.exe %config% -import ..\..\Data\Workflow.Data.xml
+Zetbox.Cli.exe %config% -import ..\..\Data\Workflow.Data.xml
 IF ERRORLEVEL 1 GOTO FAIL
 
 
