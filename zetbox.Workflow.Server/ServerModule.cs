@@ -15,6 +15,8 @@ namespace zetbox.Workflow.Server
         {
             base.Load(moduleBuilder);
 
+            moduleBuilder.RegisterModule<Common.CommonModule>();
+
             moduleBuilder.RegisterZetboxImplementors(typeof(ServerModule).Assembly);
 
             // Register explicit overrides here

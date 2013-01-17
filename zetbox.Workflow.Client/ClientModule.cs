@@ -16,6 +16,8 @@ namespace zetbox.Workflow.Client
         {
             base.Load(moduleBuilder);
 
+            moduleBuilder.RegisterModule<Common.CommonModule>();
+
             moduleBuilder.RegisterZetboxImplementors(typeof(ClientModule).Assembly);
             moduleBuilder.RegisterViewModels(typeof(ClientModule).Assembly);
 
