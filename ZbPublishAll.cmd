@@ -15,7 +15,7 @@ set config=%1
 
 cd bin\Debug
 
-Zetbox.Cli.exe %config% -generate -updatedeployedschema -repairschema
+Zetbox.Cli.exe %config% -fallback -generate -updatedeployedschema -repairschema
 IF ERRORLEVEL 1 GOTO FAIL
 
 rem publish schema data for Workflow project

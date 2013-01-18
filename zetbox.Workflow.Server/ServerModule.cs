@@ -8,7 +8,11 @@ namespace zetbox.Workflow.Server
     using Autofac;
     using Zetbox.API;
     using Zetbox.API.Server;
+    using Zetbox.API.Configuration;
+    using System.ComponentModel;
 
+    [Feature(NotOnFallback = true)]
+    [Description("Workflow client module")]
     public class ServerModule : Module
     {
         protected override void Load(ContainerBuilder moduleBuilder)

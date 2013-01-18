@@ -9,7 +9,11 @@ namespace zetbox.Workflow.Client
     using Zetbox.API;
     using Zetbox.API.Client;
     using Zetbox.Client;
+    using Zetbox.API.Configuration;
+    using System.ComponentModel;
 
+    [Feature(NotOnFallback = true)]
+    [Description("Workflow client module")]
     public class ClientModule : Module
     {
         protected override void Load(ContainerBuilder moduleBuilder)

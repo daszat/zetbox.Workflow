@@ -5,23 +5,18 @@ echo Changes to the object model are generated.
 echo Use this to apply upstream changes.
 echo ********************************************************************************
 
-set fallbackconfig=
 set config=
 
 if .%1. == .. GOTO GOON
-set fallbackconfig=%1
 set config=%1
-
-if .%2. == .. GOTO GOON
-set config=%2
 
 :GOON
 
-call "ZbInstall.cmd" %fallbackconfig%
+call "ZbInstall.cmd" %config%
 
 cd bin\Debug
 
-Zetbox.Cli.exe %fallbackconfig% -deploy-update -generate -syncidentities
+Zetbox.Cli.exe %config% -fallback -deploy-update -generate -syncidentities
 IF ERRORLEVEL 1 GOTO FAIL
 
 cd ..\..
