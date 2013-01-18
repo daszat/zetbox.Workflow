@@ -12,7 +12,7 @@ namespace zetbox.Workflow.Server
     using System.ComponentModel;
 
     [Feature(NotOnFallback = true)]
-    [Description("Workflow client module")]
+    [Description("Workflow server module")]
     public class ServerModule : Module
     {
         protected override void Load(ContainerBuilder moduleBuilder)
