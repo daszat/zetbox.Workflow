@@ -14,8 +14,10 @@
     <copyright>Copyright © 2012 dasz.at OG</copyright>
     <dependencies>
       <dependency id="zetboxBasic-Server" version="[1.0.5144.1, 1.1.0)" />
-      
-      <dependency id="LinqCube" version="[1.0.46.0, 2)" />
+      <dependency id="zetbox.Workflow-Common" version="[1.0.$REVNUM$.$DIRTY$]" />
+
+      <!-- The server package must be referenced to receive the libs from this package -->
+      <dependency id="LinqCube" version="[1.0.46.0,2)" />
     </dependencies>
   </metadata>
   <files>

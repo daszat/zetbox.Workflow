@@ -17,6 +17,13 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="zetbox.Workflow.nuspec.in">
+      <SubType>Designer</SubType>
+    </None>
+    <NuSpec Include="zetbox.Workflow.nuspec">
+      <DependentUpon>zetbox.Workflow.nuspec.in</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </NuSpec>
     <None Include="zetbox.Workflow-Common.nuspec.in">
       <SubType>Designer</SubType>
     </None>
