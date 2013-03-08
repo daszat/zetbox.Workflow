@@ -13,11 +13,15 @@
     <releaseNotes>First package.</releaseNotes>
     <copyright>Copyright © 2012 dasz.at OG</copyright>
     <dependencies>
-      <dependency id="zetboxBasic-Client" version="[1.0.4840.1, 1.1.0)" />
+      <dependency id="zetboxBasic-Client" version="[1.0.5144.1, 1.1.0)" />
     </dependencies>
   </metadata>
   <files>
-    <file src="Client\App.zetbox.Workflow\**\*.dll" target="lib\net40" />
-    <file src="Client\App.zetbox.Workflow\*.pdb" target="lib\net40" />
+    <file src="Client\zetbox.Workflow.Client.dll" target="lib\net40" />
+    <file src="Client\zetbox.Workflow.Client.pdb" target="lib\net40" />
+    <file src="Client\zetbox.Workflow.Client.xml" target="lib\net40" />
+    <file src="Client\zetbox.Workflow.Client.WPF.dll" target="lib\net40" />
+    <file src="Client\zetbox.Workflow.Client.WPF.pdb" target="lib\net40" />
+    <file src="Client\zetbox.Workflow.Client.WPF.xml" target="lib\net40" />
   </files>
 </package>

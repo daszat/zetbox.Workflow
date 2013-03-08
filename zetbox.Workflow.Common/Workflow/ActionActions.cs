@@ -15,6 +15,7 @@ namespace Zetbox.Basic.Workflow
     /// An action invocation prototype. Return false to skip a state change and log entry.
     /// </summary>
     /// <param name="action">the calling action</param>
+    /// <param name="parameter">the action's definition</param>
     /// <param name="current">the current workflow state</param>
     /// <param name="identity">the current identity or null, if the identity cannot be resolved</param>
     /// <returns>False to skip a state change and log entry.</returns>

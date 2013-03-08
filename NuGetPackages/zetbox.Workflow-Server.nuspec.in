@@ -13,11 +13,14 @@
     <releaseNotes>First package.</releaseNotes>
     <copyright>Copyright © 2012 dasz.at OG</copyright>
     <dependencies>
-      <dependency id="zetboxBasic-Server" version="[1.0.4840.1, 1.1.0)" />
+      <dependency id="zetboxBasic-Server" version="[1.0.5144.1, 1.1.0)" />
+      
+      <dependency id="LinqCube" version="[1.0.46.0, 2)" />
     </dependencies>
   </metadata>
   <files>
-    <file src="Server\App.zetbox.Workflow\*.dll" target="lib\net40" />
-    <file src="Server\App.zetbox.Workflow\*.pdb" target="lib\net40" />
+    <file src="Server\zetbox.Workflow.Server.dll" target="lib\net40" />
+    <file src="Server\zetbox.Workflow.Server.pdb" target="lib\net40" />
+    <file src="Server\zetbox.Workflow.Server.xml" target="lib\net40" />
   </files>
 </package>

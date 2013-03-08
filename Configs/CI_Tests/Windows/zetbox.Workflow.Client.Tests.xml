@@ -12,17 +12,7 @@
     <Modules>
       <Module>Zetbox.Client.ClientModule, Zetbox.Client</Module>
       <Module>Zetbox.API.Client.HttpClientModule, Zetbox.API.Client</Module>
-      <Module NotOnFallback="true">zetbox.Workflow.Client.ClientModule, zetbox.Workflow.Client</Module>
+      <Module>zetbox.Workflow.Client.ClientModule, zetbox.Workflow.Client</Module>
     </Modules>
   </Client>
-  <AssemblySearchPaths EnableShadowCopy="true">
-    <string>Common\Core</string>
-    <string>Client\Core</string>
-    <string>Client\WPF</string>
-    <string>Common\App.Zetbox</string>
-    <string>Client\App.Zetbox</string>
-    <string>Common\Microsoft</string>
-    <string>Common\App.zetbox.Workflow</string>
-    <string>Client\App.zetbox.Workflow</string>
-  </AssemblySearchPaths>
 </ZetboxConfig>

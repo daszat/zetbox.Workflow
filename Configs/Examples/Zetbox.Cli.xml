@@ -16,17 +16,8 @@
       <Module>Zetbox.DalProvider.Memory.Generator.MemoryGeneratorProvider, Zetbox.DalProvider.Memory.Generator</Module>
       <Module>Zetbox.DalProvider.Ef.Generator.EfGeneratorProvider, Zetbox.DalProvider.Ef.Generator</Module>
       <Module>Zetbox.DalProvider.Client.Generator.ClientGeneratorProvider, Zetbox.DalProvider.Client.Generator</Module>
-      <Module NotOnFallback="true">zetbox.Workflow.Server.ServerModule, zetbox.Workflow.Server</Module>
+      <Module>zetbox.Workflow.Server.ServerModule, zetbox.Workflow.Server</Module>
     </Modules>
     <ClientFilesLocations />
   </Server>
-  <AssemblySearchPaths EnableShadowCopy="true">
-    <string>Common\Core</string>
-    <string>Server\Core</string>
-    <string>Server\EF</string>
-    <string>Common\App.Zetbox</string>
-    <string>Server\App.Zetbox</string>
-    <string>Common\App.zetbox.Workflow</string>
-    <string>Server\App.zetbox.Workflow</string>
-  </AssemblySearchPaths>
 </ZetboxConfig>
