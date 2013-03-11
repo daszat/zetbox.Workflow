@@ -54,6 +54,11 @@
   <ItemGroup>
     <None Include="Properties\VersionInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.zetbox.Workflow.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Target Name="GitVersionTargets" Inputs="@(Targets)" Outputs="%(Identity).Dummy">
     <GitVersionFile TemplateFile="@(Targets).in" DestinationFile="@(Targets)" />
   </Target>
