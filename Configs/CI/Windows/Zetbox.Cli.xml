@@ -6,6 +6,10 @@
     <DocumentStore>DocumentStore\Server\</DocumentStore>
     <CodeGenWorkingPath>..\CodeGenNext</CodeGenWorkingPath>
     <CodeGenOutputPath>..\CodeGen</CodeGenOutputPath>
+    <CodeGenBinaryOutputPath>
+      <string>.\</string>
+      <string>.\HttpService/bin</string>
+    </CodeGenBinaryOutputPath>
     <CodeGenArchivePath>..\..\Backup</CodeGenArchivePath>
     <Modules>
       <Module>Zetbox.Server.ServerModule, Zetbox.Server</Module>
