@@ -22,6 +22,11 @@
     <file src="Client\zetbox.Workflow.Client.WPF.dll" target="zetbox\Client" />
     <file src="Server\zetbox.Workflow.Server.dll" target="zetbox\Server" />
 
+    <file src="Common\**\zetbox.Workflow.Common.resources.dll" target="zetbox\Common" />
+    <file src="Client\**\zetbox.Workflow.Client.resources.dll" target="zetbox\Client" />
+    <file src="Client\**\zetbox.Workflow.Client.WPF.resources.dll" target="zetbox\Client" />
+    <file src="Server\**\zetbox.Workflow.Server.resources.dll" target="zetbox\Server" />
+
     <file src="..\..\Data\**\*.*" target="zetbox\Data" />
     <file src="..\..\Modules\**\*.*" target="zetbox\Modules" />
 
