@@ -35,12 +35,13 @@ Best regards, your Workflow System");
             var sAction = (wf.SchedulerAction)action;
             var sParameter = (wf.ScheduledActionDefinition)parameter;
 
-            DateTime dt = sAction.Schedule.GetNext();
-            dt = sParameter.Schedule.GetNext(dt);
+            throw new NotImplementedException("Need ScheduledActionDefinition.BeginDate");
+            //DateTime dt = sAction.Schedule.GetNext();
+            //dt = sParameter.Schedule.GetNext(dt);
 
-            current.ScheduleAction(dt, sParameter.InvokeAction);
+            //current.ScheduleAction(dt, sParameter.InvokeAction);
 
-            return true;
+            //return true;
         }
 
         public static bool AddResponsibles(wf.Action action, wf.ParameterizedActionDefinition parameter, wf.State current, Identity identity)
