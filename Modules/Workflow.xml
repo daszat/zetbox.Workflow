@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2012-10-15T15:53:56.3411211Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2013-03-29T11:12:45.8526417Z" xmlns="http://dasz.at/Zetbox">
   <ZetboxBase:Module ExportGuid="e27c7e66-f806-4b0b-bf03-4e14efff5336">
     <ZetboxBase:ChangedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:CreatedOn>
@@ -910,6 +910,44 @@ public static void isValid_Implementor(Action obj, PropertyIsValidEventArgs e)
     <ZetboxBase:EagerLoading>false</ZetboxBase:EagerLoading>
     <ZetboxBase:RelationEnd>f2c740a5-1a5c-4e73-95f1-73845d001a31</ZetboxBase:RelationEnd>
   </ZetboxBase:ObjectReferenceProperty>
+  <ZetboxBase:StringProperty ExportGuid="1cdcb269-86d8-4c5b-b114-e4e0192dc6f5">
+    <ZetboxBase:CategoryTags>Invocation</ZetboxBase:CategoryTags>
+    <ZetboxBase:ChangedOn>2013-03-29T10:12:45.8526417Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:CodeTemplate>[Invocation]
+public static void get_ImplementorName(Action obj, PropertyGetterEventArgs&lt;string&gt; e)
+{
+}
+
+[Invocation]
+public static void preSet_ImplementorName(Action obj, PropertyPreSetterEventArgs&lt;string&gt; e)
+{
+}
+
+[Invocation]
+public static void postSet_ImplementorName(Action obj, PropertyPostSetterEventArgs&lt;string&gt; e)
+{
+}
+
+[Invocation]
+public static void isValid_ImplementorName(Action obj, PropertyIsValidEventArgs e)
+{
+	e.IsValid = obj.ImplementorName == ...;
+	e.Error = e.IsValid ? string.Empty : "&lt;Error&gt;";
+}
+
+</ZetboxBase:CodeTemplate>
+    <ZetboxBase:CreatedOn>2013-03-29T10:12:45.8526417Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:Description>The typename of the implementor of this action's invocation</ZetboxBase:Description>
+    <ZetboxBase:Label>Implementor name</ZetboxBase:Label>
+    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
+    <ZetboxBase:Name>ImplementorName</ZetboxBase:Name>
+    <ZetboxBase:ObjectClass>f33e0ab3-84ee-4543-90c1-a615191118d2</ZetboxBase:ObjectClass>
+    <ZetboxBase:Properties_pos>1101</ZetboxBase:Properties_pos>
+    <GUI:ValueModelDescriptor>975eee82-e7e1-4a12-ab43-d2e3bc3766e4</GUI:ValueModelDescriptor>
+    <ZetboxBase:HasPersistentOrder>false</ZetboxBase:HasPersistentOrder>
+    <ZetboxBase:IsCalculated>false</ZetboxBase:IsCalculated>
+    <ZetboxBase:IsList>false</ZetboxBase:IsList>
+  </ZetboxBase:StringProperty>
   <ZetboxBase:BoolProperty ExportGuid="80e36057-f3bb-49a8-aea1-0f74fc2254d4">
     <ZetboxBase:CategoryTags>Parameter</ZetboxBase:CategoryTags>
     <ZetboxBase:ChangedOn>2012-09-25T07:42:47.5334795Z</ZetboxBase:ChangedOn>
@@ -5874,6 +5912,13 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:ConstrainedProperty>ba4d4ddb-bfc2-419f-93e4-4f85c42f23ec</ZetboxBase:ConstrainedProperty>
     <ZetboxBase:CreatedOn>2012-09-12T09:34:20.9827022Z</ZetboxBase:CreatedOn>
   </ZetboxBase:NotNullableConstraint>
+  <ZetboxBase:StringRangeConstraint ExportGuid="a9a21d85-e9d5-4898-b867-73886a930011">
+    <ZetboxBase:ChangedOn>2013-03-29T10:12:45.8526417Z</ZetboxBase:ChangedOn>
+    <ZetboxBase:ConstrainedProperty>1cdcb269-86d8-4c5b-b114-e4e0192dc6f5</ZetboxBase:ConstrainedProperty>
+    <ZetboxBase:CreatedOn>2013-03-29T10:12:45.8526417Z</ZetboxBase:CreatedOn>
+    <ZetboxBase:MaxLength>3000</ZetboxBase:MaxLength>
+    <ZetboxBase:MinLength>1</ZetboxBase:MinLength>
+  </ZetboxBase:StringRangeConstraint>
   <ZetboxBase:NotNullableConstraint ExportGuid="1ffb2896-4461-4d67-ba79-ffcff67c587f">
     <ZetboxBase:ChangedOn>2012-09-25T07:38:26.7815654Z</ZetboxBase:ChangedOn>
     <ZetboxBase:ConstrainedProperty>80e36057-f3bb-49a8-aea1-0f74fc2254d4</ZetboxBase:ConstrainedProperty>
