@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:Workflow="Zetbox.Basic.Workflow" date="2013-03-29T11:12:45.8526417Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:Workflow="Zetbox.Basic.Workflow" date="2013-03-29T11:50:08.4150137Z" xmlns="http://dasz.at/Zetbox">
   <Workflow:Action ExportGuid="2317c835-8c68-4987-be54-ab5f06451a69">
     <Workflow:ChangedOn>2013-03-29T10:38:44.7295138Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:18:26.2172419Z</Workflow:CreatedOn>
     <Workflow:Description>Sends an reminder mail</Workflow:Description>
-    <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
     <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>false</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
@@ -29,7 +28,6 @@
     <Workflow:ChangedOn>2013-03-29T10:38:44.7295138Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-12T12:45:37.8408099Z</Workflow:CreatedOn>
     <Workflow:Description>Forward to antother person or group</Workflow:Description>
-    <Workflow:Implementor>7803b422-890a-4a73-bc51-704da47ff5f6</Workflow:Implementor>
     <Workflow:ImplementorName>zetbox.Workflow.Client.Workflow.CommonInvocations.Action, zetbox.Workflow.Client</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>false</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>true</Workflow:IsVisibleDefault>
@@ -42,7 +40,6 @@
     <Workflow:ChangedOn>2013-03-29T10:38:44.7295138Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-25T07:59:11.0907358Z</Workflow:CreatedOn>
     <Workflow:Description>Add responsibles (Groups and/or Persons) to the current workflow state</Workflow:Description>
-    <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
     <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>true</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
@@ -206,12 +203,7 @@
     <Workflow:Actions_pos>3</Workflow:Actions_pos>
     <Workflow:InvokeAction>c048eda3-e36e-4fca-ac4a-651604bd151c</Workflow:InvokeAction>
     <Workflow:IsRecurrent>true</Workflow:IsRecurrent>
-    <Workflow:Schedule>
-      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
-      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
-      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
-      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
-    </Workflow:Schedule>
+    <Workflow:Schedule />
   </Workflow:ScheduledActionDefinition>
   <Workflow:ScheduledActionDefinition ExportGuid="6dff806b-541b-4ff3-bcae-28dd2cdd0049">
     <Workflow:Action>20c24e3f-5191-4b97-bff4-7645f53d57eb</Workflow:Action>
@@ -225,13 +217,7 @@
     <Workflow:Actions_pos>2</Workflow:Actions_pos>
     <Workflow:InvokeAction>55c5745c-cce8-4598-b71c-e113122953f3</Workflow:InvokeAction>
     <Workflow:IsRecurrent>true</Workflow:IsRecurrent>
-    <Workflow:Schedule>
-      <DaysOffset xmlns="Zetbox.App.Base">10</DaysOffset>
-      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
-      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
-      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
-      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
-    </Workflow:Schedule>
+    <Workflow:Schedule />
   </Workflow:ScheduledActionDefinition>
   <Workflow:ScheduledActionDefinition ExportGuid="7fe81fb7-64bd-4042-92e2-2e0e6361b242">
     <Workflow:Action>52fad819-fa6d-4d45-985a-9a968b9db96f</Workflow:Action>
@@ -245,18 +231,12 @@
     <Workflow:Actions_pos>4</Workflow:Actions_pos>
     <Workflow:InvokeAction>ced1b782-6109-4888-b209-5ace54a534d7</Workflow:InvokeAction>
     <Workflow:IsRecurrent>true</Workflow:IsRecurrent>
-    <Workflow:Schedule>
-      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
-      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
-      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
-      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
-    </Workflow:Schedule>
+    <Workflow:Schedule />
   </Workflow:ScheduledActionDefinition>
   <Workflow:SchedulerAction ExportGuid="05f1e20a-aa39-40e3-99c6-d8ee0345a858">
     <Workflow:ChangedOn>2013-03-29T10:38:44.7295138Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:24:03.0715089Z</Workflow:CreatedOn>
     <Workflow:Description>A scheduler action that will trigger daily</Workflow:Description>
-    <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
     <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>true</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
@@ -264,18 +244,12 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>DailyScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Schedule>
-      <EveryDay xmlns="Zetbox.App.Base">true</EveryDay>
-      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
-      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
-      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
-    </Workflow:Schedule>
+    <Workflow:Schedule />
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="1fcb81c7-4347-4394-9897-0b072776dd40">
     <Workflow:ChangedOn>2013-03-29T10:38:44.7295138Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:24:29.526022Z</Workflow:CreatedOn>
     <Workflow:Description>A scheduler action that will trigger quaterly</Workflow:Description>
-    <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
     <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>true</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
@@ -283,18 +257,12 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>QuaterlyScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Schedule>
-      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
-      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
-      <EveryQuater xmlns="Zetbox.App.Base">true</EveryQuater>
-      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
-    </Workflow:Schedule>
+    <Workflow:Schedule />
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="20c24e3f-5191-4b97-bff4-7645f53d57eb">
     <Workflow:ChangedOn>2013-03-29T10:38:44.7295138Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:21:19.1561334Z</Workflow:CreatedOn>
     <Workflow:Description>An empty scheduler action</Workflow:Description>
-    <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
     <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>true</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
@@ -302,18 +270,12 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>EmptyScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Schedule>
-      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
-      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
-      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
-      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
-    </Workflow:Schedule>
+    <Workflow:Schedule />
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="52fad819-fa6d-4d45-985a-9a968b9db96f">
     <Workflow:ChangedOn>2013-03-29T10:38:44.7295138Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:22:57.3737512Z</Workflow:CreatedOn>
     <Workflow:Description>A scheduler action that will trigger after two weeks</Workflow:Description>
-    <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
     <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>true</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
@@ -321,19 +283,12 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>TwoWeekScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Schedule>
-      <DaysOffset xmlns="Zetbox.App.Base">14</DaysOffset>
-      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
-      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
-      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
-      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
-    </Workflow:Schedule>
+    <Workflow:Schedule />
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="b440428d-61a5-4542-ac0e-fca521f11bb8">
     <Workflow:ChangedOn>2013-03-29T10:38:44.7295138Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:22:00.6965094Z</Workflow:CreatedOn>
     <Workflow:Description>A scheduler action that will trigger after one week</Workflow:Description>
-    <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
     <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>true</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
@@ -341,19 +296,12 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>OneWeekScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Schedule>
-      <DaysOffset xmlns="Zetbox.App.Base">7</DaysOffset>
-      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
-      <EveryMonth xmlns="Zetbox.App.Base">false</EveryMonth>
-      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
-      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
-    </Workflow:Schedule>
+    <Workflow:Schedule />
   </Workflow:SchedulerAction>
   <Workflow:SchedulerAction ExportGuid="e918c8bb-cda0-4ad4-b8e0-4ee6f3a5d159">
     <Workflow:ChangedOn>2013-03-29T10:38:44.7295138Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:23:34.0498489Z</Workflow:CreatedOn>
     <Workflow:Description>A scheduler action that will trigger monthly</Workflow:Description>
-    <Workflow:Implementor>7365161e-2a3a-4fa2-a7d1-df8f3f85d4e3</Workflow:Implementor>
     <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>true</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
@@ -361,12 +309,7 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>MonthlyScheduler</Workflow:Name>
     <Workflow:ParameterType>62053394-6f4e-45f6-814b-77c7446d859b</Workflow:ParameterType>
-    <Workflow:Schedule>
-      <EveryDay xmlns="Zetbox.App.Base">false</EveryDay>
-      <EveryMonth xmlns="Zetbox.App.Base">true</EveryMonth>
-      <EveryQuater xmlns="Zetbox.App.Base">false</EveryQuater>
-      <EveryYear xmlns="Zetbox.App.Base">false</EveryYear>
-    </Workflow:Schedule>
+    <Workflow:Schedule />
   </Workflow:SchedulerAction>
   <Workflow:StateChangeDefinition ExportGuid="1e13a5bc-c608-4dc7-b501-cdb83ad19e1b">
     <Workflow:ChangedOn>2012-09-19T15:59:13.6934892Z</Workflow:ChangedOn>
@@ -446,6 +389,10 @@
     <Workflow:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</Workflow:Module>
     <Workflow:Name>TestWorkflow</Workflow:Name>
   </Workflow:WFDefinition>
+  <Workflow:StateChangeDefinition_invoked_by_ParameterizedActionDefinition_RelationEntry ExportGuid="f20fc724-2765-4349-b9ff-11ee6ea5271a">
+    <Workflow:A>1e13a5bc-c608-4dc7-b501-cdb83ad19e1b</Workflow:A>
+    <Workflow:B>ca6eb0e8-831a-41bb-9b3f-ee621a44abce</Workflow:B>
+  </Workflow:StateChangeDefinition_invoked_by_ParameterizedActionDefinition_RelationEntry>
   <Workflow:StateChangeDefinition_invoked_by_ParameterizedActionDefinition_RelationEntry ExportGuid="0b682edd-5422-43b4-aa6e-288210634c10">
     <Workflow:A>bf528c34-9624-4ea9-a8a9-bba06882a6bb</Workflow:A>
     <Workflow:B>2f611e8c-f499-49f6-a6e3-c77fde4ce2d6</Workflow:B>
@@ -458,10 +405,6 @@
     <Workflow:A>bf955ff8-fa87-43e5-bbca-b612bd8f11c5</Workflow:A>
     <Workflow:B>67d381d8-22ef-40c3-b1ec-ad031bf6b67a</Workflow:B>
   </Workflow:StateChangeDefinition_invoked_by_ParameterizedActionDefinition_RelationEntry>
-  <Workflow:StateChangeDefinition_invoked_by_ParameterizedActionDefinition_RelationEntry ExportGuid="6bd9f4c4-9d1e-49e4-b6bb-d8ca7d6e401a">
-    <Workflow:A>a99b199c-0600-4609-91e8-6fb848f766c6</Workflow:A>
-    <Workflow:B>33c027cb-a86e-4182-bcd4-d649ae27cc25</Workflow:B>
-  </Workflow:StateChangeDefinition_invoked_by_ParameterizedActionDefinition_RelationEntry>
   <Workflow:StateChangeDefinition_invoked_by_ParameterizedActionDefinition_RelationEntry ExportGuid="c98a1d61-b24b-45f2-9e95-5ce15dbb41cf">
     <Workflow:A>d69f5102-de41-44d3-af2a-7095570603ab</Workflow:A>
     <Workflow:B>4af054fd-0fa8-4c2b-b05f-20371876efad</Workflow:B>
@@ -470,16 +413,16 @@
     <Workflow:A>d69f5102-de41-44d3-af2a-7095570603ab</Workflow:A>
     <Workflow:B>07f1d8bf-01a8-46a3-b3d9-4d20ae597710</Workflow:B>
   </Workflow:StateChangeDefinition_invoked_by_ParameterizedActionDefinition_RelationEntry>
-  <Workflow:StateChangeDefinition_invoked_by_ParameterizedActionDefinition_RelationEntry ExportGuid="f20fc724-2765-4349-b9ff-11ee6ea5271a">
-    <Workflow:A>1e13a5bc-c608-4dc7-b501-cdb83ad19e1b</Workflow:A>
-    <Workflow:B>ca6eb0e8-831a-41bb-9b3f-ee621a44abce</Workflow:B>
-  </Workflow:StateChangeDefinition_invoked_by_ParameterizedActionDefinition_RelationEntry>
-  <Workflow:StateChangeDefinition_goes_to_StateDefinition_RelationEntry ExportGuid="48017da3-e7f2-4dfb-8e15-7a65fd80aad9">
+  <Workflow:StateChangeDefinition_invoked_by_ParameterizedActionDefinition_RelationEntry ExportGuid="6bd9f4c4-9d1e-49e4-b6bb-d8ca7d6e401a">
     <Workflow:A>a99b199c-0600-4609-91e8-6fb848f766c6</Workflow:A>
-    <Workflow:B>f142cca9-239b-4e35-ab81-312160e8c8c9</Workflow:B>
-  </Workflow:StateChangeDefinition_goes_to_StateDefinition_RelationEntry>
+    <Workflow:B>33c027cb-a86e-4182-bcd4-d649ae27cc25</Workflow:B>
+  </Workflow:StateChangeDefinition_invoked_by_ParameterizedActionDefinition_RelationEntry>
   <Workflow:StateChangeDefinition_goes_to_StateDefinition_RelationEntry ExportGuid="8d6148b9-6005-4c76-9097-7502ff1e7113">
     <Workflow:A>bf955ff8-fa87-43e5-bbca-b612bd8f11c5</Workflow:A>
     <Workflow:B>6b698ca5-498e-4e6e-b2e9-34b59827f272</Workflow:B>
+  </Workflow:StateChangeDefinition_goes_to_StateDefinition_RelationEntry>
+  <Workflow:StateChangeDefinition_goes_to_StateDefinition_RelationEntry ExportGuid="48017da3-e7f2-4dfb-8e15-7a65fd80aad9">
+    <Workflow:A>a99b199c-0600-4609-91e8-6fb848f766c6</Workflow:A>
+    <Workflow:B>f142cca9-239b-4e35-ab81-312160e8c8c9</Workflow:B>
   </Workflow:StateChangeDefinition_goes_to_StateDefinition_RelationEntry>
 </ZetboxPackaging>
