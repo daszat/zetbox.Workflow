@@ -6663,20 +6663,6 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:Name>workflow</ZetboxBase:Name>
     <ZetboxBase:ObjectClass>81bdfa01-39bb-44c6-821f-ba22efaa4ce1</ZetboxBase:ObjectClass>
   </ZetboxBase:ObjectReferenceParameter>
-  <ZetboxBase:Assembly ExportGuid="30836fda-6ca1-4b8b-9dbf-3dbf9394bd23">
-    <ZetboxBase:ChangedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:ChangedOn>
-    <ZetboxBase:CreatedOn>2012-09-24T15:38:18.8411662Z</ZetboxBase:CreatedOn>
-    <ZetboxBase:DeploymentRestrictions>1</ZetboxBase:DeploymentRestrictions>
-    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
-    <ZetboxBase:Name>GraphSharp.Controls, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null</ZetboxBase:Name>
-  </ZetboxBase:Assembly>
-  <ZetboxBase:Assembly ExportGuid="6321a6f0-b4d3-4cd4-85fe-b8f4e5e69054">
-    <ZetboxBase:ChangedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:ChangedOn>
-    <ZetboxBase:CreatedOn>2012-09-19T15:31:22.6789126Z</ZetboxBase:CreatedOn>
-    <ZetboxBase:DeploymentRestrictions>0</ZetboxBase:DeploymentRestrictions>
-    <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
-    <ZetboxBase:Name>QuickGraph, Version=3.3.51106.0, Culture=neutral, PublicKeyToken=f3fb40175eec2af3</ZetboxBase:Name>
-  </ZetboxBase:Assembly>
   <ZetboxBase:Assembly ExportGuid="bf525f9e-4262-4f62-8910-ba034503fd7e">
     <ZetboxBase:ChangedOn>2012-09-12T14:18:43.6292987Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-12T14:18:43.6292987Z</ZetboxBase:CreatedOn>
