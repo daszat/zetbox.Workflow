@@ -7,6 +7,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow
     using Zetbox.Client.Presentables;
     using Zetbox.API;
     using wf = Zetbox.Basic.Workflow;
+    using Zetbox;
 
     [ViewModelDescriptor]
     public class StateViewModel : DataObjectViewModel
@@ -17,6 +18,7 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow
             : base(appCtx, dataCtx, parent, obj)
         {
             State = obj;
+            dataCtx.IsElevatedModeChanged += new EventHandler(dataCtx_IsElevatedModeChanged);
         }
 
         public wf.State State { get; private set; }
@@ -41,6 +43,12 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow
             }
         }
 
+        void dataCtx_IsElevatedModeChanged(object sender, EventArgs e)
+        {
+            base.commandsStore = null;
+            OnPropertyChanged("Commands");
+        }
+
         public override string Name
         {
             get { return State.ToString(); }
@@ -49,18 +57,38 @@ namespace zetbox.Workflow.Client.ViewModel.Workflow
         protected override System.Collections.ObjectModel.ObservableCollection<ICommandViewModel> CreateCommands()
         {
             var commands = base.CreateCommands();
-            if (State.IsActive)
+            var isElevated = DataContext.IsElevatedMode;
+            if (State.IsActive || isElevated)
             {
                 foreach (var action in State.StateDefinition.Actions.Where(a => a.IsVisible))
                 {
                     // avoid capturing the loop variable
                     var localAction = action;
-                    commands.Add(ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this,
+                    var cmd = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this,
                         action.Action.GetLabel(),
                         action.Action.Description,
                         () => ExecuteAction(localAction),
                         null,
-                        null));
+                        null);
+                    // cmd.Icon = IconConverter.ToImage(action.Icon);
+                    commands.Add(cmd);
+                }
+
+                if (isElevated)
+                {
+                    foreach (var action in State.StateDefinition.Actions.Where(a => a.IsVisible == false))
+                    {
+                        // avoid capturing the loop variable
+                        var localAction = action;
+                        var cmd = ViewModelFactory.CreateViewModel<SimpleCommandViewModel.Factory>().Invoke(DataContext, this,
+                            action.Action.GetLabel(),
+                            action.Action.Description,
+                            () => ExecuteAction(localAction),
+                            null,
+                            null);
+                        cmd.Icon = IconConverter.ToImage(NamedObjects.Gui.Icons.ZetboxBase.warning_png.Find(FrozenContext));
+                        commands.Add(cmd);
+                    }
                 }
             }
             return commands;
