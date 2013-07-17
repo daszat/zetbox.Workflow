@@ -46,10 +46,16 @@ namespace Zetbox.Basic.Workflow
         public static void ScheduleAction(State obj, DateTime invokeOn, Zetbox.Basic.Workflow.ParameterizedActionDefinition action)
         {
             var ctx = obj.Context;
-            var entry = ctx.Create<SchedulerEntry>();
-            entry.Action = action;
+
+            // Avoid multiple entries for same action on same state
+            var entry = ctx.GetQuery<SchedulerEntry>().FirstOrDefault(e => e.State == obj && e.Action == action);
+            if (entry == null)
+            {
+                entry = ctx.Create<SchedulerEntry>();
+                entry.Action = action;
+                obj.ScheduledActions.Add(entry);
+            }
             entry.InvokeOn = invokeOn;
-            obj.ScheduledActions.Add(entry);
         }
     }
 }
