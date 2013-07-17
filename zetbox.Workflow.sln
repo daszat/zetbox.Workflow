@@ -22,6 +22,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zetbox.Workflow.Server", "z
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGetPackages", "NuGetPackages\NuGetPackages.csproj", "{570EC58C-012F-409C-9A7B-FE50D0B068EF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FB75C19D-653A-4910-BBFE-C4D6D5B4542C}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
