@@ -36,7 +36,7 @@ Best regards, your Workflow System");
             var sParameter = (wf.ScheduledActionDefinition)parameter;
 
             DateTime dt = sAction.Schedule.GetNext(new DateTime(DateTime.Today.Year, 1, 1));
-            dt = sParameter.Schedule.GetNext(dt, dt);
+            dt = sParameter.Schedule.GetRelative(dt);
 
             current.ScheduleAction(dt, sParameter.InvokeAction);
 
