@@ -13,7 +13,7 @@
     <releaseNotes>First package.</releaseNotes>
     <copyright>Copyright © 2012 dasz.at OG</copyright>
     <dependencies>
-      <dependency id="zetboxBasic-Server" version="[1.0.5355.1, 1.1.0)" />
+      <dependency id="zetboxBasic-Server" version="[1.0.5651.1, 1.1.0)" />
       <dependency id="zetbox.Workflow-Common" version="[1.0.$REVNUM$.$DIRTY$]" />
 
       <!-- The server package must be referenced to receive the libs from this package -->
