@@ -18,7 +18,7 @@ namespace Zetbox.Basic.Workflow
         public static void NotifyCreated(SchedulerAction obj)
         {
             obj.ParameterType = (ObjectClass)NamedObjects.Base.Classes.Zetbox.Basic.Workflow.ScheduledActionDefinition.Find(obj.Context);
-            obj.Implementor = typeof(zetbox.Workflow.Common.Workflow.CommonInvocations.Action).ToRef(obj.Context);
+            obj.ImplementorName = typeof(zetbox.Workflow.Common.Workflow.CommonInvocations.Action).GetSimpleName();
             obj.MemberName = "Schedule";
         }
     }
