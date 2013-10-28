@@ -37,6 +37,12 @@
     <DocumentationFile>..\bin\Release\Common\zetbox.Workflow.Common.xml</DocumentationFile>
     <NoWarn>1591</NoWarn>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Zetbox.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Arebis.CodeGeneration">
       <HintPath>..\packages\Arebis.CodeGenerator.1.3.0.0\lib\net40\Arebis.CodeGeneration.dll</HintPath>
@@ -154,6 +160,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Zetbox.snk" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.zetbox.txt" />
