@@ -37,12 +37,6 @@
     <DocumentationFile>..\bin\Release\Client\zetbox.Workflow.Client.WPF.xml</DocumentationFile>
     <NoWarn>1591</NoWarn>
   </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Zetbox.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Arebis.CodeGeneration, Version=1.3.0.0, Culture=neutral, PublicKeyToken=1012dfebee6c8abd, processorArchitecture=MSIL">
       <HintPath>..\packages\Arebis.CodeGenerator.1.3.0.0\lib\net40\Arebis.CodeGeneration.dll</HintPath>
@@ -197,7 +191,6 @@
       <DependentUpon>StateEditor.xaml</DependentUpon>
     </Compile>
     <None Include="packages.config" />
-    <None Include="Zetbox.snk" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\zetbox.Workflow.Client\zetbox.Workflow.Client.csproj">

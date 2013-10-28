@@ -37,12 +37,6 @@
     <DocumentationFile>..\bin\Release\Server\zetbox.Workflow.Server.xml</DocumentationFile>
     <NoWarn>1591</NoWarn>
   </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Zetbox.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Arebis.CodeGeneration">
       <HintPath>..\packages\Arebis.CodeGenerator.1.3.0.0\lib\net40\Arebis.CodeGeneration.dll</HintPath>
@@ -156,7 +150,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchedulerService.cs" />
     <None Include="packages.config" />
-    <None Include="Zetbox.snk" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\zetbox.Workflow.Common\zetbox.Workflow.Common.csproj">
