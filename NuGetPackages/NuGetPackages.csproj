@@ -16,48 +16,26 @@
     <OutputPath>..\bin\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="zetbox.Workflow.nuspec.in">
+    <None Include="zetbox.Workflow.nuspec">
       <SubType>Designer</SubType>
     </None>
-    <NuSpec Include="zetbox.Workflow.nuspec">
-      <DependentUpon>zetbox.Workflow.nuspec.in</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </NuSpec>
-    <None Include="zetbox.Workflow-Common.nuspec.in">
+    <None Include="zetbox.Workflow-Common.nuspec">
       <SubType>Designer</SubType>
     </None>
-    <NuSpec Include="zetbox.Workflow-Common.nuspec">
-      <DependentUpon>zetbox.Workflow-Common.nuspec.in</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </NuSpec>
-    <None Include="zetbox.Workflow-Client.nuspec.in">
+    <None Include="zetbox.Workflow-Client.nuspec">
       <SubType>Designer</SubType>
     </None>
-    <NuSpec Include="zetbox.Workflow-Client.nuspec">
-      <DependentUpon>zetbox.Workflow-Client.nuspec.in</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </NuSpec>
-    <None Include="zetbox.Workflow-Server.nuspec.in">
+    <None Include="zetbox.Workflow-Server.nuspec">
       <SubType>Designer</SubType>
     </None>
-    <NuSpec Include="zetbox.Workflow-Server.nuspec">
-      <DependentUpon>zetbox.Workflow-Server.nuspec.in</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </NuSpec>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\VersionInfo.Designer.cs">
-      <DependentUpon>VersionInfo.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\VersionInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.zetbox.Workflow.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Target Name="GitVersionTargets" Inputs="@(Targets)" Outputs="%(Identity).Dummy">
     <GitVersionFile TemplateFile="@(Targets).in" DestinationFile="@(Targets)" />
@@ -80,8 +58,4 @@
   <Target Name="Clean">
   </Target>
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
-  <Import Project="..\packages\MSBuildVersioning.1.0.37.0\lib\net40\MsBuildVersioning.targets" />
-  <Target Name="BeforeBuild">
-    <GitVersionFile TemplateFile="Properties\VersionInfo.cs" DestinationFile="Properties\VersionInfo.Designer.cs" />
-  </Target>
 </Project>

@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>zetbox.Workflow-Common</id>
-    <version>1.0.$REVNUM$.$DIRTY$</version>
+    <version>$version$</version>
     <title>zetbox.Workflow common assemblies</title>
     <authors>dasz.at OG</authors>
     <owners>dasz.at OG</owners>
@@ -15,7 +15,7 @@
     <dependencies>
       <dependency id="zetboxBasic-Common" version="[1.0.5651.1, 1.1.0)" />
 
-      <dependency id="zetbox.Workflow" version="[1.0.$REVNUM$.$DIRTY$]" />
+      <dependency id="zetbox.Workflow" version="[$version$]" />
     </dependencies>
   </metadata>
   <files>

@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>zetbox.Workflow-Server</id>
-    <version>1.0.$REVNUM$.$DIRTY$</version>
+    <version>$version$</version>
     <title>zetbox.Workflow server assemblies</title>
     <authors>dasz.at OG</authors>
     <owners>dasz.at OG</owners>
@@ -14,7 +14,7 @@
     <copyright>Copyright © 2012 dasz.at OG</copyright>
     <dependencies>
       <dependency id="zetboxBasic-Server" version="[1.0.5651.1, 1.1.0)" />
-      <dependency id="zetbox.Workflow-Common" version="[1.0.$REVNUM$.$DIRTY$]" />
+      <dependency id="zetbox.Workflow-Common" version="[$version$]" />
 
       <!-- The server package must be referenced to receive the libs from this package -->
       <dependency id="LinqCube" version="[1.0.46.0,2)" />

@@ -1,5 +1,5 @@
+using System;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("zetbox.Workflow.Client.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("zetbox.Workflow.Client.Tests")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
+[assembly: AssemblyCompany("dasz.at OG")]
+[assembly: AssemblyProduct("zetbox.Workflow")]
+[assembly: AssemblyCopyright("Copyright © 2012-2013 dasz.at OG")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,18 +19,12 @@ using System.Runtime.InteropServices;
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
 
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("57e04e0f-2e28-49d7-be1f-fcc3f9d357e8")]
-
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Build and Revision Numbers 
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("0.0.0.0")]
+// The following tags will be replaced by the -checkout job on jenkins to current values
 [assembly: AssemblyVersion("0.0.0.0")]
-[assembly: AssemblyFileVersion("0.0.1.0")]
+[assembly: AssemblyFileVersion("0.0.2.0")]
+[assembly: AssemblyInformationalVersion("0.0.2-zdev")]
+
+// The Common Language Specification (CLS) defines naming restrictions, data types,
+// and rules to which assemblies must conform if they are to be used across programming
+// languages. This assembly should be compatible even if it is probably not useful.
+[assembly: CLSCompliant(true)]
