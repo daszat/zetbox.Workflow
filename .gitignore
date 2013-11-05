@@ -6,8 +6,6 @@
 *.csproj.user
 bin
 obj
-/NuGetPackages/*.nuspec
-/NuGetPackages/*.targets
 
 
 # Only commit repositories.config. The rest of /packages is only a local cache
