@@ -16,18 +16,12 @@
     <OutputPath>..\bin\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="zetbox.Workflow.nuspec">
+    <Content Include="zetbox.Workflow.nuspec" />
+    <Content Include="zetbox.Workflow-Common.nuspec" />
+    <Content Include="zetbox.Workflow-Client.nuspec">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="zetbox.Workflow-Common.nuspec">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="zetbox.Workflow-Client.nuspec">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="zetbox.Workflow-Server.nuspec">
-      <SubType>Designer</SubType>
-    </None>
+    </Content>
+    <Content Include="zetbox.Workflow-Server.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.zetbox.Workflow.txt">
