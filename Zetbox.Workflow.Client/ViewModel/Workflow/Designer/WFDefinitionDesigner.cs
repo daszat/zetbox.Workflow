@@ -219,6 +219,7 @@ namespace Zetbox.Workflow.Client.ViewModel.Workflow.Designer
         #region Graphs
         #region DefinitionGraph
         private WFDefinitionGraph _definitionGraph;
+        [CLSCompliant(false)]
         public WFDefinitionGraph DefinitionGraph
         {
             get
@@ -258,6 +259,7 @@ namespace Zetbox.Workflow.Client.ViewModel.Workflow.Designer
 
         #region StateDefinitionGraph
         private StateDefinitionGraph _StatedefinitionGraph;
+        [CLSCompliant(false)]
         public StateDefinitionGraph StateDefinitionGraph
         {
             get
