@@ -12,7 +12,7 @@ namespace Zetbox.Workflow.Common.Workflow.CommonInvocations
 
     public class Action
     {
-        public readonly IMailSender _mail;
+        private readonly IMailSender _mail;
         public Action(IMailSender mail)
         {
             _mail = mail;
