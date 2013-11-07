@@ -30,7 +30,6 @@ namespace Zetbox.Workflow.Client.ViewModel.Workflow
             {
                 if (CurrentIdentity != null)
                 {
-                    int id = CurrentIdentity.ID;
                     return DataContext.GetQuery<wf.State>();
                     // TODO: Add filter for responsibles
                     // Currently it's not possible to filter over a n:m relation
