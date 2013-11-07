@@ -18,6 +18,7 @@
       <Module>Zetbox.DalProvider.Memory.Generator.MemoryGeneratorProvider, Zetbox.DalProvider.Memory.Generator</Module>
       <Module>Zetbox.DalProvider.NHibernate.Generator.NHibernateGeneratorProvider, Zetbox.DalProvider.NHibernate.Generator</Module>
       <Module>Zetbox.DalProvider.Client.Generator.ClientGeneratorProvider, Zetbox.DalProvider.Client.Generator</Module>
+      <Module>zetbox.Workflow.Server.ServerModule, zetbox.Workflow.Server</Module>
     </Modules>
     <ClientFilesLocations />
   </Server>
