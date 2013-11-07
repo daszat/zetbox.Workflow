@@ -1,7 +1,7 @@
 /bin
 /Configs/Local
 /DocumentStore
-/zetbox.Workflow.Client.Tests/bin
+/Zetbox.Workflow.Client.Tests/bin
 *.suo
 *.csproj.user
 bin

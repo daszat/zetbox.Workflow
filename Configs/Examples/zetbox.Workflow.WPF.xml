@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <ZetboxConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://dasz.at/Zetbox/">
-  <ConfigName>zetbox.Workflow Client Configuration</ConfigName>
+  <ConfigName>Zetbox.Workflow Client Configuration</ConfigName>
   <Client>
     <Culture>de-AT</Culture>
     <UICulture>de-AT</UICulture>
@@ -11,8 +11,8 @@
       <Module>Zetbox.Microsoft.Module, Zetbox.Microsoft</Module>
       <Module>Zetbox.Microsoft.OutlookMailSender+Module, Zetbox.Microsoft</Module>
       <Module>Zetbox.API.MailProblemReporter+Module, Zetbox.API</Module>
-      <Module>zetbox.Workflow.Client.ClientModule, zetbox.Workflow.Client</Module>
-      <Module>zetbox.Workflow.Client.WPF.ClientWPFModule, zetbox.Workflow.Client.WPF</Module>
+      <Module>Zetbox.Workflow.Client.ClientModule, Zetbox.Workflow.Client</Module>
+      <Module>Zetbox.Workflow.Client.WPF.ClientWPFModule, Zetbox.Workflow.Client.WPF</Module>
     </Modules>
   </Client>
 </ZetboxConfig>

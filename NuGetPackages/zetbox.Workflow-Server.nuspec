@@ -13,7 +13,7 @@
     <releaseNotes>First package.</releaseNotes>
     <copyright>Copyright © 2012 dasz.at OG</copyright>
     <dependencies>
-      <dependency id="zetboxBasic-Server" version="[1.0.5651.1, 1.1.0)" />
+      <dependency id="zetboxBasic-Server" version="[1.0.5801, 1.1.0)" />
       <dependency id="zetbox.Workflow-Common" version="[$version$]" />
 
       <!-- The server package must be referenced to receive the libs from this package -->
@@ -21,8 +21,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="Server\zetbox.Workflow.Server.dll" target="lib\net40" />
-    <file src="Server\zetbox.Workflow.Server.pdb" target="lib\net40" />
-    <file src="Server\zetbox.Workflow.Server.xml" target="lib\net40" />
+    <file src="Server\Zetbox.Workflow.Server.dll" target="lib\net40" />
+    <file src="Server\Zetbox.Workflow.Server.pdb" target="lib\net40" />
+    <file src="Server\Zetbox.Workflow.Server.xml" target="lib\net40" />
   </files>
 </package>

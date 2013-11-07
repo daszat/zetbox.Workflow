@@ -13,19 +13,19 @@
     <releaseNotes>First package.</releaseNotes>
     <copyright>Copyright © 2012 dasz.at OG</copyright>
     <dependencies>
-      <dependency id="zetboxBasic" version="[1.0.5651.1, 1.1.0)" />
+      <dependency id="zetboxBasic" version="[1.0.5801, 1.1.0)" />
     </dependencies>
   </metadata>
   <files>
-    <file src="Common\zetbox.Workflow.Common.dll" target="zetbox\Common" />
-    <file src="Client\zetbox.Workflow.Client.dll" target="zetbox\Client" />
-    <file src="Client\zetbox.Workflow.Client.WPF.dll" target="zetbox\Client" />
-    <file src="Server\zetbox.Workflow.Server.dll" target="zetbox\Server" />
+    <file src="Common\Zetbox.Workflow.Common.dll" target="zetbox\Common" />
+    <file src="Client\Zetbox.Workflow.Client.dll" target="zetbox\Client" />
+    <file src="Client\Zetbox.Workflow.Client.WPF.dll" target="zetbox\Client" />
+    <file src="Server\Zetbox.Workflow.Server.dll" target="zetbox\Server" />
 
-    <file src="Common\**\zetbox.Workflow.Common.resources.dll" target="zetbox\Common" />
-    <file src="Client\**\zetbox.Workflow.Client.resources.dll" target="zetbox\Client" />
-    <file src="Client\**\zetbox.Workflow.Client.WPF.resources.dll" target="zetbox\Client" />
-    <file src="Server\**\zetbox.Workflow.Server.resources.dll" target="zetbox\Server" />
+    <file src="Common\**\Zetbox.Workflow.Common.resources.dll" target="zetbox\Common" />
+    <file src="Client\**\Zetbox.Workflow.Client.resources.dll" target="zetbox\Client" />
+    <file src="Client\**\Zetbox.Workflow.Client.WPF.resources.dll" target="zetbox\Client" />
+    <file src="Server\**\Zetbox.Workflow.Server.resources.dll" target="zetbox\Server" />
 
     <file src="..\..\Data\**\*.*" target="zetbox\Data" />
     <file src="..\..\Modules\**\*.*" target="zetbox\Modules" />

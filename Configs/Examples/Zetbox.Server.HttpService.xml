@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <ZetboxConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://dasz.at/Zetbox/">
-  <ConfigName>zetbox.Workflow Server Configuration</ConfigName>
+  <ConfigName>Zetbox.Workflow Server Configuration</ConfigName>
   <Server StartServer="true">
     <ConnectionStrings>
       <Database Name="Zetbox" Schema="MSSQL" Provider="System.Data.SqlClient">Data Source=.\SQLEXPRESS;Initial Catalog=Workflow;Integrated Security=True;MultipleActiveResultSets=true;</Database>
@@ -12,11 +12,11 @@
     <Modules>
       <Module>Zetbox.Server.ServerModule, Zetbox.Server</Module>
       <Module>Zetbox.DalProvider.Ef.EfProvider, Zetbox.DalProvider.Ef</Module>
-      <Module>zetbox.Workflow.Server.ServerModule, zetbox.Workflow.Server</Module>
+      <Module>Zetbox.Workflow.Server.ServerModule, Zetbox.Workflow.Server</Module>
     </Modules>
     <ClientFilesLocations>
-      <Location Name="Exe" Start="true">bin\Debug\zetbox.Workflow.WPF.exe</Location>
-      <Location Name="Configs">Configs\Examples\zetbox.Workflow.WPF.xml</Location>
+      <Location Name="Exe" Start="true">bin\Debug\Zetbox.Workflow.WPF.exe</Location>
+      <Location Name="Configs">Configs\Examples\Zetbox.Workflow.WPF.xml</Location>
       <Location Name="Common">bin\Debug\Common</Location>
       <Location Name="Client">bin\Debug\Client</Location>
     </ClientFilesLocations>

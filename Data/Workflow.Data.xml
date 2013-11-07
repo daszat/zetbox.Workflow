@@ -4,7 +4,7 @@
     <Workflow:ChangedOn>2013-03-29T10:38:44.7295138Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:18:26.2172419Z</Workflow:CreatedOn>
     <Workflow:Description>Sends an reminder mail</Workflow:Description>
-    <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
+    <Workflow:ImplementorName>Zetbox.Workflow.Common.Workflow.CommonInvocations.Action, Zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>false</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
     <Workflow:Label>Send reminder</Workflow:Label>
@@ -28,7 +28,7 @@
     <Workflow:ChangedOn>2013-03-29T10:38:44.7295138Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-12T12:45:37.8408099Z</Workflow:CreatedOn>
     <Workflow:Description>Forward to antother person or group</Workflow:Description>
-    <Workflow:ImplementorName>zetbox.Workflow.Client.Workflow.CommonInvocations.Action, zetbox.Workflow.Client</Workflow:ImplementorName>
+    <Workflow:ImplementorName>Zetbox.Workflow.Client.Workflow.CommonInvocations.Action, Zetbox.Workflow.Client</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>false</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>true</Workflow:IsVisibleDefault>
     <Workflow:MemberName>Forward</Workflow:MemberName>
@@ -40,7 +40,7 @@
     <Workflow:ChangedOn>2013-03-29T10:38:44.7295138Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-25T07:59:11.0907358Z</Workflow:CreatedOn>
     <Workflow:Description>Add responsibles (Groups and/or Persons) to the current workflow state</Workflow:Description>
-    <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
+    <Workflow:ImplementorName>Zetbox.Workflow.Common.Workflow.CommonInvocations.Action, Zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>true</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
     <Workflow:Label>Add responsibles</Workflow:Label>
@@ -246,7 +246,7 @@
     <Workflow:ChangedOn>2013-07-17T08:58:07.4383427Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:24:03.0715089Z</Workflow:CreatedOn>
     <Workflow:Description>A scheduler action that will trigger daily</Workflow:Description>
-    <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
+    <Workflow:ImplementorName>Zetbox.Workflow.Common.Workflow.CommonInvocations.Action, Zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>true</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
     <Workflow:MemberName>Schedule</Workflow:MemberName>
@@ -261,7 +261,7 @@
     <Workflow:ChangedOn>2013-07-17T09:12:27.7795514Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:24:29.526022Z</Workflow:CreatedOn>
     <Workflow:Description>A scheduler action that will trigger on the first of each quater</Workflow:Description>
-    <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
+    <Workflow:ImplementorName>Zetbox.Workflow.Common.Workflow.CommonInvocations.Action, Zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>true</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
     <Workflow:MemberName>Schedule</Workflow:MemberName>
@@ -277,7 +277,7 @@
     <Workflow:ChangedOn>2013-07-17T09:13:42.2568113Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:21:19.1561334Z</Workflow:CreatedOn>
     <Workflow:Description>An empty scheduler action. The parameter will be relative to DateTime.Now</Workflow:Description>
-    <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
+    <Workflow:ImplementorName>Zetbox.Workflow.Common.Workflow.CommonInvocations.Action, Zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>true</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
     <Workflow:MemberName>Schedule</Workflow:MemberName>
@@ -290,7 +290,7 @@
     <Workflow:ChangedOn>2013-07-17T09:12:05.6112834Z</Workflow:ChangedOn>
     <Workflow:CreatedOn>2012-09-24T08:23:34.0498489Z</Workflow:CreatedOn>
     <Workflow:Description>A scheduler action that will trigger on the first of each month</Workflow:Description>
-    <Workflow:ImplementorName>zetbox.Workflow.Common.Workflow.CommonInvocations.Action, zetbox.Workflow.Common</Workflow:ImplementorName>
+    <Workflow:ImplementorName>Zetbox.Workflow.Common.Workflow.CommonInvocations.Action, Zetbox.Workflow.Common</Workflow:ImplementorName>
     <Workflow:IsOnEnterActionDefault>true</Workflow:IsOnEnterActionDefault>
     <Workflow:IsVisibleDefault>false</Workflow:IsVisibleDefault>
     <Workflow:MemberName>Schedule</Workflow:MemberName>

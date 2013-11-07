@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <ZetboxConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://dasz.at/Zetbox/">
-  <ConfigName>zetbox.Workflow HttpService Configuration</ConfigName>
+  <ConfigName>Zetbox.Workflow HttpService Configuration</ConfigName>
   <Server StartServer="true">
     <ConnectionStrings />
     <DocumentStore>..\DocumentStore\Server\</DocumentStore>
@@ -8,11 +8,11 @@
       <Module>Zetbox.Server.ServerModule, Zetbox.Server</Module>
       <Module>Zetbox.DalProvider.NHibernate.NHibernateProvider, Zetbox.DalProvider.NHibernate</Module>
       <Module>Zetbox.Server.HtpasswdIdentitySource+Module, Zetbox.Server</Module>
-      <Module>zetbox.Workflow.Server.ServerModule, zetbox.Workflow.Server</Module>
+      <Module>Zetbox.Workflow.Server.ServerModule, Zetbox.Workflow.Server</Module>
     </Modules>
     <ClientFilesLocations>
-      <Location Name="Exe" Start="true">..\zetbox.Workflow.WPF.exe</Location>
-      <Location Name="Configs">..\Configs\zetbox.Workflow.WPF.xml</Location>
+      <Location Name="Exe" Start="true">..\Zetbox.Workflow.WPF.exe</Location>
+      <Location Name="Configs">..\Configs\Zetbox.Workflow.WPF.xml</Location>
       <Location Name="Common">..\Common</Location>
       <Location Name="Client">..\Client</Location>
     </ClientFilesLocations>

@@ -13,14 +13,14 @@
     <releaseNotes>First package.</releaseNotes>
     <copyright>Copyright © 2012 dasz.at OG</copyright>
     <dependencies>
-      <dependency id="zetboxBasic-Common" version="[1.0.5651.1, 1.1.0)" />
+      <dependency id="zetboxBasic-Common" version="[1.0.5801, 1.1.0)" />
 
       <dependency id="zetbox.Workflow" version="[$version$]" />
     </dependencies>
   </metadata>
   <files>
-    <file src="Common\zetbox.Workflow.Common.dll" target="lib\net40" />
-    <file src="Common\zetbox.Workflow.Common.pdb" target="lib\net40" />
-    <file src="Common\zetbox.Workflow.Common.xml" target="lib\net40" />
+    <file src="Common\Zetbox.Workflow.Common.dll" target="lib\net40" />
+    <file src="Common\Zetbox.Workflow.Common.pdb" target="lib\net40" />
+    <file src="Common\Zetbox.Workflow.Common.xml" target="lib\net40" />
   </files>
 </package>

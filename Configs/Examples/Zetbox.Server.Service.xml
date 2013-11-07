@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <ZetboxConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://dasz.at/Zetbox/">
-  <ConfigName>zetbox.Workflow Server Configuration</ConfigName>
+  <ConfigName>Zetbox.Workflow Server Configuration</ConfigName>
   <Server StartServer="true">
     <ConnectionStrings>
       <Database Name="Zetbox" Schema="MSSQL" Provider="System.Data.SqlClient">Data Source=.\SQLEXPRESS;Initial Catalog=Workflow;Integrated Security=True;MultipleActiveResultSets=true;</Database>
@@ -10,7 +10,7 @@
       <Module>Zetbox.Server.ServerModule, Zetbox.Server</Module>
       <Module>Zetbox.DalProvider.Ef.EfProvider, Zetbox.DalProvider.Ef</Module>
       <Module>Zetbox.Server.Wcf.WcfModule, Zetbox.Server.Wcf</Module>
-      <Module>zetbox.Workflow.Server.ServerModule, zetbox.Workflow.Server</Module>
+      <Module>Zetbox.Workflow.Server.ServerModule, Zetbox.Workflow.Server</Module>
     </Modules>
     <ClientFilesLocations />
   </Server>
