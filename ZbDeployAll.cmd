@@ -21,7 +21,7 @@ IF ERRORLEVEL 1 GOTO FAIL
 
 cd ..\..
 
-msbuild zetbox.Workflow.sln
+msbuild Zetbox.Workflow.sln
 IF ERRORLEVEL 1 GOTO FAIL
 
 cd bin\Debug

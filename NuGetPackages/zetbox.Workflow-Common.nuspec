@@ -19,8 +19,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="Common\zetbox.Workflow.Common.dll" target="lib\net40" />
-    <file src="Common\zetbox.Workflow.Common.pdb" target="lib\net40" />
-    <file src="Common\zetbox.Workflow.Common.xml" target="lib\net40" />
+    <file src="Common\Zetbox.Workflow.Common.dll" target="lib\net40" />
+    <file src="Common\Zetbox.Workflow.Common.pdb" target="lib\net40" />
+    <file src="Common\Zetbox.Workflow.Common.xml" target="lib\net40" />
   </files>
 </package>

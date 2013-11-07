@@ -21,8 +21,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="Server\zetbox.Workflow.Server.dll" target="lib\net40" />
-    <file src="Server\zetbox.Workflow.Server.pdb" target="lib\net40" />
-    <file src="Server\zetbox.Workflow.Server.xml" target="lib\net40" />
+    <file src="Server\Zetbox.Workflow.Server.dll" target="lib\net40" />
+    <file src="Server\Zetbox.Workflow.Server.pdb" target="lib\net40" />
+    <file src="Server\Zetbox.Workflow.Server.xml" target="lib\net40" />
   </files>
 </package>

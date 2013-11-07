@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <ZetboxConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://dasz.at/Zetbox/">
-  <ConfigName>zetbox.Workflow Client Tests Configuration</ConfigName>
+  <ConfigName>Zetbox.Workflow Client Tests Configuration</ConfigName>
   <Server StartServer="false">
     <ConnectionStrings />
     <Modules />
@@ -12,7 +12,7 @@
     <Modules>
       <Module>Zetbox.Client.ClientModule, Zetbox.Client</Module>
       <Module>Zetbox.API.Client.HttpClientModule, Zetbox.API.Client</Module>
-      <Module>zetbox.Workflow.Client.ClientModule, zetbox.Workflow.Client</Module>
+      <Module>Zetbox.Workflow.Client.ClientModule, Zetbox.Workflow.Client</Module>
     </Modules>
   </Client>
 </ZetboxConfig>

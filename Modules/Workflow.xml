@@ -6538,85 +6538,85 @@ public static void StartCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
     <ZetboxBase:CreatedOn>2012-09-12T14:18:43.6292987Z</ZetboxBase:CreatedOn>
     <ZetboxBase:DeploymentRestrictions>1</ZetboxBase:DeploymentRestrictions>
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
-    <ZetboxBase:Name>zetbox.Workflow.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ZetboxBase:Name>
+    <ZetboxBase:Name>Zetbox.Workflow.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ZetboxBase:Name>
   </ZetboxBase:Assembly>
   <ZetboxBase:Assembly ExportGuid="03de75d8-4b6a-4406-81bb-7b105dd31d14">
     <ZetboxBase:ChangedOn>2012-09-12T14:20:52.3996639Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-12T14:20:52.3996639Z</ZetboxBase:CreatedOn>
     <ZetboxBase:DeploymentRestrictions>1</ZetboxBase:DeploymentRestrictions>
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
-    <ZetboxBase:Name>zetbox.Workflow.Client.WPF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ZetboxBase:Name>
+    <ZetboxBase:Name>Zetbox.Workflow.Client.WPF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ZetboxBase:Name>
   </ZetboxBase:Assembly>
   <ZetboxBase:Assembly ExportGuid="1d1c8920-d01d-464c-bc3b-233b399dbdcb">
     <ZetboxBase:ChangedOn>2012-09-12T14:21:10.3686917Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-12T14:21:10.3686917Z</ZetboxBase:CreatedOn>
     <ZetboxBase:DeploymentRestrictions>0</ZetboxBase:DeploymentRestrictions>
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
-    <ZetboxBase:Name>zetbox.Workflow.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ZetboxBase:Name>
+    <ZetboxBase:Name>Zetbox.Workflow.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ZetboxBase:Name>
   </ZetboxBase:Assembly>
   <ZetboxBase:Assembly ExportGuid="dc81d91d-474e-494e-a91f-23007c9bb32d">
     <ZetboxBase:ChangedOn>2012-09-12T14:21:20.6042771Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-12T14:21:20.6042771Z</ZetboxBase:CreatedOn>
     <ZetboxBase:DeploymentRestrictions>2</ZetboxBase:DeploymentRestrictions>
     <ZetboxBase:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</ZetboxBase:Module>
-    <ZetboxBase:Name>zetbox.Workflow.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ZetboxBase:Name>
+    <ZetboxBase:Name>Zetbox.Workflow.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ZetboxBase:Name>
   </ZetboxBase:Assembly>
   <GUI:ViewModelDescriptor ExportGuid="8aa8a194-9924-482c-b5ea-075424983368">
     <GUI:DefaultEditorKind>c3fac4ef-8d8b-456a-8e0b-da8a1bc73698</GUI:DefaultEditorKind>
     <GUI:Deleted>false</GUI:Deleted>
     <GUI:Description>WF Definition Designer</GUI:Description>
     <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
-    <GUI:ViewModelTypeRef>zetbox.Workflow.Client.ViewModel.Workflow.Designer.WFDefinitionDesigner, zetbox.Workflow.Client</GUI:ViewModelTypeRef>
+    <GUI:ViewModelTypeRef>Zetbox.Workflow.Client.ViewModel.Workflow.Designer.WFDefinitionDesigner, Zetbox.Workflow.Client</GUI:ViewModelTypeRef>
   </GUI:ViewModelDescriptor>
   <GUI:ViewModelDescriptor ExportGuid="48539f07-8872-4141-9918-53fc5e8b3951">
     <GUI:Deleted>false</GUI:Deleted>
     <GUI:Description>PropertyViewModel for InvokeActions on a ScheduledActionDefinition object</GUI:Description>
     <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
-    <GUI:ViewModelTypeRef>zetbox.Workflow.Client.ViewModel.Workflow.InvokeActionObjRefPropertyViewModel, zetbox.Workflow.Client</GUI:ViewModelTypeRef>
+    <GUI:ViewModelTypeRef>Zetbox.Workflow.Client.ViewModel.Workflow.InvokeActionObjRefPropertyViewModel, Zetbox.Workflow.Client</GUI:ViewModelTypeRef>
   </GUI:ViewModelDescriptor>
   <GUI:ViewModelDescriptor ExportGuid="cd3eecdc-7abd-433b-9da5-472dd530ac96">
     <GUI:DefaultEditorKind>0c8e3f56-8d57-4759-acb2-c798e7bef391</GUI:DefaultEditorKind>
     <GUI:Deleted>false</GUI:Deleted>
     <GUI:Description>A workflow instance state</GUI:Description>
     <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
-    <GUI:ViewModelTypeRef>zetbox.Workflow.Client.ViewModel.Workflow.StateViewModel, zetbox.Workflow.Client</GUI:ViewModelTypeRef>
+    <GUI:ViewModelTypeRef>Zetbox.Workflow.Client.ViewModel.Workflow.StateViewModel, Zetbox.Workflow.Client</GUI:ViewModelTypeRef>
   </GUI:ViewModelDescriptor>
   <GUI:ViewModelDescriptor ExportGuid="b172f0c8-ef3b-485e-8e5b-a83e4426eea1">
     <GUI:Deleted>false</GUI:Deleted>
     <GUI:Description>ViewModel for a WFDefinition Object</GUI:Description>
     <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
-    <GUI:ViewModelTypeRef>zetbox.Workflow.Client.ViewModel.Workflow.WFDefinitionViewModel, zetbox.Workflow.Client</GUI:ViewModelTypeRef>
+    <GUI:ViewModelTypeRef>Zetbox.Workflow.Client.ViewModel.Workflow.WFDefinitionViewModel, Zetbox.Workflow.Client</GUI:ViewModelTypeRef>
   </GUI:ViewModelDescriptor>
   <GUI:ViewModelDescriptor ExportGuid="18f5bafe-349a-49e4-a4f7-44d17fd23ecb">
     <GUI:DefaultEditorKind>499316a7-f0a8-477b-badf-8d4ec3dae342</GUI:DefaultEditorKind>
     <GUI:Deleted>false</GUI:Deleted>
     <GUI:Description>A workflow instance</GUI:Description>
     <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
-    <GUI:ViewModelTypeRef>zetbox.Workflow.Client.ViewModel.Workflow.WFInstanceViewModel, zetbox.Workflow.Client</GUI:ViewModelTypeRef>
+    <GUI:ViewModelTypeRef>Zetbox.Workflow.Client.ViewModel.Workflow.WFInstanceViewModel, Zetbox.Workflow.Client</GUI:ViewModelTypeRef>
   </GUI:ViewModelDescriptor>
   <GUI:ViewModelDescriptor ExportGuid="f902b61a-2fb1-4b6c-8e64-26a547d2ba01">
     <GUI:Deleted>false</GUI:Deleted>
     <GUI:Description>Navigaton search screen for workfow states</GUI:Description>
     <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
-    <GUI:ViewModelTypeRef>zetbox.Workflow.Client.ViewModel.Workflow.WFNavigationSearchScreenViewModel, zetbox.Workflow.Client</GUI:ViewModelTypeRef>
+    <GUI:ViewModelTypeRef>Zetbox.Workflow.Client.ViewModel.Workflow.WFNavigationSearchScreenViewModel, Zetbox.Workflow.Client</GUI:ViewModelTypeRef>
   </GUI:ViewModelDescriptor>
   <GUI:ViewDescriptor ExportGuid="4b49c45e-ce24-4305-a4fd-7bd959b1cd9e">
     <GUI:ControlKind>c3fac4ef-8d8b-456a-8e0b-da8a1bc73698</GUI:ControlKind>
-    <GUI:ControlTypeRef>zetbox.Workflow.Client.WPF.View.Workflow.Designer.WFDefinitionEditor, zetbox.Workflow.Client.WPF</GUI:ControlTypeRef>
+    <GUI:ControlTypeRef>Zetbox.Workflow.Client.WPF.View.Workflow.Designer.WFDefinitionEditor, Zetbox.Workflow.Client.WPF</GUI:ControlTypeRef>
     <GUI:Deleted>false</GUI:Deleted>
     <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
     <GUI:Toolkit>0</GUI:Toolkit>
   </GUI:ViewDescriptor>
   <GUI:ViewDescriptor ExportGuid="72e40299-ebea-4edd-a8bc-ac2e9b36110f">
     <GUI:ControlKind>0c8e3f56-8d57-4759-acb2-c798e7bef391</GUI:ControlKind>
-    <GUI:ControlTypeRef>zetbox.Workflow.Client.WPF.View.Workflow.StateEditor, zetbox.Workflow.Client.WPF</GUI:ControlTypeRef>
+    <GUI:ControlTypeRef>Zetbox.Workflow.Client.WPF.View.Workflow.StateEditor, Zetbox.Workflow.Client.WPF</GUI:ControlTypeRef>
     <GUI:Deleted>false</GUI:Deleted>
     <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
     <GUI:Toolkit>0</GUI:Toolkit>
   </GUI:ViewDescriptor>
   <GUI:ViewDescriptor ExportGuid="78c195d9-f666-4051-91c0-5f22f9245206">
     <GUI:ControlKind>499316a7-f0a8-477b-badf-8d4ec3dae342</GUI:ControlKind>
-    <GUI:ControlTypeRef>zetbox.Workflow.Client.WPF.View.Workflow.WFInstanceEditor, zetbox.Workflow.Client.WPF</GUI:ControlTypeRef>
+    <GUI:ControlTypeRef>Zetbox.Workflow.Client.WPF.View.Workflow.WFInstanceEditor, Zetbox.Workflow.Client.WPF</GUI:ControlTypeRef>
     <GUI:Deleted>false</GUI:Deleted>
     <GUI:Module>e27c7e66-f806-4b0b-bf03-4e14efff5336</GUI:Module>
     <GUI:Toolkit>0</GUI:Toolkit>
