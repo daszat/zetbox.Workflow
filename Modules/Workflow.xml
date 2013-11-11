@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2013-05-15T16:23:01.05201Z" xmlns="http://dasz.at/Zetbox">
+<ZetboxPackaging xmlns:ZetboxBase="Zetbox.App.Base" xmlns:GUI="Zetbox.App.GUI" date="2013-10-29T14:35:31.35084Z" xmlns="http://dasz.at/Zetbox">
   <ZetboxBase:Module ExportGuid="e27c7e66-f806-4b0b-bf03-4e14efff5336">
     <ZetboxBase:ChangedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CreatedOn>2012-09-11T16:24:20.3854716Z</ZetboxBase:CreatedOn>
@@ -6072,7 +6072,7 @@ public static void isValid_Workflow(WFInstance obj, PropertyIsValidEventArgs e)
   <ZetboxBase:Method ExportGuid="682e37f1-b2d9-4421-8d58-98420b8fa87a">
     <ZetboxBase:ChangedOn>2012-09-12T15:44:19.3810469Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void Execute(Action obj)
+public static void Execute(Action obj, Zetbox.Basic.Workflow.ParameterizedActionDefinition paramedAction, Zetbox.Basic.Workflow.State current)
 {
 }
 
@@ -6095,7 +6095,7 @@ public static void ExecuteCanExecReason(Action obj, MethodReturnEventArgs&lt;str
   <ZetboxBase:Method ExportGuid="7d33c06c-5eec-43e5-9283-c19715f280db">
     <ZetboxBase:ChangedOn>2012-09-19T14:33:04.232813Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void GetCodeTemplate(Action obj)
+public static void GetCodeTemplate(Action obj, MethodReturnEventArgs&lt;string&gt; e)
 {
 }
 
@@ -6118,7 +6118,7 @@ public static void GetCodeTemplateCanExecReason(Action obj, MethodReturnEventArg
   <ZetboxBase:Method ExportGuid="9a5a7faa-7029-4e0e-b596-ae794ea8da9a">
     <ZetboxBase:ChangedOn>2012-09-14T08:57:34.9311851Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void GetLabel(Action obj)
+public static void GetLabel(Action obj, MethodReturnEventArgs&lt;string&gt; e)
 {
 }
 
@@ -6142,7 +6142,7 @@ public static void GetLabelCanExecReason(Action obj, MethodReturnEventArgs&lt;st
   <ZetboxBase:Method ExportGuid="724c45f3-c8dd-4cb5-894b-bc2c051f090d">
     <ZetboxBase:ChangedOn>2012-09-12T09:34:20.9827022Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void GetName(Action obj)
+public static void GetName(Action obj, MethodReturnEventArgs&lt;string&gt; e)
 {
 }
 
@@ -6165,7 +6165,7 @@ public static void GetNameCanExecReason(Action obj, MethodReturnEventArgs&lt;str
   <ZetboxBase:Method ExportGuid="bef123f5-9bdf-4f5d-9e89-08677258ff4e">
     <ZetboxBase:ChangedOn>2012-09-21T12:43:21.4018726Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void GetName(ParameterizedActionDefinition obj)
+public static void GetName(ParameterizedActionDefinition obj, MethodReturnEventArgs&lt;string&gt; e)
 {
 }
 
@@ -6188,7 +6188,7 @@ public static void GetNameCanExecReason(ParameterizedActionDefinition obj, Metho
   <ZetboxBase:Method ExportGuid="51d23eef-c3be-409e-b3c7-67d44922834d">
     <ZetboxBase:ChangedOn>2012-09-21T14:58:38.8611647Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void ScheduleAction(State obj)
+public static void ScheduleAction(State obj, DateTime invokeOn, Zetbox.Basic.Workflow.ParameterizedActionDefinition action)
 {
 }
 
@@ -6212,7 +6212,7 @@ public static void ScheduleActionCanExecReason(State obj, MethodReturnEventArgs&
   <ZetboxBase:Method ExportGuid="6f4077ac-88ea-463f-b5af-b9670d223215">
     <ZetboxBase:ChangedOn>2012-09-12T16:19:26.6245743Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void Execute(StateChangeDefinition obj)
+public static void Execute(StateChangeDefinition obj, Zetbox.Basic.Workflow.State current)
 {
 }
 
@@ -6236,7 +6236,7 @@ public static void ExecuteCanExecReason(StateChangeDefinition obj, MethodReturnE
   <ZetboxBase:Method ExportGuid="9bb4ed91-abed-4eb3-9745-cc0d44ccd4fc">
     <ZetboxBase:ChangedOn>2012-09-19T14:34:25.82948Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void GetCodeTemplate(StateChangeDefinition obj)
+public static void GetCodeTemplate(StateChangeDefinition obj, MethodReturnEventArgs&lt;string&gt; e)
 {
 }
 
@@ -6259,7 +6259,7 @@ public static void GetCodeTemplateCanExecReason(StateChangeDefinition obj, Metho
   <ZetboxBase:Method ExportGuid="3afc1f5c-53af-4d8d-9a4d-e36ef9f02e41">
     <ZetboxBase:ChangedOn>2012-09-12T09:30:55.9039723Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void GetName(StateDefinition obj)
+public static void GetName(StateDefinition obj, MethodReturnEventArgs&lt;string&gt; e)
 {
 }
 
@@ -6282,7 +6282,7 @@ public static void GetNameCanExecReason(StateDefinition obj, MethodReturnEventAr
   <ZetboxBase:Method ExportGuid="02c32ab5-154d-443a-891c-dcbe7bfea142">
     <ZetboxBase:ChangedOn>2012-09-12T08:38:02.5355625Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void GetName(WFDefinition obj)
+public static void GetName(WFDefinition obj, MethodReturnEventArgs&lt;string&gt; e)
 {
 }
 
@@ -6330,7 +6330,7 @@ public static void AbortCanExecReason(WFInstance obj, MethodReturnEventArgs&lt;s
   <ZetboxBase:Method ExportGuid="72480481-4024-476e-b3fc-6f0b4f2e423f">
     <ZetboxBase:ChangedOn>2012-09-19T16:15:45.6262245Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void AddLogEntry(WFInstance obj)
+public static void AddLogEntry(WFInstance obj, string formatString)
 {
 }
 
@@ -6355,7 +6355,7 @@ public static void AddLogEntryCanExecReason(WFInstance obj, MethodReturnEventArg
   <ZetboxBase:Method ExportGuid="ce6227a5-1ee4-4cde-9020-8720b4d70eba">
     <ZetboxBase:ChangedOn>2012-09-13T13:00:17.1611672Z</ZetboxBase:ChangedOn>
     <ZetboxBase:CodeTemplate>[Invocation]
-public static void Start(WFInstance obj)
+public static void Start(WFInstance obj, Zetbox.Basic.Workflow.WFDefinition workflow)
 {
 }
 
