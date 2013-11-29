@@ -46,6 +46,7 @@
                 <StackPanel>
                     <ctrls:LabeledView DataContext="{Binding InstanceViewModel.PropertyModelsByName[LogEntries]}" />
                     <ctrls:LabeledView DataContext="{Binding InstanceViewModel.PropertyModelsByName[States]}" />
+                    <ctrls:LabeledView DataContext="{Binding PropertyModelsByName[ScheduledActions]}" />
                 </StackPanel>
             </TabItem>
             <TabItem Header="Responsibles">
