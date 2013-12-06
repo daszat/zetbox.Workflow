@@ -8,6 +8,7 @@ namespace Zetbox.Basic.Workflow
     using Zetbox.API;
     using Zetbox.API.Common;
     using Zetbox.App.Base;
+    using Zetbox.API.Utils;
 
     /// <summary>
     /// An state change invocation prototype. If nothing changes, return StateChange.NextStates. If the state should end, return null or empty. If specific states should be entered, return them.
@@ -65,17 +66,23 @@ namespace Zetbox.Basic.Workflow
         {
             var identity = _idResolver.GetCurrent();
 
+            Logging.Log.InfoFormat("Executing workflow StateChange [{0}].{1}", current, obj.Name);
+
             var nextStates = obj.NextStates.ToList();
             // call invocation
             if (_invocationExec.HasValidInvocation(obj))
             {
+                Logging.Log.DebugFormat("  calling invocation [{0}].{1}", obj.ImplementorName, obj.MemberName);
                 nextStates = _invocationExec.CallInvocation<List<StateDefinition>>(obj, typeof(StateChangeInvocationPrototype), obj, current, identity);
             }
+
+            Logging.Log.InfoFormat("  nextStates.Count = {0}", nextStates.Count);
 
             var stateEnds = true;
             if (nextStates == null || nextStates.Count == 0)
             {
                 // workflow branch ends here
+                Logging.Log.Info("No next states, workflow will end");
             }
             else
             {
@@ -84,6 +91,7 @@ namespace Zetbox.Basic.Workflow
                 {
                     if (stateDef == current.StateDefinition)
                     {
+                        Logging.Log.Info("Staying in current state");
                         stateEnds = false;
                     }
                     else

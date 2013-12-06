@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Zetbox.API;
 using Zetbox.App.Base;
+using Zetbox.API.Utils;
 
 namespace Zetbox.Basic.Workflow
 {
@@ -12,6 +13,8 @@ namespace Zetbox.Basic.Workflow
     {
         internal static State CreateState(WFInstance instance, StateDefinition def)
         {
+            Logging.Log.InfoFormat("Creating WorkflowState [{0}].{1}", instance, def.Name);
+
             var ctx = instance.Context;
             var state = ctx.Create<State>();
             state.Instance = instance;
@@ -45,6 +48,7 @@ namespace Zetbox.Basic.Workflow
         [Invocation]
         public static void ScheduleAction(State obj, DateTime invokeOn, Zetbox.Basic.Workflow.ParameterizedActionDefinition action)
         {
+            Logging.Log.InfoFormat("Scheduling workflow action [{0}].[{1}].{2}", obj.Instance, obj, action.Name);
             var ctx = obj.Context;
 
             // Avoid multiple entries for same action on same state
