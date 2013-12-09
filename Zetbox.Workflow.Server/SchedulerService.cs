@@ -97,6 +97,7 @@ namespace Zetbox.Workflow.Server
                                         .Take(MAX_ITEMS_PER_BATCH)
                                         .ToList();
                                 if (nextSchedulerEntries.Count == 0) break;
+                                Logging.Server.InfoFormat("Found {0} SchedulerEntries", nextSchedulerEntries.Count);
                                 foreach (var entry in nextSchedulerEntries)
                                 {
                                     lock (_lock)
@@ -116,6 +117,10 @@ namespace Zetbox.Workflow.Server
                                                 .Where(ad => ad.IsRecurrent)
                                                 .Where(ad => ad.InvokeAction == localEntry.Action)
                                                 .ToList();
+                                            Logging.Server.InfoFormat("  processing wf instance.state '{0}.{1}', {2} actions", 
+                                                localEntry.State.Instance,
+                                                localEntry.State.ToString(),
+                                                scheduledActions.Count);
                                             foreach(var sAction in scheduledActions)
                                             {
                                                 sAction.Action.Execute(sAction, localEntry.State);

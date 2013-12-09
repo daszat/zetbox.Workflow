@@ -8,6 +8,7 @@ namespace Zetbox.Basic.Workflow
     using Zetbox.API;
     using Zetbox.API.Common;
     using Zetbox.App.Base;
+    using Zetbox.API.Utils;
 
     [Implementor]
     public class WFInstanceActions
@@ -42,6 +43,7 @@ namespace Zetbox.Basic.Workflow
         {
             if (workflow != null)
             {
+                Logging.Log.InfoFormat("Starting workflow {0}", workflow.Name);
                 obj.Workflow = workflow;
                 foreach (var stateDef in workflow.StateDefinitions.Where(s => s.IsStartState))
                 {
@@ -85,6 +87,7 @@ namespace Zetbox.Basic.Workflow
                     .Replace("{User}", (identity ?? (object)string.Empty).ToString())
                     .Replace("{Date}", DateTime.Today.ToShortDateString())
                     .Replace("{Time}", DateTime.Now.ToShortTimeString());
+                Logging.Log.InfoFormat("Adding WF-Logentry: {0}", msg);
                 var logEntry = ctx.Create<LogEntry>();
                 logEntry.Message = msg;
                 logEntry.Identity = identity;

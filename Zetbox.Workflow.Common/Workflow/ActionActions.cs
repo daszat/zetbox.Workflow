@@ -9,6 +9,7 @@ namespace Zetbox.Basic.Workflow
     using Zetbox.API;
     using Zetbox.API.Common;
     using Zetbox.App.Base;
+    using Zetbox.API.Utils;
 
 
     /// <summary>
@@ -56,12 +57,16 @@ namespace Zetbox.Basic.Workflow
             if (current == null) throw new ArgumentException("current");
             var identity = _idResolver.GetCurrent();
 
+            Logging.Log.InfoFormat("Executing workflow action [{0}].{1}", current, obj.Name);
+
             // call invocation
             if (_invocationExec.HasValidInvocation(obj))
             {
+                Logging.Log.DebugFormat("  calling invocation [{0}].{1}", obj.ImplementorName, obj.MemberName);
                 var result = _invocationExec.CallInvocation<bool>(obj, typeof(ActionInvocationPrototype), obj, paramedAction, current, identity);
                 if (result == false)
                 {
+                    Logging.Log.Info("  -> returned false, exiting");
                     return;
                 }
             }
