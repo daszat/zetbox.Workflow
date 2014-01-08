@@ -150,28 +150,28 @@
       <HintPath>..\packages\WPFExtensions.1.0.0\lib\WPFExtensions.dll</HintPath>
     </Reference>
     <Reference Include="WPFSamplesLib">
-      <HintPath>..\packages\zetboxBasic-WpfExe.1.1.4\lib\net40\WPFSamplesLib.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-WpfExe.1.1.5\lib\net40\WPFSamplesLib.dll</HintPath>
     </Reference>
     <Reference Include="Zetbox.API">
-      <HintPath>..\packages\zetboxBasic-Common.1.1.4\lib\net40\Zetbox.API.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Common.1.1.5\lib\net40\Zetbox.API.dll</HintPath>
     </Reference>
     <Reference Include="Zetbox.API.Client">
-      <HintPath>..\packages\zetboxBasic-Client.1.1.4\lib\net40\Zetbox.API.Client.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Client.1.1.5\lib\net40\Zetbox.API.Client.dll</HintPath>
     </Reference>
     <Reference Include="Zetbox.API.Common">
-      <HintPath>..\packages\zetboxBasic-Common.1.1.4\lib\net40\Zetbox.API.Common.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Common.1.1.5\lib\net40\Zetbox.API.Common.dll</HintPath>
     </Reference>
     <Reference Include="Zetbox.Assets">
-      <HintPath>..\packages\zetboxBasic-Common.1.1.4\lib\net40\Zetbox.Assets.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Common.1.1.5\lib\net40\Zetbox.Assets.dll</HintPath>
     </Reference>
     <Reference Include="Zetbox.Client">
-      <HintPath>..\packages\zetboxBasic-Client.1.1.4\lib\net40\Zetbox.Client.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Client.1.1.5\lib\net40\Zetbox.Client.dll</HintPath>
     </Reference>
     <Reference Include="Zetbox.Client.WPF">
-      <HintPath>..\packages\zetboxBasic-WpfExe.1.1.4\lib\net40\Zetbox.Client.WPF.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-WpfExe.1.1.5\lib\net40\Zetbox.Client.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Zetbox.Client.WPF.Toolkit">
-      <HintPath>..\packages\zetboxBasic-ClientWpf.1.1.4\lib\net40\Zetbox.Client.WPF.Toolkit.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-ClientWpf.1.1.5\lib\net40\Zetbox.Client.WPF.Toolkit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

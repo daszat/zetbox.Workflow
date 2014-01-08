@@ -126,16 +126,16 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Zetbox.API">
-      <HintPath>..\packages\zetboxBasic-Common.1.1.4\lib\net40\Zetbox.API.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Common.1.1.5\lib\net40\Zetbox.API.dll</HintPath>
     </Reference>
     <Reference Include="Zetbox.API.AbstractConsumerTests">
-      <HintPath>..\packages\zetboxBasic-Tests.1.1.4\lib\net40\Zetbox.API.AbstractConsumerTests.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Tests.1.1.5\lib\net40\Zetbox.API.AbstractConsumerTests.dll</HintPath>
     </Reference>
     <Reference Include="Zetbox.API.Common">
-      <HintPath>..\packages\zetboxBasic-Common.1.1.4\lib\net40\Zetbox.API.Common.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Common.1.1.5\lib\net40\Zetbox.API.Common.dll</HintPath>
     </Reference>
     <Reference Include="Zetbox.Assets">
-      <HintPath>..\packages\zetboxBasic-Common.1.1.4\lib\net40\Zetbox.Assets.dll</HintPath>
+      <HintPath>..\packages\zetboxBasic-Common.1.1.5\lib\net40\Zetbox.Assets.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
