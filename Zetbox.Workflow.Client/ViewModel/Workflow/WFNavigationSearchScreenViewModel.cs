@@ -18,7 +18,7 @@ namespace Zetbox.Workflow.Client.ViewModel.Workflow
         public new delegate WFNavigationSearchScreenViewModel Factory(IZetboxContext dataCtx, ViewModel parent, NavigationSearchScreen screen);
 
         public WFNavigationSearchScreenViewModel(IViewModelDependencies appCtx,
-            IZetboxContext dataCtx, ViewModel parent, NavigationScreen screen)
+            IZetboxContext dataCtx, ViewModel parent, NavigationSearchScreen screen)
             : base(appCtx, dataCtx, parent, screen)
         {
             base.Type = (ObjectClass)NamedObjects.Base.Classes.Zetbox.Basic.Workflow.State.Find(FrozenContext);
